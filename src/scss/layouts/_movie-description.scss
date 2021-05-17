@@ -7,7 +7,7 @@ body {
 
   // container main
   .container {
-    border: 1px dashed red;
+    // border: 1px dashed red; -------- remove
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +33,7 @@ body {
 
   // movie data
   .movie-data {
-    border: 1px dashed blue;
+    // border: 1px dashed blue;  ------- remove
     width: 100%;
     margin-top: 1rem;
   }
@@ -41,16 +41,62 @@ body {
   h2 {
     font-weight: 100;
     letter-spacing: 2px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
   h3 {
     letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .rating-production {
+    margin-bottom: 18px;
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .genre {
     margin-bottom: 8px;
   }
 
-  .rating {
-    margin-bottom: 8px;
-    font-size: 1.2rem;
+  .class-genre {
+    display: flex;
+    article {
+      margin: 0 15px 20px 0;
+
+      &:hover {
+        span {
+          color: rgb(129, 129, 196);
+        }
+      }
+    }
+  }
+
+  .story {
+    margin-bottom: 20px;
+  }
+  .add-btn {
+    width: 12rem;
+    height: 2.75rem;
+    background-color: rgb(129, 129, 196);
+    color: white;
+    outline: transparent;
+    border: none;
+    border-radius: 6px;
+    // hover efect here
+  }
+
+  // footer
+  footer {
+    width: 100vw;
+    height: 2rem;
+    background-color: rgb(32, 32, 32);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
   }
 }

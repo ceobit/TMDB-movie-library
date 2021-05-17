@@ -366,7 +366,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 body .container {
-  border: 1px dashed red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,22 +385,58 @@ body img {
   border-radius: 10px;
 }
 body .movie-data {
-  border: 1px dashed blue;
   width: 100%;
   margin-top: 1rem;
 }
 body h2 {
   font-weight: 100;
   letter-spacing: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 body h3 {
   letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+body .rating-production {
+  margin-bottom: 18px;
+}
+body .rating-production .rating {
+  font-size: 1.2rem;
   margin-bottom: 8px;
 }
-body .rating {
+body .rating-production .rating span {
+  font-size: 1.5rem;
+}
+body .genre {
   margin-bottom: 8px;
-  font-size: 1.2rem;
+}
+body .class-genre {
+  display: flex;
+}
+body .class-genre article {
+  margin: 0 15px 20px 0;
+}
+body .class-genre article:hover span {
+  color: #8181c4;
+}
+body .story {
+  margin-bottom: 20px;
+}
+body .add-btn {
+  width: 12rem;
+  height: 2.75rem;
+  background-color: #8181c4;
+  color: white;
+  outline: transparent;
+  border: none;
+  border-radius: 6px;
+}
+body footer {
+  width: 100vw;
+  height: 2rem;
+  background-color: #202020;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
