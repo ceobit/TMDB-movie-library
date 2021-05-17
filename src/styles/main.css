@@ -365,17 +365,43 @@ body {
   background-color: #424242;
   font-family: Arial, Helvetica, sans-serif;
 }
+body .container {
+  border: 1px dashed red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
 body nav {
   width: 100vw;
-  height: 2rem;
+  height: 3rem;
   background-color: #202020;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 body img {
-  width: 270px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
+}
+body .movie-data {
+  border: 1px dashed blue;
+  width: 100%;
+  margin-top: 1rem;
+}
+body h2 {
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+body h3 {
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+body .rating {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

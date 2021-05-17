@@ -5,19 +5,52 @@ body {
   background-color: rgb(66, 66, 66);
   font-family: Arial, Helvetica, sans-serif;
 
+  // container main
+  .container {
+    border: 1px dashed red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+
   // navbar
   nav {
     width: 100vw;
-    height: 2rem;
+    height: 3rem;
     background-color: rgb(32, 32, 32);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
 
   // image
   img {
-    width: 270px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
+  }
+
+  // movie data
+  .movie-data {
+    border: 1px dashed blue;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .rating {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
   }
 }
