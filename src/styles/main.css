@@ -363,6 +363,7 @@ template {
   height: 200px;
   width: 100px;
   background-color: orange;
+  border: 2px red dashed;
 }
 
 /*# sourceMappingURL=main.css.map */
