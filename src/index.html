@@ -1,13 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TMDB movie library</title>
-</head>
-<body>
-
-</body>
+  </head>
+  <body>
+    <div class="header">
+      <a class="navbar-brand" href="#">The<span>Movie</span>Library</a>
+      <nav class="header_navigation">
+        <ul>
+          <li>
+            <a class="header_navigation_pagelink" href="#/search-and-trends" aria-current="page">
+              home-icon
+            </a>
+          </li>
+          <li><a class="header_navigation_pagelink" href="#/saved">hot-icon</a></li>
+          <li><a class="header_navigation_pagelink" href="#/about">about-icon</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div class="container-keyword-pagenumber">
+        <div class="keyword">Rating</div>
+        <div class="pagenumber-btn-container">
+          <button class="previous-page"></button>
+          <button class="current-page" disabled=""></button>
+          <button class="next-page"></button>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+      </div>
+    </main>
+  </body>
 </html>
