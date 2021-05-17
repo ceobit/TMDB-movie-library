@@ -1,19 +1,70 @@
-import axios from 'axios';
-
-import API_key from './constants';
-
-const api = axios.create({
-  baseURL: 'https://api.themoviedb.org/3/',
-});
+import { API_key, baseURL } from './constants.js';
 
 const searchApi = {
   getMoviesByName(page, movie) {
-    return api.get(`search/movie?api_key=${API_key}&language=en&query=${movie}&page=${page}`);
+    return fetch(
+      `${baseURL}search/movie?api_key=${API_key}&language=en&query=${movie}&page=${page}`,
+    );
   },
   getMovieCredits(filmId) {
-    return api.get(`/movie/${filmId}?api_key=${API_key}&language=ru`);
+    return fetch(`${baseURL}movie/${filmId}?api_key=${API_key}&language=en`);
   },
   getRatedMovies(page) {
-    return api.get(`/movie/top_rated?api_key=${API_key}&language=ru&page=${page}`);
+    return fetch(`${baseURL}movie/top_rated?api_key=${API_key}&language=en&page=${page}`);
   },
 };
+
+
+export const getFilm = (page, movieName) => {
+  searchApi
+  .getMoviesByName(page, movieName)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    return data.results.map((film) => ({
+      poster: film.poster_path,
+      filmId: film.id,
+      title: film.title,
+      vote_average: film.vote_average,
+      vote_count: film.vote_count,
+    }));
+  })
+  .catch((err) => {
+    alert(err);
+  });
+};
+
+export const getRatedFilms = (page) => {
+  return searchApi
+  .getRatedMovies(page)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    return data.results.map((film) => ({
+      poster: film.poster_path,
+      filmId: film.id,
+      title: film.title,
+      vote_average: film.vote_average,
+      vote_count: film.vote_count,
+    }));
+  })
+  .catch((err) => {
+    alert(err);
+  });
+};
+
+export const getMovieCredits = (filmId) => {
+  return searchApi
+  .getMovieCredits('389')
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => data)
+  .catch((err) => {
+    alert(err);
+  });
+};
+
+
