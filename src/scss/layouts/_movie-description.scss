@@ -1,0 +1,23 @@
+// body
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(66, 66, 66);
+  font-family: Arial, Helvetica, sans-serif;
+
+  // navbar
+  nav {
+    width: 100vw;
+    height: 2rem;
+    background-color: rgb(32, 32, 32);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  // image
+  img {
+    width: 270px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
