@@ -14,57 +14,54 @@ const searchApi = {
   },
 };
 
-
 export const getFilm = (page, movieName) => {
   searchApi
-  .getMoviesByName(page, movieName)
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => {
-    return data.results.map((film) => ({
-      poster: film.poster_path,
-      filmId: film.id,
-      title: film.title,
-      vote_average: film.vote_average,
-      vote_count: film.vote_count,
-    }));
-  })
-  .catch((err) => {
-    alert(err);
-  });
+    .getMoviesByName(page, movieName)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data.results.map((film) => ({
+        poster: film.poster_path,
+        filmId: film.id,
+        title: film.title,
+        vote_average: film.vote_average,
+        vote_count: film.vote_count,
+      }));
+    })
+    .catch((err) => {
+      alert(err);
+    });
 };
 
 export const getRatedFilms = (page) => {
   return searchApi
-  .getRatedMovies(page)
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => {
-    return data.results.map((film) => ({
-      poster: film.poster_path,
-      filmId: film.id,
-      title: film.title,
-      vote_average: film.vote_average,
-      vote_count: film.vote_count,
-    }));
-  })
-  .catch((err) => {
-    alert(err);
-  });
+    .getRatedMovies(page)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data.results.map((film) => ({
+        poster: film.poster_path,
+        filmId: film.id,
+        title: film.title,
+        vote_average: film.vote_average,
+        vote_count: film.vote_count,
+      }));
+    })
+    .catch((err) => {
+      alert(err);
+    });
 };
 
 export const getMovieCredits = (filmId) => {
   return searchApi
-  .getMovieCredits('389')
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => data)
-  .catch((err) => {
-    alert(err);
-  });
+    .getMovieCredits(filmId)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => data)
+    .catch((err) => {
+      alert(err);
+    });
 };
-
-
