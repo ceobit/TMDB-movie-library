@@ -1,0 +1,25 @@
+@import "variables";
+
+
+@mixin media ($size) {
+  @media all and (max-width: $size){
+    @content
+  }
+}
+
+
+@mixin font-face ($font-family, $file-path, $weight: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url($file-path);
+    font-weight: $weight;
+  }
+}
+
+
+@mixin flex ($justifyContent, $alignItem: center, $flexDirection: row ) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+  flex-direction: $flexDirection;
+}
