@@ -8,7 +8,7 @@ const posterTemplate = (movie) => {
   return `<div class="movie" data-film-id=${movie.filmId}>
         <!-- movie image -->
         <div class="movie-image-container">
-          <img class="movie-img" src=${posterURL}${movie.poster} alt="poster" />
+          <img class="movie-img" src=${posterURL}${movie.poster} alt="poster" data-film-id=${movie.filmId}/>
           <p class="genres">drama, romance, historical</p>
           <span class="release-year">####</span>
         </div>
@@ -62,6 +62,7 @@ const addToFavoriteList = (e) => {
     e.target.classList.toggle('add-to-favorites_grey');
     e.target.classList.toggle('add-to-favorites_red');
 
+    //Save the favourite movie to local storage
     if (findDuplicate(filmId)) {
       deleteFromLS(filmId);
     } else {
@@ -72,4 +73,13 @@ const addToFavoriteList = (e) => {
   }
 };
 
+const openFilmDescriptionPage = (e) => {
+  console.log(e.target);
+  if (e.target.classList.contains('movie-img')) {
+    const filmId = e.target.getAttribute('data-film-id');
+    window.open(`../pages/movieDescription.html?filmId=${filmId}`);
+  }
+};
+
 imagesContainer.addEventListener('click', addToFavoriteList);
+imagesContainer.addEventListener('click', openFilmDescriptionPage);
