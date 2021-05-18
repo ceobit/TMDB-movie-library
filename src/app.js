@@ -1,5 +1,5 @@
 import { getMovieCredits, getRatedFilms, getFilm, getFilmById } from './api.js';
-import { saveToLS } from './scripts/localStorage.js';
+import {saveToLS, clearLs, deleteFromLS} from './scripts/localStorage.js';
 // getRatedFilms(1).then(arr => console.log(arr));
 // getMovieCredits("123").then((data) => console.log(data));
 
@@ -19,4 +19,5 @@ import { saveToLS } from './scripts/localStorage.js';
 
 //getFilm(1, '101').then((data) => console.log(data));
 
-getFilmById('180').then(data => saveToLS(data.filmId));
+
+// getFilmById('191').then(data => saveToLS(data.filmId));

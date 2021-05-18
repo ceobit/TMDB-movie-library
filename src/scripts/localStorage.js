@@ -7,21 +7,27 @@ export const saveToLS = (filmId) => {
 
     localStorage.setItem('favoriteList', JSON.stringify(updatedFavoriteList));
   }
-  console.log(getFromLS());
 };
 
 export const getFromLS = () => {
   return JSON.parse(localStorage.getItem('favoriteList'));
 };
 
-const deleteFromLS = (filmId) => {
-
+export const deleteFromLS = (filmId) => {
+  let updatedFavoriteList = [];
+  const currentFavoriteList = getFromLS();
+  updatedFavoriteList = currentFavoriteList.splice(currentFavoriteList.indexOf(filmId), 1);
+  localStorage.setItem('favoriteList', JSON.stringify(updatedFavoriteList));
 };
 
-const clearLs = () => {
+export const clearLs = () => {
   localStorage.clear();
 };
 
+
 const findDuplicate = (id) => {
-  return getFromLS().filter((el) => el.id === id).length;
+  const currentFavoriteList = getFromLS();
+  if (currentFavoriteList) {
+    return getFromLS().filter((el) => el === id).length;
+  } else return 0;
 };
