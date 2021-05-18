@@ -360,17 +360,8 @@ template {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: #424242;
   font-family: Arial, Helvetica, sans-serif;
-}
-body .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
 }
 body nav {
   width: 100vw;
@@ -379,50 +370,57 @@ body nav {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
-body img {
+body .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+body .container img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-body .movie-data {
+body .container .movie-data {
   width: 100%;
   margin-top: 1rem;
 }
-body h2 {
+body .container .movie-data h2 {
   font-weight: 100;
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-body h3 {
+body .container .movie-data h3 {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-body .rating-production {
+body .container .movie-data .rating-production {
   margin-bottom: 18px;
 }
-body .rating-production .rating {
+body .container .movie-data .rating-production .rating {
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
-body .rating-production .rating span {
+body .container .movie-data .rating-production .rating span {
   font-size: 1.5rem;
 }
-body .genre {
+body .container .movie-data h4 {
   margin-bottom: 8px;
 }
-body .class-genre {
+body .container .movie-data .class-genre {
   display: flex;
 }
-body .class-genre article {
+body .container .movie-data .class-genre article {
   margin: 0 15px 20px 0;
 }
-body .class-genre article:hover span {
+body .container .movie-data .class-genre article:hover span {
   color: #8181c4;
 }
-body .story {
+body .container .movie-data .story {
   margin-bottom: 20px;
 }
-body .add-btn {
+body .container .movie-data .add-btn {
   width: 12rem;
   height: 2.75rem;
   background-color: #8181c4;
@@ -437,6 +435,132 @@ body footer {
   background-color: #202020;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+@media only screen and (min-width: 576px) {
+  body .container img {
+    width: 50%;
+  }
+  body .container .movie-data h2 {
+    font-size: 2rem;
+  }
+  body .container .movie-data h3 {
+    font-size: 1.5rem;
+  }
+  body .container .movie-data .rating-production {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .container .movie-data .rating-production p {
+    font-size: 1.2rem;
+  }
+  body .container .movie-data h4 {
+    font-size: 1.5rem;
+  }
+  body .container .movie-data .class-genre {
+    font-size: 1.3rem;
+  }
+  body .container .movie-data .story {
+    font-size: 1.25rem;
+  }
+  body .container .movie-data .add-btn {
+    width: 18rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body .container {
+    flex-direction: row;
+    width: 95vw;
+  }
+  body .container img {
+    width: 40%;
+    margin-right: 10px;
+    align-self: flex-start;
+  }
+  body .container .movie-data {
+    margin-left: 10px;
+    height: 100%;
+  }
+  body .container .movie-data h2 {
+    font-size: 2.2rem;
+  }
+  body .container .movie-data h3 {
+    font-size: 1.6rem;
+  }
+  body .container .movie-data .rating-production {
+    display: block;
+  }
+  body .container .movie-data h4 {
+    font-size: 1.6rem;
+  }
+  body .container .movie-data .class-genre {
+    font-size: 1.4rem;
+  }
+  body .container .movie-data .story {
+    font-size: 1.35rem;
+  }
+  body .container .movie-data .add-btn {
+    font-size: 1.35rem;
+  }
+
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  body nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body .container {
+    max-width: 1200px;
+    margin-top: 5rem;
+  }
+  body .container img {
+    max-width: 780px;
+    margin-right: 20px;
+  }
+  body .container .movie-data {
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body .container .movie-data h2 {
+    font-size: 1.8rem;
+  }
+  body .container .movie-data h3 {
+    font-size: 1.4rem;
+  }
+  body .container .movie-data h4 {
+    font-size: 1.3rem;
+  }
+  body .container .movie-data .rating-production {
+    display: flex;
+    flex-direction: row;
+  }
+  body .container .movie-data .rating-production p {
+    font-size: 1rem;
+  }
+  body .container .movie-data .class-genre {
+    font-size: 1.1rem;
+  }
+  body .container .movie-data .story {
+    font-size: 1.15rem;
+  }
+  body .container .movie-data .add-btn {
+    width: 10rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
