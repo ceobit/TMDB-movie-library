@@ -14,11 +14,20 @@ body {
   width: 100vw;
 }
 .face {
+  border-top: rgba(85, 84, 84, 0.9) 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 0rem 20rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   width: 80vw;
   height: 70vh;
-  background-color: #504d4d;
+  // background-color: #504d4d;
   border-radius: 20px;
-  overflow: hidden;
+  // overflow: hidden;
 }
 .top-icon {
   width: 20px;
@@ -55,13 +64,13 @@ body {
   align-items: center;
   justify-content: center;
 }
-img {
-  height: 16rem;
-  width: 8rem;
+.imgHolder {
+  height: 20rem;
+  width: 10rem;
   border-radius: 20px;
   padding: 10px;
 }
-ul {
+li {
   list-style-type: none;
 }
 .hi {
@@ -69,6 +78,18 @@ ul {
   justify-content: space-evenly;
   align-items: center;
 }
+.inputSearch {
+  padding: 0.5rem 1rem;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: white;
+  width: 450px;
+  font-size: 1.15rem;
+  margin: 0.25rem;
+  border-radius: 25px;
+}
+
 .remove {
   background: transparent;
   border: 0.5px white solid;

@@ -11,7 +11,7 @@ ul.addEventListener('click', (event) => {
   }
 });
 
-// search
+// searching :I tried  it but its not working
 const searchBar = document.forms['search-book'].querySelector('input');
 searchBar.addEventListener('keyup', function (e) {
   const term = e.target.value.toLowerCase();
