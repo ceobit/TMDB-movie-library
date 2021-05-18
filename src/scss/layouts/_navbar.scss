@@ -13,7 +13,6 @@
 .navbar {
   display: flex;
   position: relative;
-  //   justify-content: space-between;
   justify-content: space-around;
   align-items: center;
   background-color: var(--clr-primary);
@@ -45,7 +44,6 @@
 }
 
 .navbar-pagelinks li a {
-  //   text-transform: uppercase;
   display: block;
   text-decoration: none;
   color: white;
