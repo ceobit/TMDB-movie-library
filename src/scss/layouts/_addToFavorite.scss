@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  overflow: hidden;
   color: #f0f4fd;
   background-color: #000;
   display: flex;
@@ -20,14 +19,11 @@ body {
   align-items: center;
   background-color: #1e1e1e;
   padding: 0rem 20rem;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   width: 80vw;
   height: 70vh;
-  // background-color: #504d4d;
   border-radius: 20px;
-  // overflow: hidden;
+  margin-top: 20px;
+  overflow: hidden;
 }
 .top-icon {
   width: 20px;
