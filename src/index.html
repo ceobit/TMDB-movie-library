@@ -7,9 +7,22 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>TMDB movie library</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>TMDB movie library</title>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-brand" href="#">The<span>Movies</span>Library</div>
+      <div class="navbar-pagelinks">
+        <ul>
+          <li>
+            <a class="pagelink" href="#/search-and-trends" aria-current="page">Home </a>
+          </li>
+          <li><a class="pagelink" href="#/saved">Hot</a></li>
+          <li><a class="pagelink" href="#/about">About</a></li>
+        </ul>
+      </div>
+    </nav>
     <a href="./pages/movieDescription.html">Movie-Description</a>
       <script src="./app.js" type="module"></script>
   </body>
