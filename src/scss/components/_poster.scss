@@ -1,15 +1,26 @@
-* {
-  box-sizing: border-box;
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+// Movie Poster
 // movie poster container
 .movie {
   width: auto;
   height: auto;
-  background-color: rgb(26, 8, 21);
-  padding: 0.8rem;
+  //   background-color: rgb(26, 8, 21);
+  //   background-color: #0a1e33;
+  background-color: #0b3957;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  &:hover {
+    // box-shadow: 5px 15px 10px rgb(5, 5, 107);
+    box-shadow: 5px 15px 10px var(--clr-neutral-900);
+    // border: yellow 2px solid;
+    transform: translate3d(5px, -15px, 30px);
+    transition: 0.5s;
+  }
 }
 // common properties
 .movie-image-container,
@@ -18,11 +29,9 @@
 .ratings-favorites-container {
   max-width: 342px;
 }
-
 // movie image
 .movie-image-container {
   position: relative;
-  border: tomato 2px dashed;
 }
 .movie-img {
   width: 342px;
@@ -32,7 +41,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-// release year of movie
+// release year of movie (upper right corner of image)
 .release-year {
   position: absolute;
   background-color: white;
@@ -66,6 +75,7 @@
 .user-rating {
   display: none;
 }
+
 // watched - not watched
 .watched {
   padding: 0.2rem;
@@ -113,7 +123,6 @@
   .movie-img {
     width: 342px;
     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-    border: springgreen 2px solid;
   }
 }
 
@@ -128,4 +137,10 @@
 // Notes:
 // make picture size and max width the same
 // change picture or picture size with screensize
-// clicking on rating opens up
+// clicking on rating opens up rating input
+// add year into space for year
+// clicking watched or not watched will toggle watched or not watched
+// hover effect on hover over whole poster with box shadow
+// make sure that all movies which were added to favorite have to also inherit the watched and favorited classnames
+// put nice hover effects
+// when click on image or title leads to movie description
