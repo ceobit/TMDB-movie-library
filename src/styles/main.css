@@ -360,7 +360,8 @@ template {
 }
 
 .movie {
-  width: 19vw;
+  width: 40vw;
+  height: auto;
   background-color: #181818;
   padding: 0.5vw;
   display: flex;
@@ -368,14 +369,56 @@ template {
   flex-direction: column;
 }
 
-.movie-img {
-  width: 342px;
+.movie-image-container {
+  position: relative;
+  max-width: 342px;
   height: auto;
+}
+
+.movie-img {
+  margin-bottom: 0.8vw;
+}
+
+.release-year {
+  position: absolute;
+  background-color: white;
+  color: cornflowerblue;
+  right: 0.7vw;
+  top: 0.3vw;
 }
 
 .ratings-favorites-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0.5vw;
+}
+
+.star-rating-imdb {
+  color: #ffd900;
+}
+
+.user-rating-container {
+  background-color: green;
+  cursor: pointer;
+}
+
+.star-rating-user {
+  color: gray;
+}
+
+.user-rating {
+  display: none;
+}
+
+.watched {
+  padding: 0.2rem;
+  color: grey;
+  border: grey 1px solid;
+}
+
+.add-to-favorites {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

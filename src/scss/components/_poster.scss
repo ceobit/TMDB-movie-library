@@ -1,5 +1,7 @@
+// movie poster container
 .movie {
-  width: 19vw;
+  width: 40vw;
+  height: auto;
   background-color: rgb(24, 24, 24);
   padding: 0.5vw;
   display: flex;
@@ -7,11 +9,69 @@
   // align-items: center;
   flex-direction: column;
 }
-.movie-img {
-  width: 342px;
+// movie image
+.movie-image-container {
+  position: relative;
+  max-width: 342px;
   height: auto;
 }
+.movie-img {
+  margin-bottom: 0.8vw;
+}
+// release year of movie
+.release-year {
+  position: absolute;
+  background-color: white;
+  color: cornflowerblue;
+  right: 0.7vw;
+  top: 0.3vw;
+}
+// ratings
 .ratings-favorites-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0.5vw;
+}
+.star-rating-imdb {
+  color: rgb(255, 217, 0);
+}
+.user-rating-container {
+  background-color: green;
+  cursor: pointer;
+}
+.star-rating-user {
+  color: gray;
+}
+.user-rating {
+  display: none;
+}
+// watched - not watched
+.watched {
+  padding: 0.2rem;
+  color: grey;
+  border: grey 1px solid;
+}
+
+// add to favorites button
+.add-to-favorites {
+  cursor: pointer;
+}
+
+// SCREEN SIZE ADJUSTMENTS
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
