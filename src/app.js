@@ -1,5 +1,6 @@
 import { getMovieCredits, getRatedFilms, getFilm, getFilmById } from './api.js';
 import {saveToLS, clearLs, deleteFromLS} from './scripts/localStorage.js';
+import { getParameter } from './scripts/aux.js';
 // getRatedFilms(1).then(arr => console.log(arr));
 // getMovieCredits("123").then((data) => console.log(data));
 
@@ -25,8 +26,13 @@ import {saveToLS, clearLs, deleteFromLS} from './scripts/localStorage.js';
 // const film = document.querySelector('.movie');
 //
 // const openWindow = (e) => {
-//   const descr = window.open('./pages/movieDescription.html');
+//   const descr = window.open('./pages/movieDescription.html?id=10');
 //   console.log('hello');
 // };
 //
 // film.addEventListener('click', openWindow);
+//
+// import { getParameter } from './scripts/aux.js';
+// const parameter = getParameter();
+// const filmId = parameter['filmId'];
+//
