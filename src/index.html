@@ -15,26 +15,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <!-- stylesheet for poster -->
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>TMDB movie library</title>
   </head>
   <body>
     <div class="movie" data-film-id="1">
       <!-- movie image -->
       <div class="movie-image" data-film-id="1">
-        <img src="./img/movie-placeholder-unsplash-w342.jpg" alt="searched-movie1" />
+        <img
+          src="./img/movie-placeholder-unsplash-w342.jpg"
+          alt="searched-movie1"
+          class="movie-img"
+        />
         <span class="release-year">####</span>
       </div>
       <!-- movie title -->
       <h2 class="movie-title">Movie Title 1</h2>
       <div class="ratings-favorites-container" data-film-id="1">
         <!-- IMDb rating -->
-        <span>IMDb</span>
-        <i class="fas fa-star star-rating-imdb"></i>
-        <span class="imdb-rating">#.#</span>
+        <div class="imdb-rating-container" data-film-id="1">
+          <span>IMDb</span>
+          <i class="fas fa-star star-rating-imdb"></i>
+          <span class="imdb-rating">#.#</span>
+        </div>
         <!-- user rating -->
-        <i class="fas fa-star star-rating-user"></i>
-        <span class="user-rating">#.#</span>
+        <div class="user-rating-container" data-film-id="1">
+          <i class="fas fa-star star-rating-user"></i>
+          <span class="user-rating">#.#</span>
+        </div>
         <!-- add film to favorites page -->
         <i class="fas fa-heart add-to-favorites"></i>
       </div>

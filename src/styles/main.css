@@ -359,4 +359,23 @@ template {
   color: #FFF;
 }
 
+.movie {
+  width: 19vw;
+  background-color: #181818;
+  padding: 0.5vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.movie-img {
+  width: 342px;
+  height: auto;
+}
+
+.ratings-favorites-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=main.css.map */

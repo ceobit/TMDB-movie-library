@@ -1,0 +1,17 @@
+.movie {
+  width: 19vw;
+  background-color: rgb(24, 24, 24);
+  padding: 0.5vw;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+}
+.movie-img {
+  width: 342px;
+  height: auto;
+}
+.ratings-favorites-container {
+  display: flex;
+  justify-content: space-between;
+}
