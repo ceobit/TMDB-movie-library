@@ -11,13 +11,25 @@
     <title>TMDB movie library</title>
 </head>
 <body>
-    <div class="movie">
+    <div class="movie" data-film-id="1">
+        <!-- movie image -->
         <div class="movie-image" data-film-id="1">
             <img src="./img/movie-placeholder-unsplash.jpg" alt="searched-movie1" />
+            <span class="release-year">####</span>
         </div>
+        <!-- movie title -->
         <h2 class="movie-title">Movie Title 1</h2>
-      </div>
-      <span>IMDb</span><i class="fas fa-star"></i>
-      <i class="fas fa-heart"></i>
+        <div class="ratings-favorites-container">
+            <!-- IMDb rating -->
+            <span>IMDb</span>
+            <i class="fas fa-star"></i>
+            <span class="imdb-rating"></span>
+            <!-- user rating -->
+            <i class="fas fa-star"></i>
+            <span class="user-rating"></span>
+            <!-- add film to favorites page -->
+            <i class="fas fa-heart add-to-favorites"></i>
+        </div>
+    </div>
 </body>
 </html>
