@@ -44,13 +44,13 @@ export const getFilmById = (filmId) => {
       return res.json();
     })
     .then((data) => {
-      return data.results.map((film) => ({
-        poster: film.poster_path,
-        filmId: film.id,
-        title: film.title,
-        vote_average: film.vote_average,
-        vote_count: film.vote_count,
-      }));
+      return {
+        poster: data.poster_path,
+        filmId: data.id,
+        title: data.title,
+        vote_average: data.vote_average,
+        vote_count: data.vote_count,
+      };
     })
     .catch((err) => {
       alert(err);
