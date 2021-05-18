@@ -372,7 +372,6 @@ template {
 
 .navbar {
   display: flex;
-  position: relative;
   justify-content: space-around;
   align-items: center;
   background-color: var(--clr-primary);
@@ -425,6 +424,12 @@ template {
   .navbar {
     align-items: flex-start;
   }
+}
+.about-container {
+  color: black;
+}
+.about-container a i {
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
