@@ -359,20 +359,27 @@ template {
   color: #FFF;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .movie {
   width: auto;
   height: auto;
   background-color: #1a0815;
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
 }
 
+.movie-title {
+  max-width: 342px;
+}
+
 .movie-image-container {
   position: relative;
-  width: 100%;
   height: auto;
-  max-width: 342px;
+  width: auto;
   height: auto;
 }
 
@@ -382,6 +389,7 @@ template {
   margin-bottom: 0.8rem;
   background-image: url("../../img/movie-placeholder-unsplash-w342.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   border: crimson 2px solid;
 }
 
@@ -439,8 +447,14 @@ template {
 }
 
 @media (min-width: 576px) {
-  .movie-image-container {
-    max-width: 500px;
+  .movie-img {
+    width: 500px;
+    background-image: url("../../img/movie-placeholder-unsplash-w500.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .movie-img {
+    border: springgreen 2px solid;
   }
 }
 

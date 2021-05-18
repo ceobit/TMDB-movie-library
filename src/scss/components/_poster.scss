@@ -1,20 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
 // movie poster container
 .movie {
   width: auto;
   height: auto;
   background-color: rgb(26, 8, 21);
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
 }
 // common properties
+.movie-title {
+  max-width: 342px;
+}
 
 // movie image
 .movie-image-container {
   position: relative;
-  width: 100%;
   height: auto;
-  max-width: 342px;
+  width: auto;
+  //   max-width: 342px;
   height: auto;
 }
 .movie-img {
@@ -23,6 +30,7 @@
   margin-bottom: 0.8rem;
   background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   border: crimson 2px solid;
 }
 // release year of movie
@@ -83,14 +91,18 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  // movie image
-  .movie-image-container {
-    max-width: 500px;
+  .movie-img {
+    width: 500px;
+    background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .movie-img {
+    // width: 342px;
+    border: springgreen 2px solid;
+  }
 }
 
 // Large devices (desktops, 992px and up)
