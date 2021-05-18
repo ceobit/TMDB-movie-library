@@ -362,7 +362,7 @@ template {
 .movie {
   width: auto;
   height: auto;
-  background-color: #181818;
+  background-color: #1a0815;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -377,15 +377,21 @@ template {
 }
 
 .movie-img {
-  margin-bottom: 0.8vw;
+  width: 342px;
+  height: 450px;
+  margin-bottom: 0.8rem;
+  background-image: url("../../img/movie-placeholder-unsplash-w342.jpg");
+  background-repeat: no-repeat;
+  border: crimson 2px solid;
 }
 
 .release-year {
   position: absolute;
   background-color: white;
+  padding: 0.1rem 0.2rem;
   color: cornflowerblue;
-  right: 0.7vw;
-  top: 0.3vw;
+  right: 0.7rem;
+  top: 0.3rem;
 }
 
 .movie-title {
@@ -398,6 +404,7 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .star-rating-imdb {
@@ -405,7 +412,6 @@ template {
 }
 
 .user-rating-container {
-  background-color: green;
   cursor: pointer;
 }
 
@@ -425,6 +431,7 @@ template {
 
 .add-to-favorites {
   cursor: pointer;
+  color: grey;
 }
 
 .genres {

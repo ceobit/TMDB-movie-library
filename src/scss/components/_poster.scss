@@ -2,11 +2,9 @@
 .movie {
   width: auto;
   height: auto;
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(26, 8, 21);
   padding: 0.5rem;
   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
   flex-direction: column;
 }
 // common properties
@@ -20,16 +18,23 @@
   height: auto;
 }
 .movie-img {
-  margin-bottom: 0.8vw;
+  width: 342px;
+  height: 450px;
+  margin-bottom: 0.8rem;
+  background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
+  background-repeat: no-repeat;
+  border: crimson 2px solid;
 }
 // release year of movie
 .release-year {
   position: absolute;
   background-color: white;
+  padding: 0.1rem 0.2rem;
   color: cornflowerblue;
-  right: 0.7vw;
-  top: 0.3vw;
+  right: 0.7rem;
+  top: 0.3rem;
 }
+
 //movie title
 .movie-title {
   max-width: 342px;
@@ -42,13 +47,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //   margin: 0.5vw;
+  margin-bottom: 0.5rem;
 }
 .star-rating-imdb {
   color: rgb(255, 217, 0);
 }
 .user-rating-container {
-  background-color: green;
   cursor: pointer;
 }
 .star-rating-user {
@@ -67,12 +71,12 @@
 // add to favorites button
 .add-to-favorites {
   cursor: pointer;
+  color: grey;
 }
 
 // genre overview
 .genres {
   margin-bottom: 0.3vw;
-  //   align-self: flex-start;
 }
 
 // SCREEN SIZE ADJUSTMENTS
@@ -96,3 +100,8 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
 }
+
+// Notes:
+// make picture size and max width the same
+// change picture or picture size with screensize
+// clicking on rating opens up
