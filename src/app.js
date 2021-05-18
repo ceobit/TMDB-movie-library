@@ -1,5 +1,5 @@
 import { getMovieCredits, getRatedFilms, getFilm } from './api.js';
-
+import { saveToLS } from './scripts/localStorage.js';
 // getRatedFilms(1).then(arr => console.log(arr));
 // getMovieCredits("123").then((data) => console.log(data));
 
@@ -12,7 +12,9 @@ import { getMovieCredits, getRatedFilms, getFilm } from './api.js';
 //
 //   const filmId = e.target.parentElement.getAttribute('data-filmId');
 //
-//   getMovieCredits(filmId).then((data) => title.textContent = data.title);
+// getMovieCredits('101').then((data) => saveToLS(data));
 //
 // };
 // poster.addEventListener('click', handleTitle);
+
+getFilm(1, '101').then((data) => console.log(data));

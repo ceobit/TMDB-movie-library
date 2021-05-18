@@ -15,7 +15,7 @@ const searchApi = {
 };
 
 export const getFilm = (page, movieName) => {
-  searchApi
+  return searchApi
     .getMoviesByName(page, movieName)
     .then((res) => {
       return res.json();
