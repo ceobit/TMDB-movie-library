@@ -372,15 +372,16 @@ template {
   flex-direction: column;
 }
 
-.movie-title {
+.movie-image-container,
+.movie-img,
+.movie-title,
+.ratings-favorites-container {
   max-width: 342px;
 }
 
 .movie-image-container {
   position: relative;
-  height: auto;
-  width: auto;
-  height: auto;
+  border: tomato 2px dashed;
 }
 
 .movie-img {
@@ -390,7 +391,6 @@ template {
   background-image: url("../../img/movie-placeholder-unsplash-w342.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: crimson 2px solid;
 }
 
 .release-year {
@@ -403,12 +403,10 @@ template {
 }
 
 .movie-title {
-  max-width: 342px;
   margin: 0.5rem 0;
 }
 
 .ratings-favorites-container {
-  max-width: 342px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -447,13 +445,29 @@ template {
 }
 
 @media (min-width: 576px) {
+  .movie-image-container,
+.movie-img,
+.movie-title,
+.ratings-favorites-container {
+    max-width: 500px;
+  }
+
   .movie-img {
     width: 500px;
     background-image: url("../../img/movie-placeholder-unsplash-w500.jpg");
   }
 }
 @media (min-width: 768px) {
+  .movie-image-container,
+.movie-img,
+.movie-title,
+.ratings-favorites-container {
+    max-width: 342px;
+  }
+
   .movie-img {
+    width: 342px;
+    background-image: url("../../img/movie-placeholder-unsplash-w342.jpg");
     border: springgreen 2px solid;
   }
 }

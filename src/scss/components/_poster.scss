@@ -12,17 +12,17 @@
   flex-direction: column;
 }
 // common properties
-.movie-title {
+.movie-image-container,
+.movie-img,
+.movie-title,
+.ratings-favorites-container {
   max-width: 342px;
 }
 
 // movie image
 .movie-image-container {
   position: relative;
-  height: auto;
-  width: auto;
-  //   max-width: 342px;
-  height: auto;
+  border: tomato 2px dashed;
 }
 .movie-img {
   width: 342px;
@@ -31,7 +31,6 @@
   background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  border: crimson 2px solid;
 }
 // release year of movie
 .release-year {
@@ -45,13 +44,11 @@
 
 //movie title
 .movie-title {
-  max-width: 342px;
   margin: 0.5rem 0;
 }
 
 // ratings
 .ratings-favorites-container {
-  max-width: 342px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,6 +88,13 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  // common properties
+  .movie-image-container,
+  .movie-img,
+  .movie-title,
+  .ratings-favorites-container {
+    max-width: 500px;
+  }
   .movie-img {
     width: 500px;
     background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
@@ -99,8 +103,16 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  // common properties
+  .movie-image-container,
+  .movie-img,
+  .movie-title,
+  .ratings-favorites-container {
+    max-width: 342px;
+  }
   .movie-img {
-    // width: 342px;
+    width: 342px;
+    background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
     border: springgreen 2px solid;
   }
 }
