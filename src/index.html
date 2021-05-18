@@ -1,35 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>TMDB movie library</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="movie" data-film-id="1">
-        <!-- movie image -->
-        <div class="movie-image" data-film-id="1">
-            <img src="./img/movie-placeholder-unsplash.jpg" alt="searched-movie1" />
-            <span class="release-year">####</span>
-        </div>
-        <!-- movie title -->
-        <h2 class="movie-title">Movie Title 1</h2>
-        <div class="ratings-favorites-container">
-            <!-- IMDb rating -->
-            <span>IMDb</span>
-            <i class="fas fa-star"></i>
-            <span class="imdb-rating"></span>
-            <!-- user rating -->
-            <i class="fas fa-star"></i>
-            <span class="user-rating"></span>
-            <!-- add film to favorites page -->
-            <i class="fas fa-heart add-to-favorites"></i>
-        </div>
+      <!-- movie image -->
+      <div class="movie-image" data-film-id="1">
+        <img src="./img/movie-placeholder-unsplash-w342.jpg" alt="searched-movie1" />
+        <span class="release-year">####</span>
+      </div>
+      <!-- movie title -->
+      <h2 class="movie-title">Movie Title 1</h2>
+      <div class="ratings-favorites-container" data-film-id="1">
+        <!-- IMDb rating -->
+        <span>IMDb</span>
+        <i class="fas fa-star star-rating-imdb"></i>
+        <span class="imdb-rating">#.#</span>
+        <!-- user rating -->
+        <i class="fas fa-star star-rating-user"></i>
+        <span class="user-rating">#.#</span>
+        <!-- add film to favorites page -->
+        <i class="fas fa-heart add-to-favorites"></i>
+      </div>
     </div>
-</body>
+  </body>
 </html>
