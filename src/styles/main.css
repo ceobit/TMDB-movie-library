@@ -420,14 +420,39 @@ body {
 .swiper-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-top: 40px;
+  justify-content: center;
 }
 
 img {
   height: 16rem;
   width: 8rem;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hi {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.remove {
+  background: transparent;
+  border: 0.5px white solid;
+  border-radius: 5px;
+  height: 1.5rem;
+  width: 4rem;
+  cursor: pointer;
+  color: whitesmoke;
+}
+.remove:hover {
+  width: 4.2rem;
+  height: 1.7rem;
+  transition: 0.1s;
 }
 
 /*# sourceMappingURL=main.css.map */
