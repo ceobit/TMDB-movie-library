@@ -1,17 +1,21 @@
 // movie poster container
 .movie {
-  width: 40vw;
+  width: auto;
   height: auto;
   background-color: rgb(24, 24, 24);
-  padding: 0.5vw;
+  padding: 0.5rem;
   display: flex;
-  justify-content: center;
-  // align-items: center;
+  //   justify-content: center;
+  //   align-items: center;
   flex-direction: column;
 }
+// common properties
+
 // movie image
 .movie-image-container {
   position: relative;
+  width: 100%;
+  height: auto;
   max-width: 342px;
   height: auto;
 }
@@ -26,12 +30,19 @@
   right: 0.7vw;
   top: 0.3vw;
 }
+//movie title
+.movie-title {
+  max-width: 342px;
+  margin: 0.5rem 0;
+}
+
 // ratings
 .ratings-favorites-container {
+  max-width: 342px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5vw;
+  //   margin: 0.5vw;
 }
 .star-rating-imdb {
   color: rgb(255, 217, 0);
@@ -58,10 +69,20 @@
   cursor: pointer;
 }
 
+// genre overview
+.genres {
+  margin-bottom: 0.3vw;
+  //   align-self: flex-start;
+}
+
 // SCREEN SIZE ADJUSTMENTS
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  // movie image
+  .movie-image-container {
+    max-width: 500px;
+  }
 }
 
 // Medium devices (tablets, 768px and up)

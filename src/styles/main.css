@@ -360,17 +360,18 @@ template {
 }
 
 .movie {
-  width: 40vw;
+  width: auto;
   height: auto;
   background-color: #181818;
-  padding: 0.5vw;
+  padding: 0.5rem;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
 .movie-image-container {
   position: relative;
+  width: 100%;
+  height: auto;
   max-width: 342px;
   height: auto;
 }
@@ -387,11 +388,16 @@ template {
   top: 0.3vw;
 }
 
+.movie-title {
+  max-width: 342px;
+  margin: 0.5rem 0;
+}
+
 .ratings-favorites-container {
+  max-width: 342px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5vw;
 }
 
 .star-rating-imdb {
@@ -419,6 +425,16 @@ template {
 
 .add-to-favorites {
   cursor: pointer;
+}
+
+.genres {
+  margin-bottom: 0.3vw;
+}
+
+@media (min-width: 576px) {
+  .movie-image-container {
+    max-width: 500px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
