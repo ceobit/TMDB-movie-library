@@ -1,4 +1,4 @@
-import { getMovieCredits, getRatedFilms, getFilm } from './api.js';
+import { getMovieCredits, getRatedFilms, getFilm, getFilmById } from './api.js';
 import { saveToLS } from './scripts/localStorage.js';
 // getRatedFilms(1).then(arr => console.log(arr));
 // getMovieCredits("123").then((data) => console.log(data));
@@ -17,4 +17,6 @@ import { saveToLS } from './scripts/localStorage.js';
 // };
 // poster.addEventListener('click', handleTitle);
 
-getFilm(1, '101').then((data) => console.log(data));
+//getFilm(1, '101').then((data) => console.log(data));
+
+getFilmById('180').then(data => saveToLS(data.filmId));

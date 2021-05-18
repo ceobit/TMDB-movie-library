@@ -1,9 +1,9 @@
-export const saveToLS = (filmData) => {
+export const saveToLS = (filmId) => {
   let updatedFavoriteList = [];
   const currentFavoriteList = getFromLS();
-  if (!findDuplicate(filmData.id)) {
-    if (currentFavoriteList) updatedFavoriteList = [...currentFavoriteList, filmData];
-    else updatedFavoriteList.push(filmData);
+  if (!findDuplicate(filmId)) {
+    if (currentFavoriteList) updatedFavoriteList = [...currentFavoriteList, filmId];
+    else updatedFavoriteList.push(filmId);
 
     localStorage.setItem('favoriteList', JSON.stringify(updatedFavoriteList));
   }
@@ -14,8 +14,12 @@ export const getFromLS = () => {
   return JSON.parse(localStorage.getItem('favoriteList'));
 };
 
-const deleteFromLS = () => {
+const deleteFromLS = (filmId) => {
 
+};
+
+const clearLs = () => {
+  localStorage.clear();
 };
 
 const findDuplicate = (id) => {
