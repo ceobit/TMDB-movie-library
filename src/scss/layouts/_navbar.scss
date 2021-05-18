@@ -22,6 +22,9 @@
 .navbar-brand {
   font-size: 1.5rem;
   margin: 0.5rem;
+  a {
+    color: var(--clr-tertiary);
+  }
   span {
     color: var(--clr-secondary);
   }

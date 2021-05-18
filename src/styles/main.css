@@ -479,6 +479,9 @@ ul {
   font-size: 1.5rem;
   margin: 0.5rem;
 }
+.navbar-brand a {
+  color: var(--clr-tertiary);
+}
 .navbar-brand span {
   color: var(--clr-secondary);
 }
