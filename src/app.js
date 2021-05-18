@@ -21,3 +21,12 @@ import {saveToLS, clearLs, deleteFromLS} from './scripts/localStorage.js';
 
 
 // getFilmById('191').then(data => saveToLS(data.filmId));
+
+// const film = document.querySelector('.movie');
+//
+// const openWindow = (e) => {
+//   const descr = window.open('./pages/movieDescription.html');
+//   console.log('hello');
+// };
+//
+// film.addEventListener('click', openWindow);
