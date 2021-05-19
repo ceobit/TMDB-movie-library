@@ -517,6 +517,12 @@ template {
   padding-left: 0.6rem;
   padding-right: 0.7rem;
 }
+.searchbutton:hover {
+  cursor: pointer;
+}
+.searchbutton:active {
+  background-color: #4caf50;
+}
 
 .navbar {
   display: flex;

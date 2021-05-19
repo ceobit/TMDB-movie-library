@@ -27,4 +27,10 @@
   border-radius: 0 1rem 1rem 0;
   padding-left: 0.6rem;
   padding-right: 0.7rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #4caf50;
+  }
 }
