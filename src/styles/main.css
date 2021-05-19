@@ -679,6 +679,56 @@ body .des-container .des-movie-data .des-add-btn {
     padding: 2rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  body .des-nav .des-brand {
+    font-size: 2rem;
+  }
+  body .des-container {
+    flex-direction: row;
+    padding: 3rem 0 0 2rem;
+  }
+  body .des-container .des-movie-poster {
+    width: 35%;
+  }
+  body .des-container .des-movie-data {
+    padding: 2rem;
+  }
+  body .des-container .des-movie-data .des-movie-title {
+    padding-bottom: 0.75rem;
+    font-size: 2.8rem;
+  }
+  body .des-container .des-movie-data .des-short-description {
+    font-size: 2rem;
+    padding-bottom: 1.25rem;
+  }
+  body .des-container .des-movie-data .des-rating-production .des-rating-stars {
+    font-size: 1.7rem;
+  }
+  body .des-container .des-movie-data .des-rating-production .des-rating-stars .des-rating {
+    font-size: 1.7rem;
+  }
+  body .des-container .des-movie-data .des-rating-production .des-production {
+    font-size: 1.4rem;
+  }
+  body .des-container .des-movie-data .des-genre {
+    font-size: 1.9rem;
+  }
+  body .des-container .des-movie-data .des-class-genre {
+    font-size: 1.4rem;
+  }
+  body .des-container .des-movie-data .des-storyline {
+    font-size: 1.9rem;
+  }
+  body .des-container .des-movie-data .des-story {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+  }
+  body .des-container .des-movie-data .des-add-btn {
+    width: 18rem;
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+}
 .about-container {
   color: black;
 }

@@ -204,129 +204,83 @@ body {
   }
 }
 
-// // tablet large Screen
-// @media only screen and (min-width: 768px) {
-//   body {
-//     .container {
-//       flex-direction: row;
-//       width: 95vw;
+// Large Devices
+@media only screen and (min-width: 992px) {
+  body {
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 2rem;
+      }
+    }
 
-//       img {
-//         width: 40%;
-//         margin-right: 10px;
-//         align-self: flex-start;
-//       }
+    // Main Container
+    .des-container {
+      flex-direction: row;
+      padding: 3rem 0 0 2rem;
 
-//       .movie-data {
-//         margin-left: 10px;
-//         height: 100%;
+      // Movie Poster
+      .des-movie-poster {
+        width: 35%;
+      }
 
-//         h2 {
-//           font-size: 2.2rem;
-//         }
+      // Movie Description (Data)
+      .des-movie-data {
+        padding: 2rem;
 
-//         h3 {
-//           font-size: 1.6rem;
-//         }
+        // Movie Title
+        .des-movie-title {
+          padding-bottom: 0.75rem;
+          font-size: 2.8rem;
+        }
 
-//         .rating-production {
-//           display: block;
-//         }
+        // Short Description of Movie
+        .des-short-description {
+          font-size: 2rem;
+          padding-bottom: 1.25rem;
+        }
 
-//         h4 {
-//           font-size: 1.6rem;
-//         }
+        // Movie Rating
+        .des-rating-production {
+          .des-rating-stars {
+            font-size: 1.7rem;
 
-//         .class-genre {
-//           font-size: 1.4rem;
-//         }
+            .des-rating {
+              font-size: 1.7rem;
+            }
+          }
+          .des-production {
+            font-size: 1.4rem;
+          }
+        }
 
-//         .story {
-//           font-size: 1.35rem;
-//         }
+        // Genre
+        .des-genre {
+          font-size: 1.9rem;
+        }
 
-//         .add-btn {
-//           font-size: 1.35rem;
-//         }
-//       }
-//     }
-//   }
+        .des-class-genre {
+          font-size: 1.4rem;
+        }
 
-//   footer {
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//   }
-// }
+        // Movie Storyline
+        .des-storyline {
+          font-size: 1.9rem;
+        }
 
-// // Desktop Screen
-// @media only screen and (min-width: 992px) {
-//   body {
-//     display: flex;
-//     justify-content: center;
+        .des-story {
+          font-size: 1.3rem;
+          padding-bottom: 2rem;
+        }
 
-//     nav {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//     }
-
-//     .container {
-//       max-width: 1200px;
-//       margin-top: 5rem;
-
-//       img {
-//         max-width: 780px;
-//         margin-right: 20px;
-//       }
-
-//       .movie-data {
-//         margin-left: 20px;
-//       }
-//     }
-//   }
-// }
-
-// // Desktop lager Screen
-// @media only screen and (min-width: 992px) {
-//   body {
-//     .container {
-//       .movie-data {
-//         h2 {
-//           font-size: 1.8rem;
-//         }
-
-//         h3 {
-//           font-size: 1.4rem;
-//         }
-
-//         h4 {
-//           font-size: 1.3rem;
-//         }
-
-//         .rating-production {
-//           display: flex;
-//           flex-direction: row;
-
-//           p {
-//             font-size: 1rem;
-//           }
-//         }
-
-//         .class-genre {
-//           font-size: 1.1rem;
-//         }
-
-//         .story {
-//           font-size: 1.15rem;
-//         }
-
-//         .add-btn {
-//           width: 10rem;
-//           height: 2rem;
-//           font-size: 0.9rem;
-//         }
-//       }
-//     }
-//   }
-// }
+        // BTN for Add to Favorites
+        .des-add-btn {
+          width: 18rem;
+          height: 4rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
