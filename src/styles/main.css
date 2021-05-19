@@ -356,22 +356,28 @@ template {
 :root {
   font-family: "Lato";
   font-size: 16px;
-  color: #FFF;
+  color: #fff;
 }
 
-.movies-container {
+* {
+  box-sizing: border-box;
+}
+
+.posters-container {
+  padding: 5% 5%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .movie {
-  width: auto;
-  height: auto;
   background-color: #0b3957;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  margin: 1px;
+  width: calc(100% / 5 - 1%);
+  margin-top: 3%;
+  border-radius: 10px;
 }
 .movie:hover {
   border: none;
@@ -392,7 +398,7 @@ template {
 .movie-image-container {
   width: 100%;
   position: relative;
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
 
@@ -408,10 +414,9 @@ template {
 
 .release-year {
   position: absolute;
-  background-color: #076d92;
+  background-color: white;
   padding: 0.1rem 0.2rem;
-  border-radius: 0.2rem;
-  color: white;
+  color: cornflowerblue;
   right: 0.7rem;
   top: 0.3rem;
 }
@@ -486,49 +491,12 @@ template {
   margin-bottom: 0.3vw;
 }
 
-@media (min-width: 576px) {
-  .movie-image-container,
-.movie-img,
-.movie-title,
-.ratings-favorites-container {
-    max-width: 500px;
-  }
-
-  .movie-img {
-    width: 500px;
-    background-image: url("../../img/movie-placeholder-unsplash-w500.jpg");
-  }
-}
-@media (min-width: 768px) {
-  .movie-image-container,
-.movie-img,
-.movie-title,
-.ratings-favorites-container {
-    max-width: 342px;
-  }
-
-  .movie-img {
-    width: 342px;
-    background-image: url("../../img/movie-placeholder-unsplash-w342.jpg");
-  }
-}
-:root {
-  --clr-primary: #0d253f;
-  --clr-secondary: #01b4e4;
-  --clr-tertiary: #90cea1;
-  --clr-neutral-100: #e7ebee;
-  --clr-neutral-500: #333;
-  --clr-neutral-900: #06111f;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-accent: "Playfair Display", serif;
-}
-
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--clr-primary);
-  color: var(--clr-tertiary);
+  background-color: #0d253f;
+  color: #90cea1;
 }
 
 .navbar-brand {
@@ -536,11 +504,11 @@ template {
   margin: 0.5rem;
 }
 .navbar-brand a {
-  color: var(--clr-tertiary);
+  color: #90cea1;
   text-decoration: none;
 }
 .navbar-brand span {
-  color: var(--clr-secondary);
+  color: #01b4e4;
 }
 
 .navbar-pagelinks {
@@ -567,10 +535,10 @@ template {
 }
 
 .navbar-pagelinks li:hover {
-  background-color: var(--clr-tertiary);
+  background-color: #90cea1;
 }
 .navbar-pagelinks li:hover a {
-  color: var(--clr-primary);
+  color: #0d253f;
 }
 
 @media (max-width: 800px) {

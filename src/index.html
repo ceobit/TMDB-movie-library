@@ -15,27 +15,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="original"
+      href="../images/favicon/30448-6-video-icon.png"
+    />
     <!-- stylesheet for poster -->
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <title>TMDB movie library</title>
+    <title>The Movie Library</title>
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar-brand">
-        <a class="pagelink" href="../index.html">The<span>Movies</span>Library</a>
+        <a class="pagelink" href="index.html">The<span>Movies</span>Library</a>
       </div>
       <div class="navbar-pagelinks">
         <ul>
           <li>
-            <a class="pagelink" href="#/search-and-trends" aria-current="page">Home </a>
+            <a class="pagelink" href="index.html" aria-current="page">Home </a>
           </li>
           <li><a class="pagelink" href="./pages/favoriteList.html">Hot</a></li>
           <li><a class="pagelink" href="./pages/about.html">About</a></li>
         </ul>
       </div>
     </nav>
-    <section class="movies-container">
+
+    <section class="posters-container">
       <!-- movie posters -->
 
       <div class="movie" data-film-id="1">
@@ -68,154 +76,7 @@
         </div>
         <p class="genres">genre1, genre2, genre3</p>
       </div>
-
-      <div class="movie" data-film-id="1">
-        <div class="movie-image-container" data-film-id="1">
-          <div class="movie-img"></div>
-          <span class="release-year">####</span>
-        </div>
-        <h2 class="movie-title">Movie Title really really really really long 1</h2>
-
-        <div class="ratings-favorites-container" data-film-id="1">
-          <div class="imdb-rating-container" data-film-id="1">
-            <span>IMDb</span>
-            <i class="fas fa-star star-rating-imdb"></i>
-            <span class="imdb-rating">#.#</span>
-          </div>
-          <div class="user-rating-container" data-film-id="1">
-            <span class="rated-not-rated">Your rating:</span>
-            <i class="fas fa-star star-rating-user"></i>
-            <span class="user-rating">#.#/10</span>
-          </div>
-          <div class="not-watched">not watched</div>
-          <i class="fas fa-heart add-to-favorites"></i>
-        </div>
-        <p class="genres">genre1, genre2, genre3</p>
-      </div>
-
-      <div class="movie" data-film-id="1">
-        <div class="movie-image-container" data-film-id="1">
-          <div class="movie-img"></div>
-          <span class="release-year">####</span>
-        </div>
-        <h2 class="movie-title">Movie Title</h2>
-
-        <div class="ratings-favorites-container" data-film-id="1">
-          <div class="imdb-rating-container" data-film-id="1">
-            <span>IMDb</span>
-            <i class="fas fa-star star-rating-imdb"></i>
-            <span class="imdb-rating">#.#</span>
-          </div>
-          <div class="user-rating-container" data-film-id="1">
-            <span class="rated-not-rated">Your rating:</span>
-            <i class="fas fa-star star-rating-user"></i>
-            <span class="user-rating">#.#/10</span>
-          </div>
-          <div class="watched">not watched</div>
-          <i class="fas fa-heart add-to-favorites"></i>
-        </div>
-        <p class="genres">genre1, genre2, genre3</p>
-      </div>
-
-      <div class="movie" data-film-id="1">
-        <div class="movie-image-container" data-film-id="1">
-          <div class="movie-img"></div>
-          <span class="release-year">####</span>
-        </div>
-        <h2 class="movie-title">Movie Title really really really really long 1</h2>
-
-        <div class="ratings-favorites-container" data-film-id="1">
-          <div class="imdb-rating-container" data-film-id="1">
-            <span>IMDb</span>
-            <i class="fas fa-star star-rating-imdb"></i>
-            <span class="imdb-rating">#.#</span>
-          </div>
-          <div class="user-rating-container" data-film-id="1">
-            <span class="rated-not-rated">Your rating:</span>
-            <i class="fas fa-star star-rating-user"></i>
-            <span class="user-rating">#.#/10</span>
-          </div>
-          <div class="watched">not watched</div>
-          <i class="fas fa-heart add-to-favorites"></i>
-        </div>
-        <p class="genres">genre1, genre2, genre3</p>
-      </div>
-
-      <div class="movie" data-film-id="1">
-        <div class="movie-image-container" data-film-id="1">
-          <div class="movie-img"></div>
-          <span class="release-year">####</span>
-        </div>
-        <h2 class="movie-title">Movie Title really really really really long 1</h2>
-
-        <div class="ratings-favorites-container" data-film-id="1">
-          <div class="imdb-rating-container" data-film-id="1">
-            <span>IMDb</span>
-            <i class="fas fa-star star-rating-imdb"></i>
-            <span class="imdb-rating">#.#</span>
-          </div>
-          <div class="user-rating-container" data-film-id="1">
-            <span class="rated-not-rated">Your rating:</span>
-            <i class="fas fa-star star-rating-user"></i>
-            <span class="user-rating">#.#/10</span>
-          </div>
-          <div class="watched">not watched</div>
-          <i class="fas fa-heart add-to-favorites"></i>
-        </div>
-        <p class="genres">genre1, genre2, genre3</p>
-      </div>
-
-      <div class="movie" data-film-id="1">
-        <div class="movie-image-container" data-film-id="1">
-          <div class="movie-img"></div>
-          <span class="release-year">####</span>
-        </div>
-        <h2 class="movie-title">Movie Title really really really really long 1</h2>
-
-        <div class="ratings-favorites-container" data-film-id="1">
-          <div class="imdb-rating-container" data-film-id="1">
-            <span>IMDb</span>
-            <i class="fas fa-star star-rating-imdb"></i>
-            <span class="imdb-rating">#.#</span>
-          </div>
-          <div class="user-rating-container" data-film-id="1">
-            <span class="rated-not-rated">Your rating:</span>
-            <i class="fas fa-star star-rating-user"></i>
-            <span class="user-rating">#.#/10</span>
-          </div>
-          <div class="watched">not watched</div>
-          <i class="fas fa-heart add-to-favorites"></i>
-        </div>
-        <p class="genres">genre1, genre2, genre3</p>
-      </div>
-
-      <div class="movie" data-film-id="1">
-        <div class="movie-image-container" data-film-id="1">
-          <div class="movie-img"></div>
-          <span class="release-year">####</span>
-        </div>
-        <h2 class="movie-title">Movie Title really really really really long 1</h2>
-
-        <div class="ratings-favorites-container" data-film-id="1">
-          <div class="imdb-rating-container" data-film-id="1">
-            <span>IMDb</span>
-            <i class="fas fa-star star-rating-imdb"></i>
-            <span class="imdb-rating">#.#</span>
-          </div>
-          <div class="user-rating-container" data-film-id="1">
-            <span class="rated-not-rated">Your rating:</span>
-            <i class="fas fa-star star-rating-user"></i>
-            <span class="user-rating">#.#/10</span>
-          </div>
-          <div class="not-watched">not watched</div>
-          <i class="fas fa-heart add-to-favorites"></i>
-        </div>
-        <p class="genres">genre1, genre2, genre3</p>
-      </div>
     </section>
-    <a href="./pages/movieDescription.html">Movie-Description</a>
-    <a href="./pages/favoriteList.html">Add To Favorite</a>
-
 
     <!-- movie poster -->
     <div class="movie" data-film-id="1">
@@ -224,48 +85,6 @@
         <div class="movie-img"></div>
         <span class="release-year">####</span>
       </div>
-
-
-    <!-- movie poster -->
-    <div class="posters-container">
-      <!--      <div class="movie" data-film-id="1">-->
-      <!--        &lt;!&ndash; movie image &ndash;&gt;-->
-      <!--        <div class="movie-image-container" data-film-id="1">-->
-      <!--          <img class="movie-img" src="./img/movie-placeholder-unsplash-w342.jpg" alt="poster" />-->
-      <!--          <p class="genres">drama, romance, historical</p>-->
-      <!--          <span class="release-year">####</span>-->
-      <!--        </div>-->
-
-      <!--        &lt;!&ndash; movie title &ndash;&gt;-->
-      <!--        <div class="movie-description">-->
-      <!--          <h2 class="movie-title">Movie Title really really really really long 1</h2>-->
-      <!--          <div class="ratings-favorites-container" data-film-id="1">-->
-      <!--            &lt;!&ndash; IMDb rating &ndash;&gt;-->
-      <!--            <div class="imdb-rating-container" data-film-id="1">-->
-      <!--              <span>IMDb</span>-->
-      <!--              <i class="fas fa-star star-rating-imdb"></i>-->
-      <!--              <span class="imdb-rating">#.#</span>-->
-      <!--            </div>-->
-      <!--            &lt;!&ndash; user rating &ndash;&gt;-->
-      <!--            <div class="user-rating-container" data-film-id="1">-->
-      <!--              <span class="rated-not-rated">Your rating:</span>-->
-      <!--              <i class="fas fa-star star-rating-user"></i>-->
-      <!--              <i class="fas fa-star star-rating-user"></i>-->
-      <!--              <i class="fas fa-star star-rating-user"></i>-->
-      <!--              <i class="fas fa-star star-rating-user"></i>-->
-      <!--              <i class="fas fa-star star-rating-user"></i>-->
-      <!--              <span class="user-rating">#.#/10</span>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--          <div class="favorite-container">-->
-      <!--            &lt;!&ndash; set as watched &ndash;&gt;-->
-      <!--            <div class="watched">not watched</div>-->
-      <!--            &lt;!&ndash; add film to favorites page &ndash;&gt;-->
-      <!--            <i class="fas fa-heart add-to-favorites"></i>-->
-      <!--          </div>-->
-      <!--        </div>-->
-    </div>
-
 
     <script src="./app.js" type="module"></script>
     <!-- poster scripts -->

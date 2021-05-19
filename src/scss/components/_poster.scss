@@ -1,49 +1,37 @@
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
+* {
+  box-sizing: border-box;
 }
 
 // Movie Poster
+// container for all movies
+.posters-container {
+  padding: 5% 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 // movie poster container
 .movie {
-  width: auto;
-  height: auto;
   //   background-color: rgb(26, 8, 21);
   //   background-color: #0a1e33;
   // background-color: #0c2f4b;
+  // background-color: rgb(26, 8, 21);
   background-color: #0b3957;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  margin: 1px;
+  width: calc(100% / 5 - 1%);
+  margin-top: 3%;
+  border-radius: 10px;
   &:hover {
     border: none;
-    // box-shadow: 5px 15px 10px rgb(5, 5, 107);
     box-shadow: 5px 15px 10px var(--clr-neutral-900);
-    // transform: translate3d(5px, -15px, 30px);
     transform: scale(1.06);
     border-radius: 0.4rem;
     transition: 0.5s;
     z-index: 1;
   }
 }
-// Roman changes
-// .posters-container {
-//   padding: 5% 5%;
-//   display: flex;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-// }
-
-// // movie poster container
-// .movie {
-//   width: calc(100% / 4 - 1%);
-//   background-color: rgb(26, 8, 21);
-//   display: flex;
-//   flex-direction: column;
-//   margin-top: 3%;
-//   border-radius: 20px;
-// }
 
 // common properties
 .movie-image-container,
@@ -52,12 +40,12 @@
 .ratings-favorites-container {
   max-width: 342px;
 }
+
 // movie image
 .movie-image-container {
   width: 100%;
   position: relative;
-  //Roman?
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
 
@@ -74,11 +62,9 @@
 // release year of movie (upper right corner of image)
 .release-year {
   position: absolute;
-  //   background-color: var(--clr-secondary);
-  background-color: #076d92;
+  background-color: white;
   padding: 0.1rem 0.2rem;
-  border-radius: 0.2rem;
-  color: white;
+  color: cornflowerblue;
   right: 0.7rem;
   top: 0.3rem;
 }
@@ -122,7 +108,6 @@
   display: none;
 }
 
-//Roman
 .favorite-container {
   display: flex;
   justify-content: space-between;
@@ -159,54 +144,47 @@
   margin-bottom: 0.3vw;
 }
 
-// SCREEN SIZE ADJUSTMENTS
+// SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  // common properties
-  .movie-image-container,
-  .movie-img,
-  .movie-title,
-  .ratings-favorites-container {
-    max-width: 500px;
-  }
-  .movie-img {
-    width: 500px;
-    background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
-  }
-}
+// @media (min-width: 576px) {
+//   // common properties
+//   .movie-image-container,
+//   .movie-img,
+//   .movie-title,
+//   .ratings-favorites-container {
+//     max-width: 500px;
+//   }
+//   .movie-img {
+//     width: 500px;
+//     background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
+//   }
+// }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  // common properties
-  .movie-image-container,
-  .movie-img,
-  .movie-title,
-  .ratings-favorites-container {
-    max-width: 342px;
-  }
-  .movie-img {
-    width: 342px;
-    background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-  }
-}
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   // common properties
+//   .movie-image-container,
+//   .movie-img,
+//   .movie-title,
+//   .ratings-favorites-container {
+//     max-width: 342px;
+//   }
+//   .movie-img {
+//     width: 342px;
+//     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
+//   }
+// }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+// }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+// }
 
 // Notes:
 // make picture size and max width the same
 // change picture or picture size with screensize
-// clicking on rating opens up rating input
-// add year into space for year
-// clicking watched or not watched will toggle watched or not watched
-// hover effect on hover over whole poster with box shadow
-// make sure that all movies which were added to favorite have to also inherit the watched and favorited classnames
-// put nice hover effects
-// when click on image or title leads to movie description
-// user rating by clicking on stars
+// clicking on rating opens up

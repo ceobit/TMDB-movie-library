@@ -4,15 +4,23 @@
 $sansSerif: 'Lato';
 $defaultFontSize: 16px;
 
+$ff-primary: 'Roboto', sans-serif;
+$ff-accent: 'Playfair Display', serif;
 
 //Colors
-$fontColor: #FFF;
+$fontColor: #fff;
 $bgColorMobile: #000;
 
+$clr-primary: #0d253f;
+$clr-secondary: #01b4e4;
+$clr-tertiary: #90cea1;
+
+$clr-neutral-100: #e7ebee;
+$clr-neutral-500: #333;
+$clr-neutral-900: #06111f;
+
 $buttonsBg: (
-        primary: #3CAAD9,
-        success: #4CAF50,
-        error: #910928
+  primary: #3caad9,
+  success: #4caf50,
+  error: #910928,
 );
-
-
