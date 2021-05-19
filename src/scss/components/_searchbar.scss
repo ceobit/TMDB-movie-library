@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 10rem;
+  padding-top: 3%;
 }
 // shared properties
 .searchbar,
@@ -19,6 +20,7 @@
   padding-left: 0.7rem;
   border-radius: 1rem 0 0 1rem;
   border-right: none;
+  outline:none;
 }
 // search button type submit
 .searchbutton {
@@ -28,6 +30,7 @@
   border-radius: 0 1rem 1rem 0;
   padding-left: 0.6rem;
   padding-right: 0.7rem;
+  outline:none;
   &:hover {
     cursor: pointer;
   }
