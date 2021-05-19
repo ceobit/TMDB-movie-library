@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Description</title>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar des-nav">
       <!-- Navigation Logo -->
-      <div class="navbar-brand">The<span>Movies</span>Library</div>
+      <div class="navbar-brand des-brand">The<span>Movies</span>Library</div>
 
       <!-- Navigation Links -->
       <div class="navbar-pagelinks">
         <ul>
           <li>
-            <a class="pagelink" href="../index.html" aria-current="page">Home</a>
+            <a class="pagelink" href="../index.html">Home</a>
           </li>
           <li><a class="pagelink" href="./favoriteList.html">Hot</a></li>
           <li><a class="pagelink" href="./about.html">About</a></li>
@@ -26,35 +35,42 @@
     </nav>
 
     <!-- Movie Description Container -->
-    <div class="container">
+    <div class="des-container">
       <!-- Movie Poster -->
-      <img class="movie-poster" src="" alt="Movie-Poster" />
+      <img class="des-movie-poster" src="" alt="Movie-Poster" />
 
       <!-- Movie Data -->
-      <div class="movie-data">
+      <div class="des-movie-data">
         <!-- Movie Title and Short Description -->
-        <h2 class="movie-title"></h2>
-        <h3 class="short-description"></h3>
+        <h2 class="des-movie-title"></h2>
+        <h3 class="des-short-description"></h3>
 
         <!-- Movie Rating -->
-        <div class="rating-production">
-          <div class="rating-stars">⭐︎ ⭐︎ ⭐︎ ⭐︎ ⭐︎ <span class="rating"></span></div>
-          <p class="production">Country of production / 100 min. / 1994 year</p>
+        <div class="des-rating-production">
+          <div class="des-rating-stars">
+            <span>IMDb</span> <i class="fas fa-star star-rating-imdb"></i>
+            <span class="des-rating"></span>
+          </div>
+          <div class="des-production">
+            <p class="des-country"></p>
+            <p class="des-time"></p>
+            <p class="des-year"></p>
+          </div>
         </div>
-        <h4 class="genre">Genre</h4>
-        <div class="class-genre">
+        <h4 class="des-genre">Genre</h4>
+        <div class="des-class-genre">
           <article><span>●</span> genre-one</article>
           <article><span>●</span> genre-two</article>
         </div>
-        <h4 class="storyline">Storyline</h4>
-        <p class="story">
+        <h4 class="des-storyline">Storyline</h4>
+        <p class="des-story">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quas tempora ipsa quisquam
           voluptatem perspiciatis sed animi, dolorum explicabo rem aspernatur? Explicabo consectetur
           vero at dolorum. Fugiat commodi nihil omnis? Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Nam a vitae expedita quibusdam consequatur id nulla dolorem dolores
           sequi tempora?
         </p>
-        <button class="add-btn">Add To Favorites</button>
+        <button class="des-add-btn">Add To Favorites</button>
       </div>
     </div>
     <!-- footer ADD FOOTER-->
