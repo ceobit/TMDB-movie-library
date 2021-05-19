@@ -1,6 +1,7 @@
 import { getMovieCredits } from '../api.js';
 import { getParameter } from './aux.js';
 import { posterBigURL } from '../constants.js';
+import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage.js';
 
 const parameter = getParameter();
 const filmId = parameter['filmId'].split('/').join('');
@@ -29,3 +30,17 @@ getMovieCredits(filmId).then((data) => {
 
   console.log(data);
 });
+
+const addToFavoriteList = (e) => {
+  // get film id from HTML
+  //Save the favourite movie to local storage
+  if (findDuplicate(filmId)) {
+    deleteFromLS(filmId);
+    addToFavorite.textContent = 'Add To Favorites';
+  } else {
+    saveToLS(filmId);
+    addToFavorite.textContent = 'Remove From Favorites';
+  }
+};
+
+addToFavorite.addEventListener('click', addToFavoriteList);

@@ -574,6 +574,10 @@ body .des-container .des-movie-poster {
   height: auto;
   border-radius: 25px;
 }
+body .des-container .des-movie-poster:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.692);
+  transform: scale(1.02);
+}
 body .des-container .des-movie-data {
   padding-top: 0.25rem;
 }
@@ -617,10 +621,13 @@ body .des-container .des-movie-data .des-add-btn {
   background-color: #3caad9;
   border: none;
   outline: none;
-  width: 9rem;
-  height: 2rem;
+  width: 14rem;
+  height: 2.75rem;
   border-radius: 6px;
   color: white;
+}
+body .des-container .des-movie-data .des-add-btn:hover {
+  box-shadow: inset 0 0 15px white;
 }
 
 @media only screen and (min-width: 576px) {
@@ -665,7 +672,7 @@ body .des-container .des-movie-data .des-add-btn {
   body .des-container .des-movie-data .des-add-btn {
     width: 14.5rem;
     height: 3rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -726,7 +733,7 @@ body .des-container .des-movie-data .des-add-btn {
   body .des-container .des-movie-data .des-add-btn {
     width: 18rem;
     height: 4rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -774,9 +781,9 @@ body .des-container .des-movie-data .des-add-btn {
     padding-bottom: 2rem;
   }
   body .des-container .des-movie-data .des-add-btn {
-    width: 14rem;
+    width: 14.5rem;
     height: 3.5rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }
 .about-container {
