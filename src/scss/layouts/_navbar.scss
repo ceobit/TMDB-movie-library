@@ -1,9 +1,11 @@
 .navbar {
+  height: 3.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: $clr-primary;
   color: $clr-tertiary;
+  position: relative;
 }
 
 .navbar-brand {
@@ -27,6 +29,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  // justify-content: space-between;
 }
 
 .navbar-pagelinks li {
@@ -47,9 +50,85 @@
   }
   background-color: $clr-tertiary;
 }
+
+//hamburger menu for mobile version
+.hamburger-container {
+  display: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+// .rotated-menu {
+//   animation: 1s 1 alternate rotate;
+// }
+
 @media (max-width: 800px) {
-  .navbar {
-    // flex-direction: column;
-    align-items: flex-start;
+  // .navbar {
+  //   // flex-direction: column;
+  //   align-items: flex-start;
+  // }
+}
+@media (max-width: 575.98px) {
+  .hamburger-container {
+    display: block;
+  }
+  .navbar-pagelinks li:hover {
+    a {
+      color: white;
+    }
+    background-color: $clr-secondary;
+  }
+  // onclick of hamburger menu
+  .navbar-pagelinks ul {
+    display: none;
+    border: olivedrab 1px solid;
+    height: 50vh;
+    width: 40vw;
+    position: absolute;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 3.5rem;
+    border-radius: 0 0 0 10vh;
+    right: 0;
+    background-color: $clr-secondary;
+    z-index: 1;
+    font-size: larger;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBack {
+  0% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  100% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
