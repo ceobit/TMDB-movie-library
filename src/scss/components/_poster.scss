@@ -27,24 +27,23 @@
     transition: 0.5s;
     z-index: 1;
   }
-=======
-.posters-container {
-  padding: 5% 5%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+// Roman changes
+// .posters-container {
+//   padding: 5% 5%;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
 
-// movie poster container
-.movie {
-  width: calc(100% / 4 - 1%);
-  background-color: rgb(26, 8, 21);
-  display: flex;
-  flex-direction: column;
-  margin-top: 3%;
-  border-radius: 20px;
->>>>>>> development
-}
+// // movie poster container
+// .movie {
+//   width: calc(100% / 4 - 1%);
+//   background-color: rgb(26, 8, 21);
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 3%;
+//   border-radius: 20px;
+// }
 
 // common properties
 .movie-image-container,
@@ -57,8 +56,7 @@
 .movie-image-container {
   width: 100%;
   position: relative;
-<<<<<<< HEAD
-=======
+//Roman?
   border-radius: 20px 20px 0 0;
   cursor: pointer;
 }
@@ -73,12 +71,8 @@
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
-<<<<<<< HEAD
-// release year of movie (upper right corner of image)
-=======
 
-// release year of movie
->>>>>>> development
+// release year of movie (upper right corner of image)
 .release-year {
   position: absolute;
   //   background-color: var(--clr-secondary);
@@ -129,15 +123,13 @@
   display: none;
 }
 
-<<<<<<< HEAD
-=======
+//Roman
 .favorite-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
->>>>>>> development
 // watched - not watched
 .watched {
   display: inline-block;
@@ -171,7 +163,6 @@
 
 // SCREEN SIZE ADJUSTMENTS
 
-<<<<<<< HEAD
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   // common properties
@@ -201,38 +192,6 @@
     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
   }
 }
-=======
-//// Small devices (landscape phones, 576px and up)
-//@media (min-width: 576px) {
-//  // common properties
-//  .movie-image-container,
-//  .movie-img,
-//  .movie-title,
-//  .ratings-favorites-container {
-//    max-width: 500px;
-//  }
-//  .movie-img {
-//    width: 500px;
-//    background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
-//  }
-//}
-//
-//// Medium devices (tablets, 768px and up)
-//@media (min-width: 768px) {
-//  // common properties
-//  .movie-image-container,
-//  .movie-img,
-//  .movie-title,
-//  .ratings-favorites-container {
-//    max-width: 342px;
-//  }
-//  .movie-img {
-//    width: 342px;
-//    background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-//    border: springgreen 2px solid;
-//  }
-//}
->>>>>>> development
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
