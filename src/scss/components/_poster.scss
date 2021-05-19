@@ -1,33 +1,7 @@
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
+* {
+  box-sizing: border-box;
 }
 
-
-// Movie Poster
-// movie poster container
-.movie {
-  width: auto;
-  height: auto;
-  //   background-color: rgb(26, 8, 21);
-  //   background-color: #0a1e33;
-  // background-color: #0c2f4b;
-  background-color: #0b3957;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  margin: 1px;
-  &:hover {
-    border: none;
-    // box-shadow: 5px 15px 10px rgb(5, 5, 107);
-    box-shadow: 5px 15px 10px var(--clr-neutral-900);
-    // transform: translate3d(5px, -15px, 30px);
-    transform: scale(1.06);
-    border-radius: 0.4rem;
-    transition: 0.5s;
-    z-index: 1;
-  }
-// Roman
 .posters-container {
   padding: 5% 5%;
   display: flex;
@@ -43,9 +17,7 @@
   flex-direction: column;
   margin-top: 3%;
   border-radius: 20px;
-
 }
-  // Roman end
 
 // common properties
 .movie-image-container,
@@ -54,12 +26,11 @@
 .ratings-favorites-container {
   max-width: 342px;
 }
+
 // movie image
 .movie-image-container {
   width: 100%;
   position: relative;
-
-  //Roman
   border-radius: 20px 20px 0 0;
   cursor: pointer;
 }
@@ -67,22 +38,19 @@
 .movie-image-container :hover {
   box-shadow: 0 0 55px rgba(3, 16, 33, 0.25);
 }
-// Roman end
-  
+
 .movie-img {
   display: block;
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
 
-// release year of movie (upper right corner of image)
+// release year of movie
 .release-year {
   position: absolute;
-  //   background-color: var(--clr-secondary);
-  background-color: #076d92;
+  background-color: white;
   padding: 0.1rem 0.2rem;
-  border-radius: 0.2rem;
-  color: white;
+  color: cornflowerblue;
   right: 0.7rem;
   top: 0.3rem;
 }
@@ -126,14 +94,12 @@
   display: none;
 }
 
-// Roman
 .favorite-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-// Roman End
-  
+
 // watched - not watched
 .watched {
   display: inline-block;
@@ -155,6 +121,7 @@
   color: red;
 }
 
+
 // genre overview
 .genres {
   position: absolute;
@@ -166,35 +133,36 @@
 
 // SCREEN SIZE ADJUSTMENTS
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  // common properties
-  .movie-image-container,
-  .movie-img,
-  .movie-title,
-  .ratings-favorites-container {
-    max-width: 500px;
-  }
-  .movie-img {
-    width: 500px;
-    background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  // common properties
-  .movie-image-container,
-  .movie-img,
-  .movie-title,
-  .ratings-favorites-container {
-    max-width: 342px;
-  }
-  .movie-img {
-    width: 342px;
-    background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-  }
-}
+//// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) {
+//  // common properties
+//  .movie-image-container,
+//  .movie-img,
+//  .movie-title,
+//  .ratings-favorites-container {
+//    max-width: 500px;
+//  }
+//  .movie-img {
+//    width: 500px;
+//    background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
+//  }
+//}
+//
+//// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) {
+//  // common properties
+//  .movie-image-container,
+//  .movie-img,
+//  .movie-title,
+//  .ratings-favorites-container {
+//    max-width: 342px;
+//  }
+//  .movie-img {
+//    width: 342px;
+//    background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
+//    border: springgreen 2px solid;
+//  }
+//}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
@@ -207,11 +175,4 @@
 // Notes:
 // make picture size and max width the same
 // change picture or picture size with screensize
-// clicking on rating opens up rating input
-// add year into space for year
-// clicking watched or not watched will toggle watched or not watched
-// hover effect on hover over whole poster with box shadow
-// make sure that all movies which were added to favorite have to also inherit the watched and favorited classnames
-// put nice hover effects
-// when click on image or title leads to movie description
-// user rating by clicking on stars
+// clicking on rating opens up
