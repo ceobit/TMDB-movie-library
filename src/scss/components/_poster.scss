@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+// Movie Poster
+// container for all movies
+.posters-container {
+  padding: 5% 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+// movie poster container
+.movie {
+  //   background-color: rgb(26, 8, 21);
+  //   background-color: #0a1e33;
+  // background-color: #0c2f4b;
+  // background-color: rgb(26, 8, 21);
+  background-color: #0b3957;
+  // padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 5 - 1%);
+  margin-top: 3%;
+  border-radius: 10px;
+  &:hover {
+    border: none;
+    box-shadow: 5px 15px 10px var(--clr-neutral-900);
+    transform: scale(1.06);
+    border-radius: 0.4rem;
+    transition: 0.5s;
+    z-index: 1;
+  }
+}
+
+// common properties
+.movie-title,
+.ratings-favorites-container {
+  // margin: 0 1rem;
+}
+.movie-image-container,
+.movie-img,
+.movie-title,
+.ratings-favorites-container {
+  max-width: 342px;
+}
+
+// movie image
+.movie-image-container {
+  width: 100%;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.movie-image-container :hover {
+  box-shadow: 0 0 55px rgba(3, 16, 33, 0.25);
+}
+
+.movie-img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+// release year of movie (upper right corner of image)
+.release-year {
+  position: absolute;
+  background-color: white;
+  padding: 0.1rem 0.2rem;
+  color: cornflowerblue;
+  right: 0.7rem;
+  top: 0.3rem;
+}
+
+.movie-description {
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: blue 1px solid;
+}
+
+//movie title
+.movie-title {
+  margin: 0.5rem 0;
+  height: 3rem;
+}
+
+// ratings
+.ratings-favorites-container {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+
+  margin: 0.5rem 0;
+}
+
+.star-rating-imdb {
+  color: rgb(255, 217, 0);
+}
+
+.user-rating-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rated-not-rated {
+  margin-right: 2px;
+}
+
+.star-rating-user {
+  color: gray;
+}
+
+.user-rating {
+  display: none;
+}
+
+.favorite-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// watched - not watched
+.watched {
+  display: inline-block;
+  padding: 0.2rem;
+  color: grey;
+  border: grey 1px solid;
+}
+
+// add to favorites button
+.add-to-favorites {
+  cursor: pointer;
+}
+
+.add-to-favorites_grey:before {
+  color: grey;
+}
+
+.add-to-favorites_red:before {
+  color: red;
+}
+
+// genre overview
+// .genres {
+//   left: 0.7rem;
+//   top: 0.3rem;
+//   // display: inline-block;
+//   // margin-bottom: 0.3vw;
+// }
+
+// SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   // common properties
+//   .movie-image-container,
+//   .movie-img,
+//   .movie-title,
+//   .ratings-favorites-container {
+//     max-width: 500px;
+//   }
+//   .movie-img {
+//     width: 500px;
+//     background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   // common properties
+//   .movie-image-container,
+//   .movie-img,
+//   .movie-title,
+//   .ratings-favorites-container {
+//     max-width: 342px;
+//   }
+//   .movie-img {
+//     width: 342px;
+//     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
+//   }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+// }
+
+// Notes:
+// make picture size and max width the same
+// change picture or picture size with screensize
+// clicking on rating opens up
