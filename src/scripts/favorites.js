@@ -1,27 +1,28 @@
-// delete btn
-const ul = document.querySelector('#movieDesc');
-ul.addEventListener('click', (event) => {
-  if (event.target.tagName === 'BUTTON') {
-    const button = event.target;
-    const li = button.parentNode;
-    const ul = li.parentNode;
-    if (button.textContent === 'Remove') {
-      ul.removeChild(li);
-    }
-  }
-});
+import { posterTemplate } from '../constants.js';
+import { getFilmById } from '../api.js';
+import { getFromLS } from './localStorage.js';
 
-// searching :I tried  it but its not working
-const searchBar = document.forms['search-book'].querySelector('input');
-searchBar.addEventListener('keyup', function (e) {
-  const term = e.target.value.toLowerCase();
-  const books = list.getElementsByTagName('li');
-  Array.form(books).forEach(function (book) {
-    const title = book.firstElementChild.textContent;
-    if (title.toLowerCase().indexOf(term) != -1) {
-      book.style.display = 'block';
-    } else {
-      book.style.display = 'none';
-    }
-  });
-});
+const favouriteImagesContainer = document.querySelector('.posters-container');
+getFromLS().forEach((filmId) =>
+  getFilmById(filmId)
+    .then((data) => {
+      console.log(data);
+      favouriteImagesContainer.insertAdjacentHTML('beforeend', posterTemplate(data));
+    })
+    .catch((e) => console.log(e)),
+);
+
+// // searching :I tried  it but its not working
+// const searchBar = document.forms['search-book'].querySelector('input');
+// searchBar.addEventListener('keyup', function (e) {
+//   const term = e.target.value.toLowerCase();
+//   const books = list.getElementsByTagName('li');
+//   Array.form(books).forEach(function (book) {
+//     const title = book.firstElementChild.textContent;
+//     if (title.toLowerCase().indexOf(term) != -1) {
+//       book.style.display = 'block';
+//     } else {
+//       book.style.display = 'none';
+//     }
+//   });
+// });
