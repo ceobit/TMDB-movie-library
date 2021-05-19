@@ -114,8 +114,6 @@ body {
 
     // Main Container
     .des-container {
-      border: 1px dashed red;
-
       // Movie Poster
       .des-movie-poster {
         width: 70%;
@@ -175,6 +173,32 @@ body {
           height: 3rem;
           font-size: 1.3rem;
         }
+      }
+    }
+  }
+}
+
+// Medium Devices
+@media only screen and (min-width: 768px) {
+  body {
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 1.6rem;
+      }
+    }
+
+    // Main Container
+    .des-container {
+      // Movie Poster
+      .des-movie-poster {
+        width: 50%;
+      }
+
+      // Movie Description (Data)
+      .des-movie-data {
+        padding: 2rem;
       }
     }
   }

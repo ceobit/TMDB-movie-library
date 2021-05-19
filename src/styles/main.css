@@ -627,9 +627,6 @@ body .des-container .des-movie-data .des-add-btn {
   body .des-nav .des-brand {
     font-size: 1.5rem;
   }
-  body .des-container {
-    border: 1px dashed red;
-  }
   body .des-container .des-movie-poster {
     width: 70%;
   }
@@ -669,6 +666,17 @@ body .des-container .des-movie-data .des-add-btn {
     width: 14.5rem;
     height: 3rem;
     font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body .des-nav .des-brand {
+    font-size: 1.6rem;
+  }
+  body .des-container .des-movie-poster {
+    width: 50%;
+  }
+  body .des-container .des-movie-data {
+    padding: 2rem;
   }
 }
 .about-container {
