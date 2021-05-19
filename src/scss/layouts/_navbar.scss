@@ -12,7 +12,7 @@
 }
 .navbar {
   display: flex;
-  position: relative;
+  // position: relative;
   justify-content: space-around;
   align-items: center;
   background-color: var(--clr-primary);
@@ -22,6 +22,10 @@
 .navbar-brand {
   font-size: 1.5rem;
   margin: 0.5rem;
+  a {
+    color: var(--clr-tertiary);
+    text-decoration: none;
+  }
   span {
     color: var(--clr-secondary);
   }
