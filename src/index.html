@@ -16,22 +16,28 @@
       referrerpolicy="no-referrer"
     />
     <!-- stylesheet for poster -->
+
     <link rel="stylesheet" href="./styles/main.css" />
     <title>TMDB movie library</title>
   </head>
   <body>
     <nav class="navbar">
-      <div class="navbar-brand" href="#">The<span>Movies</span>Library</div>
+      <div class="navbar-brand">
+        <a class="pagelink" href="../index.html">The<span>Movies</span>Library</a>
+      </div>
       <div class="navbar-pagelinks">
         <ul>
           <li>
             <a class="pagelink" href="#/search-and-trends" aria-current="page">Home </a>
           </li>
-          <li><a class="pagelink" href="#/saved">Hot</a></li>
-          <li><a class="pagelink" href="#/about">About</a></li>
+          <li><a class="pagelink" href="./pages/favoriteList.html">Hot</a></li>
+          <li><a class="pagelink" href="./pages/about.html">About</a></li>
         </ul>
       </div>
     </nav>
+    
+
+                   
     <section class="movies-container">
       <!-- movie posters -->
 
@@ -212,8 +218,51 @@
     </section>
     <a href="./pages/movieDescription.html">Movie-Description</a>
     <a href="./pages/favoriteList.html">Add To Favorite</a>
+
+
+    <!-- movie poster -->
+    <div class="posters-container">
+      <!--      <div class="movie" data-film-id="1">-->
+      <!--        &lt;!&ndash; movie image &ndash;&gt;-->
+      <!--        <div class="movie-image-container" data-film-id="1">-->
+      <!--          <img class="movie-img" src="./img/movie-placeholder-unsplash-w342.jpg" alt="poster" />-->
+      <!--          <p class="genres">drama, romance, historical</p>-->
+      <!--          <span class="release-year">####</span>-->
+      <!--        </div>-->
+
+      <!--        &lt;!&ndash; movie title &ndash;&gt;-->
+      <!--        <div class="movie-description">-->
+      <!--          <h2 class="movie-title">Movie Title really really really really long 1</h2>-->
+      <!--          <div class="ratings-favorites-container" data-film-id="1">-->
+      <!--            &lt;!&ndash; IMDb rating &ndash;&gt;-->
+      <!--            <div class="imdb-rating-container" data-film-id="1">-->
+      <!--              <span>IMDb</span>-->
+      <!--              <i class="fas fa-star star-rating-imdb"></i>-->
+      <!--              <span class="imdb-rating">#.#</span>-->
+      <!--            </div>-->
+      <!--            &lt;!&ndash; user rating &ndash;&gt;-->
+      <!--            <div class="user-rating-container" data-film-id="1">-->
+      <!--              <span class="rated-not-rated">Your rating:</span>-->
+      <!--              <i class="fas fa-star star-rating-user"></i>-->
+      <!--              <i class="fas fa-star star-rating-user"></i>-->
+      <!--              <i class="fas fa-star star-rating-user"></i>-->
+      <!--              <i class="fas fa-star star-rating-user"></i>-->
+      <!--              <i class="fas fa-star star-rating-user"></i>-->
+      <!--              <span class="user-rating">#.#/10</span>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--          <div class="favorite-container">-->
+      <!--            &lt;!&ndash; set as watched &ndash;&gt;-->
+      <!--            <div class="watched">not watched</div>-->
+      <!--            &lt;!&ndash; add film to favorites page &ndash;&gt;-->
+      <!--            <i class="fas fa-heart add-to-favorites"></i>-->
+      <!--          </div>-->
+      <!--        </div>-->
+    </div>
+
+
     <script src="./app.js" type="module"></script>
     <!-- poster scripts -->
-    <script src="./scripts/poster.js"></script>
+    <script src="./scripts/poster.js" type="module"></script>
   </body>
 </html>

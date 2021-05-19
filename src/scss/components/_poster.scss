@@ -3,6 +3,7 @@
   flex-wrap: wrap;
 }
 
+
 // Movie Poster
 // movie poster container
 .movie {
@@ -26,7 +27,26 @@
     transition: 0.5s;
     z-index: 1;
   }
+// Roman
+.posters-container {
+  padding: 5% 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+// movie poster container
+.movie {
+  width: calc(100% / 4 - 1%);
+  background-color: rgb(26, 8, 21);
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  border-radius: 20px;
+
+}
+  // Roman end
+
 // common properties
 .movie-image-container,
 .movie-img,
@@ -36,16 +56,25 @@
 }
 // movie image
 .movie-image-container {
+  width: 100%;
   position: relative;
+
+  //Roman
+  border-radius: 20px 20px 0 0;
+  cursor: pointer;
 }
+
+.movie-image-container :hover {
+  box-shadow: 0 0 55px rgba(3, 16, 33, 0.25);
+}
+// Roman end
+  
 .movie-img {
-  width: 342px;
-  height: 450px;
-  margin-bottom: 0.8rem;
-  background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: block;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
 }
+
 // release year of movie (upper right corner of image)
 .release-year {
   position: absolute;
@@ -56,6 +85,10 @@
   color: white;
   right: 0.7rem;
   top: 0.3rem;
+}
+
+.movie-description {
+  padding: 3%;
 }
 
 //movie title
@@ -70,21 +103,40 @@
   align-items: center;
   margin-bottom: 0.5rem;
 }
+
 .star-rating-imdb {
   color: rgb(255, 217, 0);
 }
+
 .user-rating-container {
   cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
 }
+
+.rated-not-rated {
+  margin-right: 2px;
+}
+
 .star-rating-user {
   color: gray;
 }
+
 .user-rating {
   display: none;
 }
 
+// Roman
+.favorite-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// Roman End
+  
 // watched - not watched
 .watched {
+  display: inline-block;
   padding: 0.2rem;
   color: grey;
   border: grey 1px solid;
@@ -93,11 +145,23 @@
 // add to favorites button
 .add-to-favorites {
   cursor: pointer;
+}
+
+.add-to-favorites_grey:before {
   color: grey;
 }
 
+.add-to-favorites_red:before {
+  color: red;
+}
+
+
 // genre overview
 .genres {
+  position: absolute;
+  left: 0.7rem;
+  top: 0.3rem;
+  display: inline-block;
   margin-bottom: 0.3vw;
 }
 
