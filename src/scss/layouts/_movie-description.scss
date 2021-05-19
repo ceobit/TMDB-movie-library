@@ -284,3 +284,82 @@ body {
     }
   }
 }
+
+// Extra Large Devices
+@media only screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 2rem;
+      }
+    }
+
+    // Main Container
+    .des-container {
+      width: 60%;
+      align-self: center;
+
+      // Movie Poster
+      .des-movie-poster {
+        width: 35%;
+      }
+
+      // Movie Description (Data)
+      .des-movie-data {
+        // Movie Title
+        .des-movie-title {
+          font-size: 2.2rem;
+        }
+
+        // Short Description of Movie
+        .des-short-description {
+          font-size: 1.5rem;
+        }
+
+        // Movie Rating
+        .des-rating-production {
+          .des-rating-stars {
+            font-size: 1.2rem;
+
+            .des-rating {
+              font-size: 1.2rem;
+            }
+          }
+          .des-production {
+            font-size: 1.1rem;
+          }
+        }
+
+        // Genre
+        .des-genre {
+          font-size: 1.5rem;
+        }
+
+        .des-class-genre {
+          font-size: 1.1rem;
+        }
+
+        // Movie Storyline
+        .des-storyline {
+          font-size: 1.5rem;
+        }
+
+        .des-story {
+          font-size: 1.15rem;
+          padding-bottom: 2rem;
+        }
+
+        // BTN for Add to Favorites
+        .des-add-btn {
+          width: 14rem;
+          height: 3.5rem;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
