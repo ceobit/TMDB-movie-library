@@ -23,10 +23,12 @@ body {
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     // Movie Poster
     .des-movie-poster {
-      width: 100%;
+      width: 95%;
       height: auto;
       border-radius: 25px;
     }
@@ -95,129 +97,88 @@ body {
         border-radius: 6px;
         color: white; // change later
       }
-    }
+    } // Movie Description (Data) END
   } // Main Container END
 }
 
-// OLD CODE BELOW
+// Small Devices
+@media only screen and (min-width: 576px) {
+  body {
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 1.5rem;
+      }
+    }
 
-//     // movie data
-//     .movie-data {
-//       width: 100%;
-//       margin-top: 1rem;
+    // Main Container
+    .des-container {
+      border: 1px dashed red;
 
-//       h2 {
-//         font-weight: 100;
-//         letter-spacing: 2px;
-//         margin-bottom: 20px;
-//       }
+      // Movie Poster
+      .des-movie-poster {
+        width: 70%;
+      }
 
-//       h3 {
-//         letter-spacing: 1px;
-//         margin-bottom: 20px;
-//       }
+      // Movie Description (Data)
+      .des-movie-data {
+        padding: 1rem;
 
-//       .rating-production {
-//         margin-bottom: 18px;
-//         .rating {
-//           font-size: 1.2rem;
-//           margin-bottom: 8px;
-//           span {
-//             font-size: 1.5rem;
-//           }
-//         }
-//       }
+        // Movie Title
+        .des-movie-title {
+          padding-bottom: 0.75rem;
+          font-size: 2rem;
+        }
 
-//       h4 {
-//         margin-bottom: 8px;
-//       }
+        // Short Description of Movie
+        .des-short-description {
+          font-size: 1.4rem;
+          padding-bottom: 1.25rem;
+        }
 
-//       .class-genre {
-//         display: flex;
-//         article {
-//           margin: 0 15px 20px 0;
+        // Movie Rating
+        .des-rating-production {
+          .des-rating-stars {
+            font-size: 1.4rem;
 
-//           &:hover {
-//             span {
-//               color: rgb(129, 129, 196);
-//             }
-//           }
-//         }
-//       }
+            .des-rating {
+              font-size: 1.4rem;
+            }
+          }
 
-//       .story {
-//         margin-bottom: 20px;
-//       }
-//       .add-btn {
-//         width: 12rem;
-//         height: 2.75rem;
-//         background-color: rgb(129, 129, 196);
-//         color: white;
-//         outline: transparent;
-//         border: none;
-//         border-radius: 6px;
-//         // hover efect here
-//       }
-//     }
-//   }
+          .des-production {
+            font-size: 1.2rem;
+          }
+        }
+        // Genre
+        .des-genre {
+          font-size: 1.5rem;
+        }
 
-//   // footer
-//   footer {
-//     width: 100vw;
-//     height: 2rem;
-//     background-color: rgb(32, 32, 32);
-//     border-top-left-radius: 12px;
-//     border-top-right-radius: 12px;
-//   }
-// }
+        .des-class-genre {
+          font-size: 1.2rem;
+        }
 
-// // Tablet Screen
-// @media only screen and (min-width: 576px) {
-//   body {
-//     .container {
-//       img {
-//         width: 50%;
-//       }
+        // Movie Storyline
+        .des-storyline {
+          font-size: 1.5rem;
+        }
 
-//       .movie-data {
-//         h2 {
-//           font-size: 2rem;
-//         }
+        .des-story {
+          font-size: 1.15rem;
+        }
 
-//         h3 {
-//           font-size: 1.5rem;
-//         }
-
-//         .rating-production {
-//           display: flex;
-//           justify-content: space-between;
-
-//           p {
-//             font-size: 1.2rem;
-//           }
-//         }
-
-//         h4 {
-//           font-size: 1.5rem;
-//         }
-
-//         .class-genre {
-//           font-size: 1.3rem;
-//         }
-
-//         .story {
-//           font-size: 1.25rem;
-//         }
-
-//         .add-btn {
-//           width: 18rem;
-//           height: 3rem;
-//           font-size: 1.2rem;
-//         }
-//       }
-//     }
-//   }
-// }
+        // BTN for Add to Favorites
+        .des-add-btn {
+          width: 14.5rem;
+          height: 3rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
 
 // // tablet large Screen
 // @media only screen and (min-width: 768px) {
