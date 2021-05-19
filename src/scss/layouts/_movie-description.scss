@@ -300,12 +300,13 @@ body {
 
     // Main Container
     .des-container {
-      width: 60%;
+      width: 80%;
+      max-width: 1000px;
       align-self: center;
 
       // Movie Poster
       .des-movie-poster {
-        width: 35%;
+        width: 40%;
       }
 
       // Movie Description (Data)

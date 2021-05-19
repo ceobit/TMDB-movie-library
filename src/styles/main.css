@@ -738,11 +738,12 @@ body .des-container .des-movie-data .des-add-btn {
     font-size: 2rem;
   }
   body .des-container {
-    width: 60%;
+    width: 80%;
+    max-width: 1000px;
     align-self: center;
   }
   body .des-container .des-movie-poster {
-    width: 35%;
+    width: 40%;
   }
   body .des-container .des-movie-data .des-movie-title {
     font-size: 2.2rem;
