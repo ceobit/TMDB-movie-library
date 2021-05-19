@@ -1,9 +1,12 @@
 .searchbar-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 10vh;
   border: blueviolet 2px solid;
 }
 .searchbar {
   border: coral 1px solid;
+  width: 20vw;
+  height: 2rem;
 }
