@@ -19,68 +19,22 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="card">
-      <div class="face">
-        <div class="movie-type">
-          <h3>Comedy</h3>
-          <h3>Action</h3>
-          <h3>Drama</h3>
-          <h3>Thriller</h3>
-          <h3>Horror</h3>
-        </div>
-        <li class="swiper-container">
-          <div class="swiper-wrapper">
-            <ul id="movieDesc" class="swiper-wrapper" >
-              <li class="swiper-slide">
-                <img src="../image/spiderman.jpeg" alt="" />
-                <h5>Spider man</h5>
-                <p><i class="fas fa-star"></i> 8.1</p>
-                <button class="remove">Remove</button>
-              </li>
-              <li class="swiper-slide">
-                <img src="../image/fast-and-farious.jpg" alt="" />
-                <h5>Fast-and-Furious</h5>
-                <p><i class="fas fa-star"></i> 7.4</p>
-                <button class="remove">Remove</button>
-              </li>
-
-              <li class="swiper-slide">
-                <img src="../image/Jumanji.jpeg" alt="" />
-                <h5>Jumanji: The Next Level</h5>
-                <p><i class="fas fa-star"></i> 6.7</p>
-                <button class="remove">Remove</button>
-              </li>
-
-              <li class="swiper-slide">
-                <img src="../image/Conjuring2.jpeg" alt="" />
-                <h5>Conjuring2</h5>
-                <p><i class="fas fa-star"></i> 6.4</p>
-                <button class="remove">Remove</button>
-              </li>
-
-              <li class="swiper-slide">
-                <img src="../image/the-boy.jpeg" alt="" />
-                <h5>The boy 2</h5>
-                <p><i class="fas fa-star"></i> 7.3</p>
-                <button class="remove">Remove</button>
-              </li>
-            </ul>
-          </di>
-        </div>
-      </div>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="pagelink" href="../index.html">The<span>Movies</span>Library</a>
     </div>
-    <script>
-      const ul = document.querySelector('#movieDesc');
-      ul.addEventListener('click', (event) => {
-        if (event.target.tagName === 'BUTTON') {
-          const button = event.target;
-          const li = button.parentNode;
-          const ul = li.parentNode;
-          if (button.textContent === 'Remove') {
-            ul.removeChild(li);
-          }
-        }
-      });
-    </script>
+    <div class="navbar-pagelinks">
+      <ul>
+        <li>
+          <a class="pagelink" href="../index.html" aria-current="page">Home </a>
+        </li>
+        <li><a class="pagelink" href="./favoriteList.html">Hot</a></li>
+        <li><a class="pagelink" href="./about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="favorite-title">Your list of favorite movies</h1>
+  <div class="posters-container"></div>
+    <script defer src="../scripts/favorites.js" type="module"></script>
   </body>
 </html>
