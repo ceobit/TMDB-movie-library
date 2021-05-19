@@ -84,7 +84,8 @@ body {
 // release year of movie (upper right corner of image)
 .release-year {
   position: absolute;
-  background-color: white;
+  background-color: #ffffff;
+  opacity: .7;
   padding: 0.1rem 0.2rem;
   color: cornflowerblue;
   right: 0.7rem;
