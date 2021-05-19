@@ -14,18 +14,17 @@ export const getFromLS = () => {
 };
 
 export const deleteFromLS = (filmId) => {
-  let updatedFavoriteList = [];
-  const currentFavoriteList = getFromLS();
-  updatedFavoriteList = currentFavoriteList.splice(currentFavoriteList.indexOf(filmId), 1);
-  localStorage.setItem('favoriteList', JSON.stringify(updatedFavoriteList));
+  const currentFavoriteList = getFromLS() || [];
+  currentFavoriteList.splice(currentFavoriteList.indexOf(filmId), 1);
+  console.log(currentFavoriteList);
+  localStorage.setItem('favoriteList', JSON.stringify(currentFavoriteList));
 };
 
 export const clearLs = () => {
   localStorage.clear();
 };
 
-
-const findDuplicate = (id) => {
+export const findDuplicate = (id) => {
   const currentFavoriteList = getFromLS();
   if (currentFavoriteList) {
     return getFromLS().filter((el) => el === id).length;

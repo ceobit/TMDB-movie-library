@@ -1,273 +1,317 @@
-// body
+// Body
 body {
-  background-color: rgb(66, 66, 66);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: $bgColorMobile;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif; // Change at the end
 
-  // navbar
-  nav {
+  // Navbar
+  .navbar {
+    border: 1px dashed red; // <----------------------- delete
     width: 100vw;
-    height: 3rem;
-    background-color: rgb(32, 32, 32);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    align-items: center;
+
+    // Navbar -> Logo
+    .navbar-brand {
+      border: 1px dashed red; // <----------------------- delete
+      font-size: 1.2rem;
+    }
   }
 
-  // container main
+  // Main Container
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
+    // container settings
+    border: 1px dashed red; // <----------------------- delete
+    width: 90vw;
 
-    // image
-    img {
+    // Movie Poster
+    .movie-poster {
       width: 100%;
       height: auto;
-      border-radius: 10px;
+      border-radius: 25px;
     }
 
-    // movie data
+    // Movie Description (Data)
     .movie-data {
-      width: 100%;
-      margin-top: 1rem;
+      border: 1px dashed greenyellow; // <----------------------- delete
 
-      h2 {
-        font-weight: 100;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
+      // Movie Title
+      .movie-title {
+        font-weight: normal;
+        padding-bottom: 0.5rem;
       }
 
-      h3 {
-        letter-spacing: 1px;
-        margin-bottom: 20px;
+      // Short Description of Movie
+      .short-description {
+        font-weight: normal;
+        padding-bottom: 1.5rem;
       }
 
+      // Movie Rating
       .rating-production {
-        margin-bottom: 18px;
+        padding-bottom: 1rem;
+        .rating-stars {
+          font-size: 1.2rem;
+          padding-bottom: 0.25rem;
+        }
+
         .rating {
           font-size: 1.2rem;
-          margin-bottom: 8px;
-          span {
-            font-size: 1.5rem;
-          }
         }
-      }
 
-      h4 {
-        margin-bottom: 8px;
-      }
-
-      .class-genre {
-        display: flex;
-        article {
-          margin: 0 15px 20px 0;
-
-          &:hover {
-            span {
-              color: rgb(129, 129, 196);
-            }
-          }
+        .production {
+          // CONTINUE HERE
         }
-      }
-
-      .story {
-        margin-bottom: 20px;
-      }
-      .add-btn {
-        width: 12rem;
-        height: 2.75rem;
-        background-color: rgb(129, 129, 196);
-        color: white;
-        outline: transparent;
-        border: none;
-        border-radius: 6px;
-        // hover efect here
       }
     }
-  }
-
-  // footer
-  footer {
-    width: 100vw;
-    height: 2rem;
-    background-color: rgb(32, 32, 32);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
+  } // Main Container END
 }
 
-// Tablet Screen
-@media only screen and (min-width: 576px) {
-  body {
-    .container {
-      img {
-        width: 50%;
-      }
+// OLD CODE BELOW
 
-      .movie-data {
-        h2 {
-          font-size: 2rem;
-        }
+//     // movie data
+//     .movie-data {
+//       width: 100%;
+//       margin-top: 1rem;
 
-        h3 {
-          font-size: 1.5rem;
-        }
+//       h2 {
+//         font-weight: 100;
+//         letter-spacing: 2px;
+//         margin-bottom: 20px;
+//       }
 
-        .rating-production {
-          display: flex;
-          justify-content: space-between;
+//       h3 {
+//         letter-spacing: 1px;
+//         margin-bottom: 20px;
+//       }
 
-          p {
-            font-size: 1.2rem;
-          }
-        }
+//       .rating-production {
+//         margin-bottom: 18px;
+//         .rating {
+//           font-size: 1.2rem;
+//           margin-bottom: 8px;
+//           span {
+//             font-size: 1.5rem;
+//           }
+//         }
+//       }
 
-        h4 {
-          font-size: 1.5rem;
-        }
+//       h4 {
+//         margin-bottom: 8px;
+//       }
 
-        .class-genre {
-          font-size: 1.3rem;
-        }
+//       .class-genre {
+//         display: flex;
+//         article {
+//           margin: 0 15px 20px 0;
 
-        .story {
-          font-size: 1.25rem;
-        }
+//           &:hover {
+//             span {
+//               color: rgb(129, 129, 196);
+//             }
+//           }
+//         }
+//       }
 
-        .add-btn {
-          width: 18rem;
-          height: 3rem;
-          font-size: 1.2rem;
-        }
-      }
-    }
-  }
-}
+//       .story {
+//         margin-bottom: 20px;
+//       }
+//       .add-btn {
+//         width: 12rem;
+//         height: 2.75rem;
+//         background-color: rgb(129, 129, 196);
+//         color: white;
+//         outline: transparent;
+//         border: none;
+//         border-radius: 6px;
+//         // hover efect here
+//       }
+//     }
+//   }
 
-// tablet large Screen
-@media only screen and (min-width: 768px) {
-  body {
-    .container {
-      flex-direction: row;
-      width: 95vw;
+//   // footer
+//   footer {
+//     width: 100vw;
+//     height: 2rem;
+//     background-color: rgb(32, 32, 32);
+//     border-top-left-radius: 12px;
+//     border-top-right-radius: 12px;
+//   }
+// }
 
-      img {
-        width: 40%;
-        margin-right: 10px;
-        align-self: flex-start;
-      }
+// // Tablet Screen
+// @media only screen and (min-width: 576px) {
+//   body {
+//     .container {
+//       img {
+//         width: 50%;
+//       }
 
-      .movie-data {
-        margin-left: 10px;
-        height: 100%;
+//       .movie-data {
+//         h2 {
+//           font-size: 2rem;
+//         }
 
-        h2 {
-          font-size: 2.2rem;
-        }
+//         h3 {
+//           font-size: 1.5rem;
+//         }
 
-        h3 {
-          font-size: 1.6rem;
-        }
+//         .rating-production {
+//           display: flex;
+//           justify-content: space-between;
 
-        .rating-production {
-          display: block;
-        }
+//           p {
+//             font-size: 1.2rem;
+//           }
+//         }
 
-        h4 {
-          font-size: 1.6rem;
-        }
+//         h4 {
+//           font-size: 1.5rem;
+//         }
 
-        .class-genre {
-          font-size: 1.4rem;
-        }
+//         .class-genre {
+//           font-size: 1.3rem;
+//         }
 
-        .story {
-          font-size: 1.35rem;
-        }
+//         .story {
+//           font-size: 1.25rem;
+//         }
 
-        .add-btn {
-          font-size: 1.35rem;
-        }
-      }
-    }
-  }
+//         .add-btn {
+//           width: 18rem;
+//           height: 3rem;
+//           font-size: 1.2rem;
+//         }
+//       }
+//     }
+//   }
+// }
 
-  footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-}
+// // tablet large Screen
+// @media only screen and (min-width: 768px) {
+//   body {
+//     .container {
+//       flex-direction: row;
+//       width: 95vw;
 
-// Desktop Screen
-@media only screen and (min-width: 992px) {
-  body {
-    display: flex;
-    justify-content: center;
+//       img {
+//         width: 40%;
+//         margin-right: 10px;
+//         align-self: flex-start;
+//       }
 
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+//       .movie-data {
+//         margin-left: 10px;
+//         height: 100%;
 
-    .container {
-      max-width: 1200px;
-      margin-top: 5rem;
+//         h2 {
+//           font-size: 2.2rem;
+//         }
 
-      img {
-        max-width: 780px;
-        margin-right: 20px;
-      }
+//         h3 {
+//           font-size: 1.6rem;
+//         }
 
-      .movie-data {
-        margin-left: 20px;
-      }
-    }
-  }
-}
+//         .rating-production {
+//           display: block;
+//         }
 
-// Desktop lager Screen
-@media only screen and (min-width: 992px) {
-  body {
-    .container {
-      .movie-data {
-        h2 {
-          font-size: 1.8rem;
-        }
+//         h4 {
+//           font-size: 1.6rem;
+//         }
 
-        h3 {
-          font-size: 1.4rem;
-        }
+//         .class-genre {
+//           font-size: 1.4rem;
+//         }
 
-        h4 {
-          font-size: 1.3rem;
-        }
+//         .story {
+//           font-size: 1.35rem;
+//         }
 
-        .rating-production {
-          display: flex;
-          flex-direction: row;
+//         .add-btn {
+//           font-size: 1.35rem;
+//         }
+//       }
+//     }
+//   }
 
-          p {
-            font-size: 1rem;
-          }
-        }
+//   footer {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//   }
+// }
 
-        .class-genre {
-          font-size: 1.1rem;
-        }
+// // Desktop Screen
+// @media only screen and (min-width: 992px) {
+//   body {
+//     display: flex;
+//     justify-content: center;
 
-        .story {
-          font-size: 1.15rem;
-        }
+//     nav {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//     }
 
-        .add-btn {
-          width: 10rem;
-          height: 2rem;
-          font-size: 0.9rem;
-        }
-      }
-    }
-  }
-}
+//     .container {
+//       max-width: 1200px;
+//       margin-top: 5rem;
+
+//       img {
+//         max-width: 780px;
+//         margin-right: 20px;
+//       }
+
+//       .movie-data {
+//         margin-left: 20px;
+//       }
+//     }
+//   }
+// }
+
+// // Desktop lager Screen
+// @media only screen and (min-width: 992px) {
+//   body {
+//     .container {
+//       .movie-data {
+//         h2 {
+//           font-size: 1.8rem;
+//         }
+
+//         h3 {
+//           font-size: 1.4rem;
+//         }
+
+//         h4 {
+//           font-size: 1.3rem;
+//         }
+
+//         .rating-production {
+//           display: flex;
+//           flex-direction: row;
+
+//           p {
+//             font-size: 1rem;
+//           }
+//         }
+
+//         .class-genre {
+//           font-size: 1.1rem;
+//         }
+
+//         .story {
+//           font-size: 1.15rem;
+//         }
+
+//         .add-btn {
+//           width: 10rem;
+//           height: 2rem;
+//           font-size: 0.9rem;
+//         }
+//       }
+//     }
+//   }
+// }
