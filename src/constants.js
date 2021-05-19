@@ -9,7 +9,7 @@ export const posterTemplate = (movie) => {
         <div class="movie-image-container">
           <img class="movie-img" src=${posterURL}${movie.poster} alt="poster" data-film-id=${movie.filmId}/>
           <p class="genres">drama, romance, historical</p>
-          <span class="release-year">####</span>
+     git      <span class="release-year">####</span>
         </div>
         <!-- movie title -->
         <div class="movie-description">
