@@ -548,6 +548,61 @@ template {
     align-items: flex-start;
   }
 }
+body {
+  background-color: #444444;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .des-nav {
+  width: 100%;
+  align-items: center;
+}
+body .des-nav .des-brand {
+  font-size: 1.2rem;
+}
+body .des-container {
+  border: 1px dashed red;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+body .des-container .des-movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+body .des-container .des-movie-data {
+  border: 1px dashed greenyellow;
+  padding-top: 0.25rem;
+}
+body .des-container .des-movie-data .des-movie-title {
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+}
+body .des-container .des-movie-data .des-short-description {
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+body .des-container .des-movie-data .des-rating-production {
+  padding-bottom: 1rem;
+}
+body .des-container .des-movie-data .des-rating-production .des-rating-stars {
+  font-size: 1.1rem;
+  padding-bottom: 0.25rem;
+}
+body .des-container .des-movie-data .des-rating-production .des-rating-stars .des-rating {
+  font-size: 1rem;
+}
+body .des-container .des-movie-data .des-rating-production .des-production {
+  display: flex;
+  font-size: 0.9rem;
+}
+body .des-container .des-movie-data .des-genre {
+  font-size: 1rem;
+}
+
 .about-container {
   color: black;
 }
