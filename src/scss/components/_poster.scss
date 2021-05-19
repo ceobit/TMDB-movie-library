@@ -73,7 +73,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: blue 1px solid;
 }
 
 //movie title
@@ -152,6 +151,9 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 575.98px) {
+  .posters-container {
+    justify-content: center;
+  }
   .movie {
     width: calc(100% / 1);
     max-width: 342px;
@@ -162,6 +164,7 @@
 @media (min-width: 576px) {
   .movie {
     width: calc(100% / 2 - 1%);
+    font-size: 15px;
   }
 }
 
@@ -169,6 +172,15 @@
 @media (min-width: 768px) {
   .movie {
     width: calc(100% / 3 - 1%);
+    font-size: 14px;
+  }
+  .ratings-favorites-container {
+    display: flex;
+    align-items: center;
+  }
+  .user-rating-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -176,13 +188,27 @@
 @media (min-width: 992px) {
   .movie {
     width: calc(100% / 4 - 1%);
+    font-size: 13px;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .movie {
+    width: calc(100% / 5 - 1%);
+    max-width: 342px;
+    font-size: $defaultFontSize;
+  }
 }
-
+// @media (min-width: 1800px) {
+//   // .movie-image-container {
+//   //   display: flex;
+//   //   justify-content: center;
+//   // }
+//   .movie {
+//     width: calc(100% / 5 - 1%);
+//   }
+// }
 // Notes:
 // make picture size and max width the same
 // change picture or picture size with screensize

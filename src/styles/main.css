@@ -425,7 +425,6 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: blue 1px solid;
 }
 
 .movie-title {
@@ -487,6 +486,10 @@ template {
 }
 
 @media (max-width: 575.98px) {
+  .posters-container {
+    justify-content: center;
+  }
+
   .movie {
     width: calc(100% / 1);
     max-width: 342px;
@@ -495,16 +498,36 @@ template {
 @media (min-width: 576px) {
   .movie {
     width: calc(100% / 2 - 1%);
+    font-size: 15px;
   }
 }
 @media (min-width: 768px) {
   .movie {
     width: calc(100% / 3 - 1%);
+    font-size: 14px;
+  }
+
+  .ratings-favorites-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-rating-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 992px) {
   .movie {
     width: calc(100% / 4 - 1%);
+    font-size: 13px;
+  }
+}
+@media (min-width: 1200px) {
+  .movie {
+    width: calc(100% / 5 - 1%);
+    max-width: 342px;
+    font-size: 16px;
   }
 }
 .searchbar-container {
