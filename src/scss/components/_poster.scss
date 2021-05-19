@@ -3,7 +3,6 @@
   flex-wrap: wrap;
 }
 
-
 // Movie Poster
 // movie poster container
 .movie {
@@ -27,6 +26,7 @@
     transition: 0.5s;
     z-index: 1;
   }
+}
 // Roman
 .posters-container {
   padding: 5% 5%;
@@ -43,9 +43,8 @@
   flex-direction: column;
   margin-top: 3%;
   border-radius: 20px;
-
 }
-  // Roman end
+// Roman end
 
 // common properties
 .movie-image-container,
@@ -68,7 +67,7 @@
   box-shadow: 0 0 55px rgba(3, 16, 33, 0.25);
 }
 // Roman end
-  
+
 .movie-img {
   display: block;
   width: 100%;
@@ -133,7 +132,7 @@
   align-items: center;
 }
 // Roman End
-  
+
 // watched - not watched
 .watched {
   display: inline-block;
