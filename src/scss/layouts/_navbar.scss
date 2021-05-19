@@ -53,11 +53,14 @@
 
 //hamburger menu for mobile version
 .hamburger-container {
-  display: block;
+  display: none;
   &:hover {
     cursor: pointer;
   }
 }
+// .rotated-menu {
+//   animation: 1s 1 alternate rotate;
+// }
 
 @media (max-width: 800px) {
   // .navbar {
@@ -75,8 +78,7 @@
     }
     background-color: $clr-secondary;
   }
-
-  // onclick
+  // onclick of hamburger menu
   .navbar-pagelinks ul {
     display: none;
     border: olivedrab 1px solid;
@@ -91,5 +93,42 @@
     right: 0;
     background-color: $clr-secondary;
     z-index: 1;
+    font-size: larger;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBack {
+  0% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  100% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
