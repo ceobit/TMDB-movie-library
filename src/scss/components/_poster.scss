@@ -5,7 +5,7 @@
 // Movie Poster
 // container for all movies
 .posters-container {
-  padding: 5% 5%;
+  padding: 0% 5% 5% 5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -203,8 +203,8 @@
   }
 }
 @media (min-width: 1740px) {
-  // .movie {
-  //   width: calc(100% / 6 - 1%);
+  // .posters-container {
+  //   padding: 0 5%;
   // }
   .user-rating-container {
     flex-direction: row;
