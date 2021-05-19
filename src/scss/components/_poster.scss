@@ -2,24 +2,42 @@
   box-sizing: border-box;
 }
 
+// Movie Poster
+// container for all movies
 .posters-container {
   padding: 5% 5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 // movie poster container
 .movie {
-  width: calc(100% / 4 - 1%);
-  background-color: rgb(26, 8, 21);
+  //   background-color: rgb(26, 8, 21);
+  //   background-color: #0a1e33;
+  // background-color: #0c2f4b;
+  // background-color: rgb(26, 8, 21);
+  background-color: #0b3957;
+  // padding: 1rem;
   display: flex;
   flex-direction: column;
+  width: calc(100% / 5 - 1%);
   margin-top: 3%;
-  border-radius: 20px;
+  border-radius: 10px;
+  &:hover {
+    border: none;
+    box-shadow: 5px 15px 10px var(--clr-neutral-900);
+    transform: scale(1.06);
+    border-radius: 0.4rem;
+    transition: 0.5s;
+    z-index: 1;
+  }
 }
 
 // common properties
+.movie-title,
+.ratings-favorites-container {
+  // margin: 0 1rem;
+}
 .movie-image-container,
 .movie-img,
 .movie-title,
@@ -31,7 +49,7 @@
 .movie-image-container {
   width: 100%;
   position: relative;
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
 
@@ -42,10 +60,10 @@
 .movie-img {
   display: block;
   width: 100%;
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
-// release year of movie
+// release year of movie (upper right corner of image)
 .release-year {
   position: absolute;
   background-color: white;
@@ -57,19 +75,25 @@
 
 .movie-description {
   padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: blue 1px solid;
 }
 
 //movie title
 .movie-title {
   margin: 0.5rem 0;
+  height: 3rem;
 }
 
 // ratings
 .ratings-favorites-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
+  // align-items: center;
+
+  margin: 0.5rem 0;
 }
 
 .star-rating-imdb {
@@ -121,56 +145,53 @@
   color: red;
 }
 
-
 // genre overview
-.genres {
-  position: absolute;
-  left: 0.7rem;
-  top: 0.3rem;
-  display: inline-block;
-  margin-bottom: 0.3vw;
-}
+// .genres {
+//   left: 0.7rem;
+//   top: 0.3rem;
+//   // display: inline-block;
+//   // margin-bottom: 0.3vw;
+// }
 
-// SCREEN SIZE ADJUSTMENTS
+// SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
 
-//// Small devices (landscape phones, 576px and up)
-//@media (min-width: 576px) {
-//  // common properties
-//  .movie-image-container,
-//  .movie-img,
-//  .movie-title,
-//  .ratings-favorites-container {
-//    max-width: 500px;
-//  }
-//  .movie-img {
-//    width: 500px;
-//    background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
-//  }
-//}
-//
-//// Medium devices (tablets, 768px and up)
-//@media (min-width: 768px) {
-//  // common properties
-//  .movie-image-container,
-//  .movie-img,
-//  .movie-title,
-//  .ratings-favorites-container {
-//    max-width: 342px;
-//  }
-//  .movie-img {
-//    width: 342px;
-//    background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-//    border: springgreen 2px solid;
-//  }
-//}
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   // common properties
+//   .movie-image-container,
+//   .movie-img,
+//   .movie-title,
+//   .ratings-favorites-container {
+//     max-width: 500px;
+//   }
+//   .movie-img {
+//     width: 500px;
+//     background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
+//   }
+// }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   // common properties
+//   .movie-image-container,
+//   .movie-img,
+//   .movie-title,
+//   .ratings-favorites-container {
+//     max-width: 342px;
+//   }
+//   .movie-img {
+//     width: 342px;
+//     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
+//   }
+// }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+// }
 
 // Notes:
 // make picture size and max width the same
