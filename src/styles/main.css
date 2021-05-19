@@ -486,6 +486,17 @@ template {
   color: red;
 }
 
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  border: blueviolet 2px solid;
+}
+
+.searchbar {
+  border: coral 1px solid;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
