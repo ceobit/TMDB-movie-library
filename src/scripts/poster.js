@@ -4,8 +4,11 @@ import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage
 
 const imagesContainer = document.querySelector('.posters-container');
 
-const posterTemplate = (movie) => {
-  return `<div class="movie" data-film-id=${movie.filmId}>
+export const addMovieToHTML = () => {
+  const imagesContainer = document.querySelector('.posters-container');
+
+  const posterTemplate = (movie) => {
+    return `<div class="movie" data-film-id=${movie.filmId}>
         <!-- movie image -->
         <div class="movie-image-container">
           <img class="movie-img" src=${posterURL}${movie.poster} alt="poster" data-film-id=${movie.filmId}/>
@@ -40,18 +43,21 @@ const posterTemplate = (movie) => {
             <i class="fas fa-heart add-to-favorites_grey" data-film-id=${movie.filmId}></i>
           </div>
         </div>`;
+  };
+
+  getRatedFilms(1)
+    .then((arr) => {
+      arr.forEach((el) => {
+        imagesContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
+      });
+    })
+    .then((w) => {
+      const favoriteIconList = document.querySelectorAll('.add-to-favorites');
+    })
+    .catch((e) => console.log(e));
 };
 
-getRatedFilms(1)
-  .then((arr) => {
-    arr.forEach((el) => {
-      imagesContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
-    });
-  })
-  .then((w) => {
-    const favoriteIconList = document.querySelectorAll('.add-to-favorites');
-  })
-  .catch((e) => console.log(e));
+addMovieToHTML();
 
 const addToFavoriteList = (e) => {
   let filmId = 0;
