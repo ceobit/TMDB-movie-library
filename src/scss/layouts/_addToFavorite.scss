@@ -20,12 +20,6 @@ body {
   width: 100vw;
 }
 .face {
-  border-top: rgba(85, 84, 84, 0.9) 1px solid;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding: 0rem 20rem;
   width: 80vw;
   height: 70vh;
   border-radius: 20px;
@@ -67,13 +61,13 @@ body {
   align-items: center;
   justify-content: center;
 }
-.imgHolder {
-  height: 20rem;
-  width: 10rem;
+img {
+  height: 16rem;
+  width: 8rem;
   border-radius: 20px;
   padding: 10px;
 }
-li {
+ul {
   list-style-type: none;
 }
 .hi {
