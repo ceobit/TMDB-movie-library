@@ -24,6 +24,18 @@ const searchbar = document.querySelector('.searchbar');
               el.classList.add('add-to-favorites_red');
             }
           });
+
+          //add watched
+          const watched = document.querySelectorAll('.not-watched');
+          watched.forEach((el) => {
+            filmId = el.getAttribute('data-film-id');
+            if (findDuplicate(filmId, 'watchedList')) {
+              el.classList.remove('not-watched');
+              el.classList.add('watched');
+              el.textContent = 'watched';
+            }
+          });
+
         } catch (e) {
           console.log(e);
         }
@@ -46,7 +58,6 @@ const addToFavoriteList = (e) => {
       deleteFromLS(filmId, 'favoriteList');
     } else {
       saveToLS(filmId, 'favoriteList');
-      console.log('erere');
     }
   }
 };
@@ -112,6 +123,15 @@ const handleWatched = (e) => {
     e.target.textContent = 'watched';
     e.target.classList.add('watched');
     e.target.classList.remove('not-watched');
+  }
+
+  const filmId = e.target.getAttribute('data-film-id');
+
+  //Save watched to local storage
+  if (findDuplicate(filmId, 'watchedList')) {
+    deleteFromLS(filmId, 'watchedList');
+  } else {
+    saveToLS(filmId, 'watchedList');
   }
 };
 

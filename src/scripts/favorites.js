@@ -1,6 +1,6 @@
 import { posterTemplate } from '../constants.js';
 import { getFilmById } from '../api.js';
-import { deleteFromLS, getFromLS } from './localStorage.js';
+import {deleteFromLS, findDuplicate, getFromLS} from './localStorage.js';
 
 const imagesContainer = document.querySelector('.posters-container');
 
@@ -19,6 +19,18 @@ getFromLS('favoriteList').forEach((filmId) =>
         el.classList.remove('add-to-favorites_grey');
         el.classList.add('add-to-favorites_red');
       });
+
+    //add watched
+    const watched = document.querySelectorAll('.not-watched');
+    watched.forEach((el) => {
+      filmId = el.getAttribute('data-film-id');
+      if (findDuplicate(filmId, 'watchedList')) {
+        el.classList.remove('not-watched');
+        el.classList.add('watched');
+        el.textContent = 'watched';
+      }
+    });
+
     })
     .catch((e) => console.log(e)),
 );
