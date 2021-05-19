@@ -92,7 +92,7 @@ imagesContainer.addEventListener('click', openFilmDescriptionPage);
 
 // Vivi
 // set to 'watched' or 'not watched'
-const watched = document.querySelectorAll('.watched');
+const watched = document.querySelectorAll('.not-watched');
 console.log(watched);
 console.log(watched[0].classList);
-// if (watched.classList.contains('not-watched')) console.log(watched);
+if (watched.classList.contains('not-watched')) console.log(watched);

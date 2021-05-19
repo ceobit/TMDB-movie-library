@@ -26,6 +26,7 @@
     transition: 0.5s;
     z-index: 1;
   }
+}
 // Roman changes
 // .posters-container {
 //   padding: 5% 5%;
@@ -55,14 +56,13 @@
 .movie-image-container {
   width: 100%;
   position: relative;
-//Roman?
+  //Roman?
   border-radius: 20px 20px 0 0;
   cursor: pointer;
 }
 
 .movie-image-container :hover {
   box-shadow: 0 0 55px rgba(3, 16, 33, 0.25);
-
 }
 
 .movie-img {
@@ -149,7 +149,6 @@
 .add-to-favorites_red:before {
   color: red;
 }
-
 
 // genre overview
 .genres {
