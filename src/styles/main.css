@@ -1,0 +1,19 @@
+/* Error: expected "}".
+ *     ,
+ * 217 | // user rating by clicking on stars
+ *     |                                    ^
+ *     '
+ *   src/scss/components/_poster.scss 217:36        @import
+ *   src/scss/components/__components-dir.scss 2:9  @import
+ *   src/scss/main.scss 11:9                        root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "}".\a     \2577 \a 217 \2502  // user rating by clicking on stars\a     \2502                                     ^\a     \2575 \a   src/scss/components/_poster.scss 217:36        @import\a   src/scss/components/__components-dir.scss 2:9  @import\a   src/scss/main.scss 11:9                        root stylesheet';
+}
