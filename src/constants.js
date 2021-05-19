@@ -27,11 +27,11 @@ export const posterTemplate = (movie) => {
       <div class="user-rating-container">
         <span class="rated-not-rated">Your rating:</span>
         <div class="user-rating-stars">
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
+        <i class="fas fa-star star-rating-user first-star"></i>
+        <i class="fas fa-star star-rating-user second-star"></i>
+        <i class="fas fa-star star-rating-user third-star"></i>
+        <i class="fas fa-star star-rating-user fourth-star"></i>
+        <i class="fas fa-star star-rating-user fifth-star"></i>
         </div>
         <span class="user-rating">#.#/10</span>
       </div>
