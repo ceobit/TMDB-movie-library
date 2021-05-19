@@ -5,9 +5,26 @@
   height: 10vh;
   border: blueviolet 2px solid;
 }
-.searchbar {
-  border: coral 1px solid;
-  width: 20vw;
+
+.searchbar,
+.searchbutton {
   height: 2rem;
+  border-top: 2px solid $clr-primary;
+  border-bottom: 2px solid $clr-primary;
+}
+.searchbar {
+  //   border: coral 1px solid;
+  width: 20rem;
   padding: 0.3rem;
+  padding-left: 0.7rem;
+  border-radius: 1rem 0 0 1rem;
+  border-right: none;
+}
+.searchbutton {
+  width: auto;
+  background-color: $clr-tertiary;
+  border-left: 2px solid $clr-primary;
+  border-radius: 0 1rem 1rem 0;
+  padding-left: 0.6rem;
+  padding-right: 0.7rem;
 }
