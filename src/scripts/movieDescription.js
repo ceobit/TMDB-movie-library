@@ -28,7 +28,9 @@ getMovieCredits(filmId).then((data) => {
   genres.textContent = `● ${data.genres[0].name} ● ${data.genres[1].name}`; // if time try with loop
   story.textContent = data.overview;
 
-  console.log(data);
+  if (findDuplicate(filmId, 'favoriteList')) {
+    addToFavorite.textContent = 'Remove From Favorites';
+  }
 });
 
 const addToFavoriteList = (e) => {
