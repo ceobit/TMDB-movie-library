@@ -1,25 +1,26 @@
+// from of searchbar
 .searchbar-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  border: blueviolet 2px solid;
+  height: 10rem;
 }
-
+// shared properties
 .searchbar,
 .searchbutton {
   height: 2rem;
   border-top: 2px solid $clr-primary;
   border-bottom: 2px solid $clr-primary;
 }
+// searchbar
 .searchbar {
-  //   border: coral 1px solid;
   width: 20rem;
   padding: 0.3rem;
   padding-left: 0.7rem;
   border-radius: 1rem 0 0 1rem;
   border-right: none;
 }
+// search button type submit
 .searchbutton {
   width: auto;
   background-color: $clr-tertiary;
@@ -32,5 +33,15 @@
   }
   &:active {
     background-color: #4caf50;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 575.98px) {
+  .searchbar-container {
+    height: 5rem;
+  }
+  .searchbar {
+    width: 10rem;
   }
 }

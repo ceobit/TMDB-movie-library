@@ -490,8 +490,7 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  border: blueviolet 2px solid;
+  height: 10rem;
 }
 
 .searchbar,
@@ -524,6 +523,15 @@ template {
   background-color: #4caf50;
 }
 
+@media (max-width: 575.98px) {
+  .searchbar-container {
+    height: 5rem;
+  }
+
+  .searchbar {
+    width: 10rem;
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-around;
