@@ -359,15 +359,40 @@ template {
   color: #fff;
 }
 
+@font-face {
+  font-family: "Lato";
+  src: url("/vendor/fonts/Lato-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/vendor/fonts/Lato-Bold.ttf");
+  font-weight: 700;
+}
 * {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #06111f;
+}
+
 .posters-container {
-  padding: 5% 5%;
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.found-container {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.poster_title {
+  padding: 0 5%;
 }
 
 .movie {
@@ -413,7 +438,8 @@ template {
 
 .release-year {
   position: absolute;
-  background-color: white;
+  background-color: #ffffff;
+  opacity: 0.7;
   padding: 0.1rem 0.2rem;
   color: cornflowerblue;
   right: 0.7rem;
@@ -425,12 +451,13 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: blue 1px solid;
 }
 
 .movie-title {
   margin: 0.5rem 0;
-  height: 3rem;
+  height: 3.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .ratings-favorites-container {
@@ -457,6 +484,10 @@ template {
   color: gray;
 }
 
+.gold-star {
+  color: #ffd900;
+}
+
 .user-rating {
   display: none;
 }
@@ -470,8 +501,17 @@ template {
 .watched {
   display: inline-block;
   padding: 0.2rem;
+  color: #90cea1;
+  border: #90cea1 1px solid;
+  cursor: pointer;
+}
+
+.not-watched {
+  display: inline-block;
+  padding: 0.2rem;
   color: grey;
   border: grey 1px solid;
+  cursor: pointer;
 }
 
 .add-to-favorites {
@@ -491,6 +531,7 @@ template {
   justify-content: center;
   align-items: center;
   height: 10rem;
+  padding-top: 3%;
 }
 
 .searchbar,
@@ -506,6 +547,7 @@ template {
   padding-left: 0.7rem;
   border-radius: 1rem 0 0 1rem;
   border-right: none;
+  outline: none;
 }
 
 .searchbutton {
@@ -515,6 +557,7 @@ template {
   border-radius: 0 1rem 1rem 0;
   padding-left: 0.6rem;
   padding-right: 0.7rem;
+  outline: none;
 }
 .searchbutton:hover {
   cursor: pointer;
@@ -825,11 +868,93 @@ body .des-container .des-movie-data .des-add-btn:hover {
     font-size: 1.1rem;
   }
 }
-.about-container {
-  color: black;
+section {
+  padding: 1rem 0;
 }
-.about-container a i {
-  color: black;
+@media (min-width: 40em) {
+  section section {
+    padding: 1rem 1rem;
+  }
+}
+
+/* responsive design */
+.about-container {
+  align-items: row;
+  margin-inline: auto;
+  width: min(90%, 80.5rem);
+}
+
+.about-split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 80em) {
+  .about-split {
+    flex-direction: row;
+  }
+
+  .about-split > * {
+    flex-basis: 100%;
+  }
+
+  .about-split > * + * {
+    margin-left: 1em;
+  }
+}
+body {
+  background-color: #06111f;
+}
+
+.about-container {
+  margin: 2rem;
+  padding: 1rem;
+}
+.about-container h1,
+.about-container h2,
+.about-container h3 {
+  color: #90cea1;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+.about-container p {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  color: #e7ebee;
+}
+
+.about-bg-light {
+  margin-bottom: 4rem;
+  padding: 1rem;
+  background-color: #0d253f;
+  color: #01b4e4;
+}
+.about-bg-light h2,
+.about-bg-light h3 {
+  margin-bottom: 1rem;
+}
+
+.about-bg-dark {
+  padding: 1rem;
+  background-color: #01b4e4;
+  color: #06111f;
+}
+.about-bg-dark h2,
+.about-bg-dark h3 {
+  color: #06111f;
+}
+.about-bg-dark .about-social {
+  font-size: 3rem;
+  padding-left: 3rem;
+  align-items: center;
+  color: #90cea1;
+}
+
+.about-social:hover {
+  font-size: 5rem;
+  color: #06111f;
 }
 
 /*# sourceMappingURL=main.css.map */
