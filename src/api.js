@@ -15,6 +15,9 @@ const searchApi = {
   getRatedMovies(page) {
     return fetch(`${baseURL}movie/top_rated?api_key=${API_key}&language=en&page=${page}`);
   },
+  getGenre() {
+    return fetch(`${baseURL}genre/movie/list?api_key=${API_key}&language=en`);
+  },
 };
 
 export const getFilm = (page, movieName) => {
@@ -50,6 +53,8 @@ export const getFilmById = (filmId) => {
         title: data.title,
         vote_average: data.vote_average,
         vote_count: data.vote_count,
+        year: data.release_date,
+        genres: data.genres,
       };
     })
     .catch((err) => {
@@ -70,6 +75,8 @@ export const getRatedFilms = (page) => {
         title: film.title,
         vote_average: film.vote_average,
         vote_count: film.vote_count,
+        year: film.release_date,
+        genres: film.genre_ids,
       }));
     })
     .catch((err) => {
@@ -80,6 +87,18 @@ export const getRatedFilms = (page) => {
 export const getMovieCredits = (filmId) => {
   return searchApi
     .getMovieCredits(filmId)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => data)
+    .catch((err) => {
+      alert(err);
+    });
+};
+
+export const getGenre = () => {
+  return searchApi
+    .getGenre()
     .then((res) => {
       return res.json();
     })

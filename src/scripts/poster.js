@@ -1,4 +1,4 @@
-import { getRatedFilms } from '../api.js';
+import { getGenre, getRatedFilms } from '../api.js';
 import { posterTemplate } from '../constants.js';
 import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage.js';
 
@@ -8,9 +8,19 @@ const imagesContainer = document.querySelector('.posters-container');
   getRatedFilms(1)
     .then((arr) => {
       arr.forEach((el) => {
-        console.log('here');
         try {
           imagesContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
+
+          //add red heart
+          const hearts = document.querySelectorAll('.fa-heart');
+          let filmId;
+          hearts.forEach((el) => {
+            filmId = el.getAttribute('data-film-id');
+            if (findDuplicate(filmId)) {
+              el.classList.remove('add-to-favorites_grey');
+              el.classList.add('add-to-favorites_red');
+            }
+          });
         } catch (e) {
           console.log(e);
         }
@@ -34,8 +44,6 @@ const addToFavoriteList = (e) => {
     } else {
       saveToLS(filmId);
     }
-
-    console.log(getFromLS());
   }
 };
 
@@ -47,12 +55,43 @@ const openFilmDescriptionPage = (e) => {
   }
 };
 
+const setOwnRating = (e) => {
+  if (e.target.classList.contains('fa-star')) {
+
+    e.target.parentElement.querySelectorAll('.fa-star').forEach(el => el.classList.remove('gold-star'));
+
+    if (e.target.classList.contains('first-star')) {
+      e.target.classList.toggle('gold-star');
+    }
+
+    if (e.target.classList.contains('second-star')) {
+      e.target.previousElementSibling.classList.toggle('gold-star');
+      e.target.classList.toggle('gold-star');
+    }
+
+    if (e.target.classList.contains('third-star')) {
+      e.target.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.classList.toggle('gold-star');
+      e.target.classList.toggle('gold-star');
+    }
+
+    if (e.target.classList.contains('fourth-star')) {
+      e.target.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.classList.toggle('gold-star');
+      e.target.classList.toggle('gold-star');
+    }
+
+    if (e.target.classList.contains('fifth-star')) {
+      e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.classList.toggle('gold-star');
+      e.target.classList.toggle('gold-star');
+    }
+  }
+};
+
 imagesContainer.addEventListener('click', addToFavoriteList);
 imagesContainer.addEventListener('click', openFilmDescriptionPage);
-
-// Vivi
-// set to 'watched' or 'not watched'
-const watched = document.querySelectorAll('.not-watched');
-console.log(watched);
-console.log(watched[0].classList);
-// if (watched.classList.contains('not-watched')) console.log(watched);
+imagesContainer.addEventListener('click', setOwnRating);

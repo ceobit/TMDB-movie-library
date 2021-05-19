@@ -21,4 +21,6 @@ getMovieCredits(filmId).then((data) => {
   production.textContent = `${data.production_countries[0].name} /`;
   time.textContent = `/ ${data.runtime} min. /`;
   year.textContent = `/ ${data.release_date}`;
+
+  console.log(data);
 });
