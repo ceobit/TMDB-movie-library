@@ -1010,5 +1010,60 @@ body .about-container .about-bg-light h3 {
     font-size: 2.5rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  body .about-container .about-bg-light {
+    width: 70%;
+  }
+  body .about-container .about-bg-dark {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body .about-container .about-bg-light {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .about-container .about-bg-light .about-container-content {
+    width: 45%;
+    text-align: center;
+  }
+  body .about-container .about-bg-light .about-container-content h2,
+body .about-container .about-bg-light .about-container-content h3 {
+    font-size: 1.4rem;
+  }
+  body .about-container .about-bg-light .about-container-content p {
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  body .about-container .about-bg-light .about-container-content .technologies-container img {
+    width: 40px;
+    margin-bottom: 2rem;
+  }
+  body .about-container .about-bg-dark {
+    width: 100%;
+  }
+  body .about-container .about-bg-dark .about-container-content h2 {
+    font-size: 1.5rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-split {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  body .about-container .about-bg-dark .about-container-content .about-split div {
+    padding: 0 2.5rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-split div h3 {
+    font-size: 1rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-split div p {
+    font-size: 1rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-split div .about-social {
+    font-size: 2rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

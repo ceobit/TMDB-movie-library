@@ -283,3 +283,87 @@ body {
     }
   }
 }
+
+// Large Devices
+@media only screen and (min-width: 992px) {
+  body {
+    .about-container {
+      //About Project
+      .about-bg-light {
+        width: 70%;
+      }
+      // Team Members
+      .about-bg-dark {
+        width: 70%;
+      }
+    }
+  }
+}
+
+// Extra Large Devices
+@media only screen and (min-width: 1200px) {
+  body {
+    .about-container {
+      //About Project
+      .about-bg-light {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .about-container-content {
+          width: 45%;
+          text-align: center;
+          h2,
+          h3 {
+            font-size: 1.4rem;
+          }
+          p {
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+          }
+
+          // About Project Images
+          .technologies-container {
+            img {
+              width: 40px;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+
+      // Team Members
+      .about-bg-dark {
+        width: 100%;
+
+        .about-container-content {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          .about-split {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            div {
+              padding: 0 2.5rem;
+              h3 {
+                font-size: 1rem;
+              }
+
+              p {
+                font-size: 1rem;
+              }
+
+              .about-social {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
