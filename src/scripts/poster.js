@@ -4,20 +4,20 @@ import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage
 
 const imagesContainer = document.querySelector('.posters-container');
 
-// (() => {
-//   getRatedFilms(1)
-//     .then((arr) => {
-//       arr.forEach((el) => {
-//         console.log('here');
-//         try {
-//           imagesContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
-//         } catch (e) {
-//           console.log(e);
-//         }
-//       });
-//     })
-//     .catch((e) => console.log(e));
-// })();
+(() => {
+  getRatedFilms(1)
+    .then((arr) => {
+      arr.forEach((el) => {
+        console.log('here');
+        try {
+          imagesContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
+        } catch (e) {
+          console.log(e);
+        }
+      });
+    })
+    .catch((e) => console.log(e));
+})();
 
 const addToFavoriteList = (e) => {
   let filmId = 0;
@@ -55,4 +55,4 @@ imagesContainer.addEventListener('click', openFilmDescriptionPage);
 const watched = document.querySelectorAll('.not-watched');
 console.log(watched);
 console.log(watched[0].classList);
-if (watched.classList.contains('not-watched')) console.log(watched);
+// if (watched.classList.contains('not-watched')) console.log(watched);

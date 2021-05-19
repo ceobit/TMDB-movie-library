@@ -17,7 +17,7 @@
   // background-color: #0c2f4b;
   // background-color: rgb(26, 8, 21);
   background-color: #0b3957;
-  padding: 1rem;
+  // padding: 1rem;
   display: flex;
   flex-direction: column;
   width: calc(100% / 5 - 1%);
@@ -34,6 +34,10 @@
 }
 
 // common properties
+.movie-title,
+.ratings-favorites-container {
+  // margin: 0 1rem;
+}
 .movie-image-container,
 .movie-img,
 .movie-title,
@@ -56,7 +60,7 @@
 .movie-img {
   display: block;
   width: 100%;
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 // release year of movie (upper right corner of image)
@@ -71,19 +75,25 @@
 
 .movie-description {
   padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: blue 1px solid;
 }
 
 //movie title
 .movie-title {
   margin: 0.5rem 0;
+  height: 3rem;
 }
 
 // ratings
 .ratings-favorites-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
+  // align-items: center;
+
+  margin: 0.5rem 0;
 }
 
 .star-rating-imdb {
@@ -136,13 +146,12 @@
 }
 
 // genre overview
-.genres {
-  position: absolute;
-  left: 0.7rem;
-  top: 0.3rem;
-  display: inline-block;
-  margin-bottom: 0.3vw;
-}
+// .genres {
+//   left: 0.7rem;
+//   top: 0.3rem;
+//   // display: inline-block;
+//   // margin-bottom: 0.3vw;
+// }
 
 // SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
 
