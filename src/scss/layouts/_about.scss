@@ -7,11 +7,13 @@ section {
   }
 }
 /* responsive design */
-.about-container {
-  align-items: row;
-  margin-inline: auto;
-  width: min(90%, 80.5rem);
-}
+
+// .about-container {
+//   align-items: row;
+//   margin-inline: auto;
+//   width: min(90%, 80.5rem);
+// }
+
 .about-split {
   display: flex;
   flex-direction: column;
@@ -82,4 +84,9 @@ body {
 .about-social:hover {
   font-size: 5rem;
   color: $clr-neutral-900;
+}
+.technologies-container img {
+  width: 200px;
+  height: auto;
+  margin: 4rem;
 }
