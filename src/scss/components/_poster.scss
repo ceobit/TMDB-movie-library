@@ -86,7 +86,6 @@
   display: flex;
   justify-content: space-between;
   // align-items: center;
-
   margin: 0.5rem 0;
 }
 
@@ -116,6 +115,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.3rem 0;
 }
 
 // watched - not watched
@@ -141,10 +141,11 @@
 
 // genre overview
 // .genres {
-//   left: 0.7rem;
-//   top: 0.3rem;
+//   // left: 0.7rem;
+//   // top: 0.3rem;
 //   // display: inline-block;
 //   // margin-bottom: 0.3vw;
+//   margin-top: 0.3rem;
 // }
 
 // SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
@@ -164,7 +165,13 @@
 @media (min-width: 576px) {
   .movie {
     width: calc(100% / 2 - 1%);
-    font-size: 15px;
+    // font-size: 15px;
+  }
+  .ratings-favorites-container {
+    align-items: center;
+  }
+  .user-rating-container {
+    flex-direction: column;
   }
 }
 
@@ -172,15 +179,6 @@
 @media (min-width: 768px) {
   .movie {
     width: calc(100% / 3 - 1%);
-    font-size: 14px;
-  }
-  .ratings-favorites-container {
-    display: flex;
-    align-items: center;
-  }
-  .user-rating-container {
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -188,7 +186,6 @@
 @media (min-width: 992px) {
   .movie {
     width: calc(100% / 4 - 1%);
-    font-size: 13px;
   }
 }
 
@@ -197,18 +194,22 @@
   .movie {
     width: calc(100% / 5 - 1%);
     max-width: 342px;
-    font-size: $defaultFontSize;
+  }
+  .ratings-favorites-container {
+    align-items: center;
+  }
+  .user-rating-container {
+    flex-direction: column;
   }
 }
-// @media (min-width: 1800px) {
-//   // .movie-image-container {
-//   //   display: flex;
-//   //   justify-content: center;
-//   // }
-//   .movie {
-//     width: calc(100% / 5 - 1%);
-//   }
-// }
+@media (min-width: 1740px) {
+  // .movie {
+  //   width: calc(100% / 6 - 1%);
+  // }
+  .user-rating-container {
+    flex-direction: row;
+  }
+}
 // Notes:
 // make picture size and max width the same
 // change picture or picture size with screensize

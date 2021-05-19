@@ -464,6 +464,7 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.3rem 0;
 }
 
 .watched {
@@ -498,36 +499,43 @@ template {
 @media (min-width: 576px) {
   .movie {
     width: calc(100% / 2 - 1%);
-    font-size: 15px;
+  }
+
+  .ratings-favorites-container {
+    align-items: center;
+  }
+
+  .user-rating-container {
+    flex-direction: column;
   }
 }
 @media (min-width: 768px) {
   .movie {
     width: calc(100% / 3 - 1%);
-    font-size: 14px;
-  }
-
-  .ratings-favorites-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .user-rating-container {
-    display: flex;
-    flex-direction: column;
   }
 }
 @media (min-width: 992px) {
   .movie {
     width: calc(100% / 4 - 1%);
-    font-size: 13px;
   }
 }
 @media (min-width: 1200px) {
   .movie {
     width: calc(100% / 5 - 1%);
     max-width: 342px;
-    font-size: 16px;
+  }
+
+  .ratings-favorites-container {
+    align-items: center;
+  }
+
+  .user-rating-container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1740px) {
+  .user-rating-container {
+    flex-direction: row;
   }
 }
 .searchbar-container {
