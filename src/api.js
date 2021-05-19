@@ -33,6 +33,8 @@ export const getFilm = (page, movieName) => {
         title: film.title,
         vote_average: film.vote_average,
         vote_count: film.vote_count,
+        year: film.release_date,
+        genres: film.genres,
       }));
     })
     .catch((err) => {

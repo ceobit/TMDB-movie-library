@@ -10,13 +10,25 @@ body {
 
 // Movie Poster
 // container for all movies
-.posters-container {
-  padding: 5% 5%;
+.posters-container{
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-// movie poster container
+
+.found-container {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.poster_title {
+  padding: 0 5%;
+}
+
+  // movie poster container
 .movie {
   //   background-color: rgb(26, 8, 21);
   //   background-color: #0a1e33;
@@ -137,8 +149,17 @@ body {
 .watched {
   display: inline-block;
   padding: 0.2rem;
+  color: $clr-tertiary;
+  border: $clr-tertiary 1px solid;
+  cursor: pointer;
+}
+
+.not-watched {
+  display: inline-block;
+  padding: 0.2rem;
   color: grey;
   border: grey 1px solid;
+  cursor: pointer;
 }
 
 // add to favorites button

@@ -35,7 +35,7 @@ export const posterTemplate = (movie) => {
 
     <div class="favorite-container">
     <!-- set as watched -->
-    <div class="watched">not watched</div>
+    <div class="not-watched">not watched</div>
     <!-- add film to favorites page -->
     <i class="fas fa-heart add-to-favorites_grey" data-film-id=${movie.filmId}></i>
   </div>

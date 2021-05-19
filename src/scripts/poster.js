@@ -1,8 +1,11 @@
-import { getGenre, getRatedFilms } from '../api.js';
+import { getGenre, getRatedFilms, getFilm } from '../api.js';
 import { posterTemplate } from '../constants.js';
 import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage.js';
 
 const imagesContainer = document.querySelector('.posters-container');
+const foundContainer = document.querySelector('.found-container');
+const searchButton = document.querySelector('.searchbutton');
+const searchbar = document.querySelector('.searchbar');
 
 (() => {
   getRatedFilms(1)
@@ -57,8 +60,9 @@ const openFilmDescriptionPage = (e) => {
 
 const setOwnRating = (e) => {
   if (e.target.classList.contains('fa-star')) {
-
-    e.target.parentElement.querySelectorAll('.fa-star').forEach(el => el.classList.remove('gold-star'));
+    e.target.parentElement
+      .querySelectorAll('.fa-star')
+      .forEach((el) => el.classList.remove('gold-star'));
 
     if (e.target.classList.contains('first-star')) {
       e.target.classList.toggle('gold-star');
@@ -76,15 +80,21 @@ const setOwnRating = (e) => {
     }
 
     if (e.target.classList.contains('fourth-star')) {
-      e.target.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle(
+        'gold-star',
+      );
       e.target.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
       e.target.previousElementSibling.classList.toggle('gold-star');
       e.target.classList.toggle('gold-star');
     }
 
     if (e.target.classList.contains('fifth-star')) {
-      e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
-      e.target.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
+      e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle(
+        'gold-star',
+      );
+      e.target.previousElementSibling.previousElementSibling.previousElementSibling.classList.toggle(
+        'gold-star',
+      );
       e.target.previousElementSibling.previousElementSibling.classList.toggle('gold-star');
       e.target.previousElementSibling.classList.toggle('gold-star');
       e.target.classList.toggle('gold-star');
@@ -92,6 +102,49 @@ const setOwnRating = (e) => {
   }
 };
 
+const handleWatched = (e) => {
+  if (e.target.classList.contains('watched')) {
+    e.target.textContent = 'not watched';
+    e.target.classList.add('not-watched');
+    e.target.classList.remove('watched');
+  } else if (e.target.classList.contains('not-watched')) {
+    e.target.textContent = 'watched';
+    e.target.classList.add('watched');
+    e.target.classList.remove('not-watched');
+  }
+};
+
+const findFilm = (e) => {
+  e.preventDefault();
+
+  //remove children
+  while (foundContainer.lastElementChild) {
+    foundContainer.removeChild(foundContainer.lastElementChild);
+  }
+
+  const title = document.querySelector('.found-title');
+
+  const movieName = searchbar.value;
+  if (movieName) {
+    title.textContent = 'Search result';
+
+    getFilm(1, movieName).then((arr) => {
+      if (!arr.length) {
+        title.textContent = 'Nothing found';
+      }
+      arr.forEach((el, index) => {
+        if (index < 10) foundContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
+      });
+    });
+  } else {
+    title.textContent = '';
+  }
+
+  searchbar.value = '';
+};
+
 imagesContainer.addEventListener('click', addToFavoriteList);
 imagesContainer.addEventListener('click', openFilmDescriptionPage);
 imagesContainer.addEventListener('click', setOwnRating);
+imagesContainer.addEventListener('click', handleWatched);
+searchButton.addEventListener('click', findFilm);
