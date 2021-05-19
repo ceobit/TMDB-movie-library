@@ -34,4 +34,13 @@ const deleteFromFavoriteList = (e) => {
   }
 };
 
+const openFilmDescriptionPage = (e) => {
+  console.log(e.target);
+  if (e.target.classList.contains('movie-img')) {
+    const filmId = e.target.getAttribute('data-film-id');
+    window.open(`../pages/movieDescription.html?filmId=${filmId}`);
+  }
+};
+
 imagesContainer.addEventListener('click', deleteFromFavoriteList);
+imagesContainer.addEventListener('click', openFilmDescriptionPage);

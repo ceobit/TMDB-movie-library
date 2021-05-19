@@ -147,4 +147,9 @@ imagesContainer.addEventListener('click', addToFavoriteList);
 imagesContainer.addEventListener('click', openFilmDescriptionPage);
 imagesContainer.addEventListener('click', setOwnRating);
 imagesContainer.addEventListener('click', handleWatched);
+
+foundContainer.addEventListener('click', addToFavoriteList);
+foundContainer.addEventListener('click', openFilmDescriptionPage);
+foundContainer.addEventListener('click', setOwnRating);
+foundContainer.addEventListener('click', handleWatched);
 searchButton.addEventListener('click', findFilm);
