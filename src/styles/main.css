@@ -367,7 +367,7 @@ template {
 .movie {
   width: auto;
   height: auto;
-  background-color: #0c2f4b;
+  background-color: #0b3957;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -376,9 +376,10 @@ template {
 .movie:hover {
   border: none;
   box-shadow: 5px 15px 10px var(--clr-neutral-900);
-  transform: translate3d(5px, -15px, 30px);
+  transform: scale(1.06);
   border-radius: 0.4rem;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .movie-image-container,
@@ -405,6 +406,7 @@ template {
   position: absolute;
   background-color: #076d92;
   padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
   color: white;
   right: 0.7rem;
   top: 0.3rem;

@@ -10,7 +10,8 @@
   height: auto;
   //   background-color: rgb(26, 8, 21);
   //   background-color: #0a1e33;
-  background-color: #0c2f4b;
+  // background-color: #0c2f4b;
+  background-color: #0b3957;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -19,9 +20,11 @@
     border: none;
     // box-shadow: 5px 15px 10px rgb(5, 5, 107);
     box-shadow: 5px 15px 10px var(--clr-neutral-900);
-    transform: translate3d(5px, -15px, 30px);
+    // transform: translate3d(5px, -15px, 30px);
+    transform: scale(1.06);
     border-radius: 0.4rem;
     transition: 0.5s;
+    z-index: 1;
   }
 }
 // common properties
@@ -49,6 +52,7 @@
   //   background-color: var(--clr-secondary);
   background-color: #076d92;
   padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
   color: white;
   right: 0.7rem;
   top: 0.3rem;
