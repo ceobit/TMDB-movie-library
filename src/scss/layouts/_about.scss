@@ -100,21 +100,21 @@ body {
   }
 
   .about-container {
-    border: 1px dashed red;
     padding: 1rem;
     margin: 1rem;
 
+    //About Project
     .about-bg-light {
       margin-bottom: 2rem;
       padding: 0.5rem;
       background-color: $clr-primary;
       color: $clr-tertiary;
-      word-spacing: 1px;
       border-radius: 8px;
 
       h2,
       h3 {
         margin-bottom: 5px;
+        font-size: 1.4rem;
       }
 
       p {
@@ -124,12 +124,161 @@ body {
       }
     }
 
+    // About Project Images
     .technologies-container {
       display: flex;
       justify-content: space-evenly;
       padding: 10px;
       img {
         width: 30px;
+      }
+    }
+
+    // Team Members
+    .about-bg-dark {
+      padding: 1rem;
+      background-color: $clr-primary;
+      color: $clr-neutral-100;
+      border-radius: 8px;
+
+      .about-container-content {
+        text-align: center;
+
+        h2 {
+          color: $clr-tertiary;
+          margin: 0.75rem 0 1.75rem 0;
+          text-decoration: overline;
+        }
+
+        h3 {
+          color: $clr-secondary;
+        }
+
+        p {
+          margin-bottom: 3rem;
+        }
+
+        .about-social {
+          font-size: 2rem;
+          color: $clr-neutral-900;
+          margin-bottom: 0.75rem;
+
+          &:hover {
+            color: #f16811;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small Devices
+@media only screen and (min-width: 576px) {
+  body {
+    .about-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      //About Project
+      .about-bg-light {
+        width: 85%;
+
+        h2,
+        h3 {
+          font-size: 1.7rem;
+        }
+        p {
+          padding: 0.75rem;
+          font-size: 1.25rem;
+        }
+
+        // About Project Images
+        .technologies-container {
+          img {
+            width: 40px;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      // Team Members
+      .about-bg-dark {
+        width: 85%;
+
+        .about-container-content {
+          text-align: center;
+
+          h2 {
+            font-size: 1.85rem;
+            margin-bottom: 2.5rem;
+          }
+
+          h3 {
+            font-size: 1.45rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          .about-social {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium Devices
+@media only screen and (min-width: 768px) {
+  body {
+    .about-container {
+      //About Project
+      .about-bg-light {
+        width: 75%;
+
+        h2,
+        h3 {
+          font-size: 1.8rem;
+        }
+        p {
+          padding: 1rem;
+          font-size: 1.3rem;
+          margin-bottom: 3rem;
+        }
+
+        // About Project Images
+        .technologies-container {
+          img {
+            width: 45px;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      // Team Members
+      .about-bg-dark {
+        width: 75%;
+
+        .about-container-content {
+          h2 {
+            font-size: 1.9rem;
+          }
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1.25rem;
+          }
+
+          .about-social {
+            font-size: 2.5rem;
+          }
+        }
       }
     }
   }

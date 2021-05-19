@@ -879,7 +879,6 @@ body .about-nav .about-brand {
   font-size: 1.2rem;
 }
 body .about-container {
-  border: 1px dashed red;
   padding: 1rem;
   margin: 1rem;
 }
@@ -888,12 +887,12 @@ body .about-container .about-bg-light {
   padding: 0.5rem;
   background-color: #0d253f;
   color: #90cea1;
-  word-spacing: 1px;
   border-radius: 8px;
 }
 body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
   margin-bottom: 5px;
+  font-size: 1.4rem;
 }
 body .about-container .about-bg-light p {
   margin-bottom: 15px;
@@ -907,6 +906,109 @@ body .about-container .technologies-container {
 }
 body .about-container .technologies-container img {
   width: 30px;
+}
+body .about-container .about-bg-dark {
+  padding: 1rem;
+  background-color: #0d253f;
+  color: #e7ebee;
+  border-radius: 8px;
+}
+body .about-container .about-bg-dark .about-container-content {
+  text-align: center;
+}
+body .about-container .about-bg-dark .about-container-content h2 {
+  color: #90cea1;
+  margin: 0.75rem 0 1.75rem 0;
+  text-decoration: overline;
+}
+body .about-container .about-bg-dark .about-container-content h3 {
+  color: #01b4e4;
+}
+body .about-container .about-bg-dark .about-container-content p {
+  margin-bottom: 3rem;
+}
+body .about-container .about-bg-dark .about-container-content .about-social {
+  font-size: 2rem;
+  color: #06111f;
+  margin-bottom: 0.75rem;
+}
+body .about-container .about-bg-dark .about-container-content .about-social:hover {
+  color: #f16811;
+}
+
+@media only screen and (min-width: 576px) {
+  body .about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .about-container .about-bg-light {
+    width: 85%;
+  }
+  body .about-container .about-bg-light h2,
+body .about-container .about-bg-light h3 {
+    font-size: 1.7rem;
+  }
+  body .about-container .about-bg-light p {
+    padding: 0.75rem;
+    font-size: 1.25rem;
+  }
+  body .about-container .about-bg-light .technologies-container img {
+    width: 40px;
+    margin-bottom: 1rem;
+  }
+  body .about-container .about-bg-dark {
+    width: 85%;
+  }
+  body .about-container .about-bg-dark .about-container-content {
+    text-align: center;
+  }
+  body .about-container .about-bg-dark .about-container-content h2 {
+    font-size: 1.85rem;
+    margin-bottom: 2.5rem;
+  }
+  body .about-container .about-bg-dark .about-container-content h3 {
+    font-size: 1.45rem;
+  }
+  body .about-container .about-bg-dark .about-container-content p {
+    font-size: 1.2rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-social {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body .about-container .about-bg-light {
+    width: 75%;
+  }
+  body .about-container .about-bg-light h2,
+body .about-container .about-bg-light h3 {
+    font-size: 1.8rem;
+  }
+  body .about-container .about-bg-light p {
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  body .about-container .about-bg-light .technologies-container img {
+    width: 45px;
+    margin-bottom: 2rem;
+  }
+  body .about-container .about-bg-dark {
+    width: 75%;
+  }
+  body .about-container .about-bg-dark .about-container-content h2 {
+    font-size: 1.9rem;
+  }
+  body .about-container .about-bg-dark .about-container-content h3 {
+    font-size: 1.5rem;
+  }
+  body .about-container .about-bg-dark .about-container-content p {
+    font-size: 1.25rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-social {
+    font-size: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
