@@ -12,12 +12,7 @@
 }
 // movie poster container
 .movie {
-  //   background-color: rgb(26, 8, 21);
-  //   background-color: #0a1e33;
-  // background-color: #0c2f4b;
-  // background-color: rgb(26, 8, 21);
   background-color: #0b3957;
-  // padding: 1rem;
   display: flex;
   flex-direction: column;
   width: calc(100% / 5 - 1%);
@@ -34,10 +29,10 @@
 }
 
 // common properties
-.movie-title,
-.ratings-favorites-container {
-  // margin: 0 1rem;
-}
+// .movie-title,
+// .ratings-favorites-container {
+//   // margin: 0 1rem;
+// }
 .movie-image-container,
 .movie-img,
 .movie-title,
@@ -156,42 +151,37 @@
 // SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
 
 // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-//   // common properties
-//   .movie-image-container,
-//   .movie-img,
-//   .movie-title,
-//   .ratings-favorites-container {
-//     max-width: 500px;
-//   }
-//   .movie-img {
-//     width: 500px;
-//     background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
-//   }
-// }
+@media (max-width: 575.98px) {
+  .movie {
+    width: calc(100% / 1);
+    max-width: 342px;
+  }
+}
 
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-//   // common properties
-//   .movie-image-container,
-//   .movie-img,
-//   .movie-title,
-//   .ratings-favorites-container {
-//     max-width: 342px;
-//   }
-//   .movie-img {
-//     width: 342px;
-//     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-//   }
-// }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .movie {
+    width: calc(100% / 2 - 1%);
+  }
+}
 
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-// }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .movie {
+    width: calc(100% / 3 - 1%);
+  }
+}
 
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {
-// }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .movie {
+    width: calc(100% / 4 - 1%);
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
 
 // Notes:
 // make picture size and max width the same

@@ -486,6 +486,27 @@ template {
   color: red;
 }
 
+@media (max-width: 575.98px) {
+  .movie {
+    width: calc(100% / 1);
+    max-width: 342px;
+  }
+}
+@media (min-width: 576px) {
+  .movie {
+    width: calc(100% / 2 - 1%);
+  }
+}
+@media (min-width: 768px) {
+  .movie {
+    width: calc(100% / 3 - 1%);
+  }
+}
+@media (min-width: 992px) {
+  .movie {
+    width: calc(100% / 4 - 1%);
+  }
+}
 .searchbar-container {
   display: flex;
   justify-content: center;
