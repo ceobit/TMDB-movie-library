@@ -15,7 +15,7 @@ const time = document.querySelector('.des-time');
 const year = document.querySelector('.des-year');
 const genres = document.querySelector('.des-class-genre');
 const story = document.querySelector('.des-story');
-const addToFavorite = document.querySelector('.des-add-btn'); // need function for add to favorites
+const addToFavorite = document.querySelector('.des-add-btn');
 
 getMovieCredits(filmId).then((data) => {
   moviePoster.setAttribute('src', `${posterBigURL}${data.poster_path}`);
