@@ -19,7 +19,6 @@ body {
   // Main Container
   .des-container {
     // container settings
-    border: 1px dashed red; // <----------------------- delete
     width: 100%;
     padding: 0.5rem;
     display: flex;
@@ -34,24 +33,23 @@ body {
 
     // Movie Description (Data)
     .des-movie-data {
-      border: 1px dashed greenyellow; // <----------------------- delete
       padding-top: 0.25rem;
 
       // Movie Title
       .des-movie-title {
         font-weight: normal;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.75rem;
       }
 
       // Short Description of Movie
       .des-short-description {
         font-weight: normal;
-        padding-bottom: 1rem;
+        padding-bottom: 1.25rem;
       }
 
       // Movie Rating
       .des-rating-production {
-        padding-bottom: 1rem;
+        padding-bottom: 1.25rem;
         .des-rating-stars {
           font-size: 1.1rem;
           padding-bottom: 0.25rem;
@@ -69,7 +67,33 @@ body {
 
       // Genre
       .des-genre {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .des-class-genre {
+        padding-bottom: 1.25rem;
+      }
+
+      // Movie Storyline
+      .des-storyline {
+        font-size: 1.2rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .des-story {
+        padding-bottom: 1rem;
+      }
+
+      // BTN for Add to Favorites
+      .des-add-btn {
+        background-color: #3caad9; // change later
+        border: none;
+        outline: none;
+        width: 9rem;
+        height: 2rem;
+        border-radius: 6px;
+        color: white; // change later
       }
     }
   } // Main Container END

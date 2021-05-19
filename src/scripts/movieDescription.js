@@ -12,6 +12,9 @@ const rating = document.querySelector('.des-rating');
 const production = document.querySelector('.des-country');
 const time = document.querySelector('.des-time');
 const year = document.querySelector('.des-year');
+const genres = document.querySelector('.des-class-genre');
+const story = document.querySelector('.des-story');
+const addToFavorite = document.querySelector('.des-add-btn'); // need function for add to favorites
 
 getMovieCredits(filmId).then((data) => {
   moviePoster.setAttribute('src', `${posterBigURL}${data.poster_path}`);
@@ -21,4 +24,8 @@ getMovieCredits(filmId).then((data) => {
   production.textContent = `${data.production_countries[0].name} /`;
   time.textContent = `/ ${data.runtime} min. /`;
   year.textContent = `/ ${data.release_date}`;
+  genres.textContent = `● ${data.genres[0].name} ● ${data.genres[1].name}`; // if time try with loop
+  story.textContent = data.overview;
+
+  console.log(data);
 });

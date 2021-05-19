@@ -562,7 +562,6 @@ body .des-nav .des-brand {
   font-size: 1.2rem;
 }
 body .des-container {
-  border: 1px dashed red;
   width: 100%;
   padding: 0.5rem;
   display: flex;
@@ -574,19 +573,18 @@ body .des-container .des-movie-poster {
   border-radius: 25px;
 }
 body .des-container .des-movie-data {
-  border: 1px dashed greenyellow;
   padding-top: 0.25rem;
 }
 body .des-container .des-movie-data .des-movie-title {
   font-weight: normal;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 body .des-container .des-movie-data .des-short-description {
   font-weight: normal;
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
 }
 body .des-container .des-movie-data .des-rating-production {
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
 }
 body .des-container .des-movie-data .des-rating-production .des-rating-stars {
   font-size: 1.1rem;
@@ -600,7 +598,27 @@ body .des-container .des-movie-data .des-rating-production .des-production {
   font-size: 0.9rem;
 }
 body .des-container .des-movie-data .des-genre {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.25rem;
+}
+body .des-container .des-movie-data .des-class-genre {
+  padding-bottom: 1.25rem;
+}
+body .des-container .des-movie-data .des-storyline {
+  font-size: 1.2rem;
+  padding-bottom: 0.25rem;
+}
+body .des-container .des-movie-data .des-story {
+  padding-bottom: 1rem;
+}
+body .des-container .des-movie-data .des-add-btn {
+  background-color: #3caad9;
+  border: none;
+  outline: none;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 6px;
+  color: white;
 }
 
 .about-container {
