@@ -34,11 +34,11 @@ getMovieCredits(filmId).then((data) => {
 const addToFavoriteList = (e) => {
   // get film id from HTML
   //Save the favourite movie to local storage
-  if (findDuplicate(filmId)) {
-    deleteFromLS(filmId);
+  if (findDuplicate(filmId, 'favoriteList')) {
+    deleteFromLS(filmId, 'favoriteList');
     addToFavorite.textContent = 'Add To Favorites';
   } else {
-    saveToLS(filmId);
+    saveToLS(filmId, 'favoriteList');
     addToFavorite.textContent = 'Remove From Favorites';
   }
 };

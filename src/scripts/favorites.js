@@ -1,11 +1,11 @@
 import { posterTemplate } from '../constants.js';
 import { getFilmById } from '../api.js';
-import { deleteFromLS, findDuplicate, getFromLS, saveToLS } from './localStorage.js';
+import { deleteFromLS, getFromLS } from './localStorage.js';
 
 const imagesContainer = document.querySelector('.posters-container');
 
 const favouriteImagesContainer = document.querySelector('.posters-container');
-getFromLS().forEach((filmId) =>
+getFromLS('favoriteList').forEach((filmId) =>
   getFilmById(filmId)
     .then((data) => {
       console.log(data);
@@ -29,7 +29,7 @@ const deleteFromFavoriteList = (e) => {
   filmId = e.target.getAttribute('data-film-id');
 
   if (e.target.classList.contains('fa-heart')) {
-    deleteFromLS(filmId);
+    deleteFromLS(filmId, 'favoriteList');
     e.target.parentElement.parentElement.parentElement.remove();
   }
 };
