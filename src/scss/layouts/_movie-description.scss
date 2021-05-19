@@ -1,69 +1,75 @@
 // Body
 body {
-  background-color: $bgColorMobile;
-  flex-direction: column;
-  justify-content: flex-start;
+  background-color: rgb(68, 68, 68); // Change at the end
   width: 100vw;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif; // Change at the end
 
   // Navbar
-  .navbar {
-    border: 1px dashed red; // <----------------------- delete
-    width: 100vw;
+  .des-nav {
+    width: 100%;
     align-items: center;
 
     // Navbar -> Logo
-    .navbar-brand {
-      border: 1px dashed red; // <----------------------- delete
+    .des-brand {
       font-size: 1.2rem;
     }
   }
 
   // Main Container
-  .container {
+  .des-container {
     // container settings
     border: 1px dashed red; // <----------------------- delete
-    width: 90vw;
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
 
     // Movie Poster
-    .movie-poster {
+    .des-movie-poster {
       width: 100%;
       height: auto;
       border-radius: 25px;
     }
 
     // Movie Description (Data)
-    .movie-data {
+    .des-movie-data {
       border: 1px dashed greenyellow; // <----------------------- delete
+      padding-top: 0.25rem;
 
       // Movie Title
-      .movie-title {
+      .des-movie-title {
         font-weight: normal;
         padding-bottom: 0.5rem;
       }
 
       // Short Description of Movie
-      .short-description {
+      .des-short-description {
         font-weight: normal;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
       }
 
       // Movie Rating
-      .rating-production {
+      .des-rating-production {
         padding-bottom: 1rem;
-        .rating-stars {
-          font-size: 1.2rem;
+        .des-rating-stars {
+          font-size: 1.1rem;
           padding-bottom: 0.25rem;
+
+          .des-rating {
+            font-size: 1rem;
+          }
         }
 
-        .rating {
-          font-size: 1.2rem;
+        .des-production {
+          display: flex;
+          font-size: 0.9rem;
         }
+      }
 
-        .production {
-          // CONTINUE HERE
-        }
+      // Genre
+      .des-genre {
+        font-size: 1rem;
       }
     }
   } // Main Container END
