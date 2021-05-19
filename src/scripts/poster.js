@@ -1,3 +1,4 @@
+
 import { getRatedFilms } from '../api.js';
 import { posterURL } from '../constants.js';
 import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage.js';
@@ -89,3 +90,14 @@ const openFilmDescriptionPage = (e) => {
 
 imagesContainer.addEventListener('click', addToFavoriteList);
 imagesContainer.addEventListener('click', openFilmDescriptionPage);
+
+// Small Stuff
+// set to 'watched' or 'not watched'
+const watched = document.querySelectorAll('.watched');
+console.log(watched);
+console.log(watched[0].classList);
+// if (watched.classList.contains('not-watched')) console.log(watched);
+
+
+
+
