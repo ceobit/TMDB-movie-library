@@ -8,22 +8,37 @@
     <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
-    <!-- navigation -->
-    <nav></nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Navigation Logo -->
+      <div class="navbar-brand">The<span>Movies</span>Library</div>
 
-    <!-- movie description -->
+      <!-- Navigation Links -->
+      <div class="navbar-pagelinks">
+        <ul>
+          <li>
+            <a class="pagelink" href="../index.html" aria-current="page">Home</a>
+          </li>
+          <li><a class="pagelink" href="./favoriteList.html">Hot</a></li>
+          <li><a class="pagelink" href="./about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Movie Description Container -->
     <div class="container">
-      <!-- image -->
-      <img src="../images/movie.jpeg" alt="Movie-Poster" />
+      <!-- Movie Poster -->
+      <img class="movie-poster" src="" alt="Movie-Poster" />
 
-      <!-- movie data container -->
+      <!-- Movie Data -->
       <div class="movie-data">
-        <h2 class="movie-title">Movie-Title</h2>
-        <h3 class="short-description">
-          ◆ Short Description - Lorem ipsum dolor sit - Lorem, ipsum. ◆
-        </h3>
+        <!-- Movie Title and Short Description -->
+        <h2 class="movie-title"></h2>
+        <h3 class="short-description"></h3>
+
+        <!-- Movie Rating -->
         <div class="rating-production">
-          <div class="rating">⭐︎ ⭐︎ ⭐︎ ⭐︎ ⭐︎ <span>8.9</span></div>
+          <div class="rating-stars">⭐︎ ⭐︎ ⭐︎ ⭐︎ ⭐︎ <span class="rating"></span></div>
           <p class="production">Country of production / 100 min. / 1994 year</p>
         </div>
         <h4 class="genre">Genre</h4>
@@ -42,10 +57,9 @@
         <button class="add-btn">Add To Favorites</button>
       </div>
     </div>
-    <!-- footer -->
-    <footer></footer>
+    <!-- footer ADD FOOTER-->
 
     <!-- JavaScript -->
-    <script src=""></script>
+    <script src="../scripts/movieDescription.js" type="module"></script>
   </body>
 </html>
