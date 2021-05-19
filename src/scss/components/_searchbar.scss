@@ -1,0 +1,50 @@
+// from of searchbar
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  padding-top: 3%;
+}
+// shared properties
+.searchbar,
+.searchbutton {
+  height: 2rem;
+  border-top: 2px solid $clr-primary;
+  border-bottom: 2px solid $clr-primary;
+}
+// searchbar
+.searchbar {
+  width: 20rem;
+  padding: 0.3rem;
+  padding-left: 0.7rem;
+  border-radius: 1rem 0 0 1rem;
+  border-right: none;
+  outline:none;
+}
+// search button type submit
+.searchbutton {
+  width: auto;
+  background-color: $clr-tertiary;
+  border-left: 2px solid $clr-primary;
+  border-radius: 0 1rem 1rem 0;
+  padding-left: 0.6rem;
+  padding-right: 0.7rem;
+  outline:none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #4caf50;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 575.98px) {
+  .searchbar-container {
+    height: 5rem;
+  }
+  .searchbar {
+    width: 10rem;
+  }
+}

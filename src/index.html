@@ -7,24 +7,65 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="original"
+      href="../images/favicon/30448-6-video-icon.png"
+    />
+    <!-- stylesheet for poster -->
 
-    <title>TMDB movie library</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>The Movie Library</title>
   </head>
   <body>
     <nav class="navbar">
-      <div class="navbar-brand" href="#">The<span>Movies</span>Library</div>
+      <div class="navbar-brand">
+        <a class="pagelink" href="index.html">The<span>Movies</span>Library</a>
+      </div>
       <div class="navbar-pagelinks">
         <ul>
           <li>
-            <a class="pagelink" href="#/search-and-trends" aria-current="page">Home </a>
+            <a class="pagelink" href="index.html" aria-current="page">Home </a>
           </li>
-          <li><a class="pagelink" href="#/saved">Hot</a></li>
-          <li><a class="pagelink" href="#/about">About</a></li>
+          <li><a class="pagelink" href="./pages/favoriteList.html">Hot</a></li>
+          <li><a class="pagelink" href="./pages/about.html">About</a></li>
         </ul>
       </div>
     </nav>
-    <a href="./pages/movieDescription.html">Movie-Description</a>
-      <a href="./pages/favoriteList.html">Add To Favorite</a>
-      <script src="./app.js" type="module"></script>
+    <!-- searchbar -->
+    <form class="searchbar-container">
+      <input
+        type="text"
+        name="searchbar"
+        id="searchbar"
+        class="searchbar"
+        placeholder="Search by title/genre/year/etc."
+      />
+      <button type="submit" class="searchbutton">Search</button>
+    </form>
+
+    <h1 class="poster_title found-title"></h1>
+    <section class="found-container">
+      <!-- found posters -->
+    </section>
+
+    <h1 class="poster_title">Top movie</h1>
+    <section class="posters-container">
+      <!-- movie posters -->
+    </section>
+
+    <script src="./app.js" type="module"></script>
+    <!-- poster scripts -->
+    <script src="./scripts/poster.js" type="module"></script>
   </body>
 </html>

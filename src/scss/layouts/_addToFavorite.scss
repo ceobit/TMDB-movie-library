@@ -3,8 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.poster-title {
+  padding: 5% 5%;
+  margin: 0 auto;
+}
+
 body {
-  overflow: hidden;
   color: #f0f4fd;
   background-color: #000;
   display: flex;
@@ -16,8 +22,8 @@ body {
 .face {
   width: 80vw;
   height: 70vh;
-  background-color: #504d4d;
   border-radius: 20px;
+  margin-top: 20px;
   overflow: hidden;
 }
 .top-icon {
@@ -69,6 +75,18 @@ ul {
   justify-content: space-evenly;
   align-items: center;
 }
+.inputSearch {
+  padding: 0.5rem 1rem;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: white;
+  width: 450px;
+  font-size: 1.15rem;
+  margin: 0.25rem;
+  border-radius: 25px;
+}
+
 .remove {
   background: transparent;
   border: 0.5px white solid;

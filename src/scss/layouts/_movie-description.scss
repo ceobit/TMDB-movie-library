@@ -1,271 +1,373 @@
-// body
+// Body
 body {
-  background-color: rgb(66, 66, 66);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(68, 68, 68); // Change at the end
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif; // Change at the end
 
-  // navbar
-  nav {
-    width: 100vw;
-    height: 3rem;
-    background-color: rgb(32, 32, 32);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+  // Navbar
+  .des-nav {
+    width: 100%;
+    align-items: center;
+
+    // Navbar -> Logo
+    .des-brand {
+      font-size: 1.2rem;
+    }
   }
 
-  // container main
-  .container {
+  // Main Container
+  .des-container {
+    // container settings
+    width: 100%;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
 
-    // image
-    img {
-      width: 100%;
+    // Movie Poster
+    .des-movie-poster {
+      width: 95%;
       height: auto;
-      border-radius: 10px;
-    }
+      border-radius: 25px;
 
-    // movie data
-    .movie-data {
-      width: 100%;
-      margin-top: 1rem;
-
-      h2 {
-        font-weight: 100;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-      }
-
-      h3 {
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-      }
-
-      .rating-production {
-        margin-bottom: 18px;
-        .rating {
-          font-size: 1.2rem;
-          margin-bottom: 8px;
-          span {
-            font-size: 1.5rem;
-          }
-        }
-      }
-
-      h4 {
-        margin-bottom: 8px;
-      }
-
-      .class-genre {
-        display: flex;
-        article {
-          margin: 0 15px 20px 0;
-
-          &:hover {
-            span {
-              color: rgb(129, 129, 196);
-            }
-          }
-        }
-      }
-
-      .story {
-        margin-bottom: 20px;
-      }
-      .add-btn {
-        width: 12rem;
-        height: 2.75rem;
-        background-color: rgb(129, 129, 196);
-        color: white;
-        outline: transparent;
-        border: none;
-        border-radius: 6px;
-        // hover efect here
+      &:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.692); // change at the end
+        transform: scale(1.02);
       }
     }
-  }
 
-  // footer
-  footer {
-    width: 100vw;
-    height: 2rem;
-    background-color: rgb(32, 32, 32);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
-}
+    // Movie Description (Data)
+    .des-movie-data {
+      padding-top: 0.25rem;
 
-// Tablet Screen
-@media only screen and (min-width: 576px) {
-  body {
-    .container {
-      img {
-        width: 50%;
+      // Movie Title
+      .des-movie-title {
+        font-weight: normal;
+        padding-bottom: 0.75rem;
       }
 
-      .movie-data {
-        h2 {
-          font-size: 2rem;
-        }
-
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        .rating-production {
-          display: flex;
-          justify-content: space-between;
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-
-        h4 {
-          font-size: 1.5rem;
-        }
-
-        .class-genre {
-          font-size: 1.3rem;
-        }
-
-        .story {
-          font-size: 1.25rem;
-        }
-
-        .add-btn {
-          width: 18rem;
-          height: 3rem;
-          font-size: 1.2rem;
-        }
-      }
-    }
-  }
-}
-
-// tablet large Screen
-@media only screen and (min-width: 768px) {
-  body {
-    .container {
-      flex-direction: row;
-      width: 95vw;
-
-      img {
-        width: 40%;
-        margin-right: 10px;
-        align-self: flex-start;
+      // Short Description of Movie
+      .des-short-description {
+        font-weight: normal;
+        padding-bottom: 1.25rem;
       }
 
-      .movie-data {
-        margin-left: 10px;
-        height: 100%;
+      // Movie Rating
+      .des-rating-production {
+        padding-bottom: 1.25rem;
+        .des-rating-stars {
+          font-size: 1.1rem;
+          padding-bottom: 0.25rem;
 
-        h2 {
-          font-size: 2.2rem;
-        }
-
-        h3 {
-          font-size: 1.6rem;
-        }
-
-        .rating-production {
-          display: block;
-        }
-
-        h4 {
-          font-size: 1.6rem;
-        }
-
-        .class-genre {
-          font-size: 1.4rem;
-        }
-
-        .story {
-          font-size: 1.35rem;
-        }
-
-        .add-btn {
-          font-size: 1.35rem;
-        }
-      }
-    }
-  }
-
-  footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-}
-
-// Desktop Screen
-@media only screen and (min-width: 992px) {
-  body {
-    display: flex;
-    justify-content: center;
-
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin-top: 5rem;
-
-      img {
-        max-width: 780px;
-        margin-right: 20px;
-      }
-
-      .movie-data {
-        margin-left: 20px;
-      }
-    }
-  }
-}
-
-// Desktop lager Screen
-@media only screen and (min-width: 992px) {
-  body {
-    .container {
-      .movie-data {
-        h2 {
-          font-size: 1.8rem;
-        }
-
-        h3 {
-          font-size: 1.4rem;
-        }
-
-        h4 {
-          font-size: 1.3rem;
-        }
-
-        .rating-production {
-          display: flex;
-          flex-direction: row;
-
-          p {
+          .des-rating {
             font-size: 1rem;
           }
         }
 
-        .class-genre {
-          font-size: 1.1rem;
+        .des-production {
+          display: flex;
+          font-size: 0.9rem;
+        }
+      }
+
+      // Genre
+      .des-genre {
+        font-size: 1.2rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .des-class-genre {
+        padding-bottom: 1.25rem;
+      }
+
+      // Movie Storyline
+      .des-storyline {
+        font-size: 1.2rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .des-story {
+        padding-bottom: 1rem;
+      }
+
+      // BTN for Add to Favorites
+      .des-add-btn {
+        background-color: #3caad9; // change later
+        border: none;
+        outline: none;
+        width: 14rem;
+        height: 2.75rem;
+        border-radius: 6px;
+        color: white; // change later
+
+        &:hover {
+          box-shadow: inset 0 0 15px white;
+        }
+      }
+    } // Movie Description (Data) END
+  } // Main Container END
+}
+
+// Small Devices
+@media only screen and (min-width: 576px) {
+  body {
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 1.5rem;
+      }
+    }
+
+    // Main Container
+    .des-container {
+      // Movie Poster
+      .des-movie-poster {
+        width: 70%;
+      }
+
+      // Movie Description (Data)
+      .des-movie-data {
+        padding: 1rem;
+
+        // Movie Title
+        .des-movie-title {
+          padding-bottom: 0.75rem;
+          font-size: 2rem;
         }
 
-        .story {
+        // Short Description of Movie
+        .des-short-description {
+          font-size: 1.4rem;
+          padding-bottom: 1.25rem;
+        }
+
+        // Movie Rating
+        .des-rating-production {
+          .des-rating-stars {
+            font-size: 1.4rem;
+
+            .des-rating {
+              font-size: 1.4rem;
+            }
+          }
+
+          .des-production {
+            font-size: 1.2rem;
+          }
+        }
+        // Genre
+        .des-genre {
+          font-size: 1.5rem;
+        }
+
+        .des-class-genre {
+          font-size: 1.2rem;
+        }
+
+        // Movie Storyline
+        .des-storyline {
+          font-size: 1.5rem;
+        }
+
+        .des-story {
           font-size: 1.15rem;
         }
 
-        .add-btn {
-          width: 10rem;
-          height: 2rem;
-          font-size: 0.9rem;
+        // BTN for Add to Favorites
+        .des-add-btn {
+          width: 14.5rem;
+          height: 3rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+// Medium Devices
+@media only screen and (min-width: 768px) {
+  body {
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 1.6rem;
+      }
+    }
+
+    // Main Container
+    .des-container {
+      // Movie Poster
+      .des-movie-poster {
+        width: 50%;
+      }
+
+      // Movie Description (Data)
+      .des-movie-data {
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+// Large Devices
+@media only screen and (min-width: 992px) {
+  body {
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 2rem;
+      }
+    }
+
+    // Main Container
+    .des-container {
+      flex-direction: row;
+      padding: 3rem 0 0 2rem;
+
+      // Movie Poster
+      .des-movie-poster {
+        width: 35%;
+      }
+
+      // Movie Description (Data)
+      .des-movie-data {
+        padding: 2rem;
+
+        // Movie Title
+        .des-movie-title {
+          padding-bottom: 0.75rem;
+          font-size: 2.8rem;
+        }
+
+        // Short Description of Movie
+        .des-short-description {
+          font-size: 2rem;
+          padding-bottom: 1.25rem;
+        }
+
+        // Movie Rating
+        .des-rating-production {
+          .des-rating-stars {
+            font-size: 1.7rem;
+
+            .des-rating {
+              font-size: 1.7rem;
+            }
+          }
+          .des-production {
+            font-size: 1.4rem;
+          }
+        }
+
+        // Genre
+        .des-genre {
+          font-size: 1.9rem;
+        }
+
+        .des-class-genre {
+          font-size: 1.4rem;
+        }
+
+        // Movie Storyline
+        .des-storyline {
+          font-size: 1.9rem;
+        }
+
+        .des-story {
+          font-size: 1.3rem;
+          padding-bottom: 2rem;
+        }
+
+        // BTN for Add to Favorites
+        .des-add-btn {
+          width: 18rem;
+          height: 4rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+// Extra Large Devices
+@media only screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    // Navbar
+    .des-nav {
+      // Navbar -> Logo
+      .des-brand {
+        font-size: 2rem;
+      }
+    }
+
+    // Main Container
+    .des-container {
+      width: 80%;
+      max-width: 1000px;
+      align-self: center;
+
+      // Movie Poster
+      .des-movie-poster {
+        width: 40%;
+      }
+
+      // Movie Description (Data)
+      .des-movie-data {
+        // Movie Title
+        .des-movie-title {
+          font-size: 2.2rem;
+        }
+
+        // Short Description of Movie
+        .des-short-description {
+          font-size: 1.5rem;
+        }
+
+        // Movie Rating
+        .des-rating-production {
+          .des-rating-stars {
+            font-size: 1.2rem;
+
+            .des-rating {
+              font-size: 1.2rem;
+            }
+          }
+          .des-production {
+            font-size: 1.1rem;
+          }
+        }
+
+        // Genre
+        .des-genre {
+          font-size: 1.5rem;
+        }
+
+        .des-class-genre {
+          font-size: 1.1rem;
+        }
+
+        // Movie Storyline
+        .des-storyline {
+          font-size: 1.5rem;
+        }
+
+        .des-story {
+          font-size: 1.15rem;
+          padding-bottom: 2rem;
+        }
+
+        // BTN for Add to Favorites
+        .des-add-btn {
+          width: 14.5rem;
+          height: 3.5rem;
+          font-size: 1.1rem;
         }
       }
     }
