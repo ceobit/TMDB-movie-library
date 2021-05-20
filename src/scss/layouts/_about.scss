@@ -1,3 +1,4 @@
+// Start From Here (Ruben)
 body {
   background-color: $clr-neutral-900;
 
@@ -15,7 +16,11 @@ body {
   .about-container {
     padding: 1rem;
     margin: 1rem;
-
+    .dci {
+      color: $clr-neutral-100;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
     //About Project
     .about-bg-light {
       margin-bottom: 2rem;
@@ -326,4 +331,9 @@ body {
       }
     }
   }
+}
+.technologies-container img {
+  width: 200px;
+  height: auto;
+  margin: 4rem;
 }
