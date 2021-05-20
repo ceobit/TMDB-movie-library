@@ -5,12 +5,12 @@ import {deleteFromLS, findDuplicate, getFromLS} from './localStorage.js';
 const imagesContainer = document.querySelector('.posters-container');
 
 const favouriteImagesContainer = document.querySelector('.posters-container');
+
+//to fill  list of favorites movies from Local storage
 getFromLS('favoriteList').forEach((filmId) =>
   getFilmById(filmId)
     .then((data) => {
-      console.log(data);
       favouriteImagesContainer.insertAdjacentHTML('beforeend', posterTemplate(data));
-
       //add red heart
       const hearts = document.querySelectorAll('.fa-heart');
       let filmId;

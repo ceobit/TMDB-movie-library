@@ -11,6 +11,7 @@ const searchbar = document.querySelector('.searchbar');
   getRatedFilms(1)
     .then((arr) => {
       arr.forEach((el) => {
+        // to fill movies in the main page
         try {
           imagesContainer.insertAdjacentHTML('beforeend', posterTemplate(el));
 
@@ -46,6 +47,7 @@ const searchbar = document.querySelector('.searchbar');
 
 const addToFavoriteList = (e) => {
   let filmId = 0;
+
   // get film id from HTML
   filmId = e.target.getAttribute('data-film-id');
 
@@ -53,17 +55,17 @@ const addToFavoriteList = (e) => {
     e.target.classList.toggle('add-to-favorites_grey');
     e.target.classList.toggle('add-to-favorites_red');
 
-    //Save the favourite movie to local storage
     if (findDuplicate(filmId, 'favoriteList')) {
+      //delete the favourite movie from local storage
       deleteFromLS(filmId, 'favoriteList');
     } else {
+      //Save the favourite movie to local storage
       saveToLS(filmId, 'favoriteList');
     }
   }
 };
 
 const openFilmDescriptionPage = (e) => {
-  console.log(e.target);
   if (e.target.classList.contains('movie-img')) {
     const filmId = e.target.getAttribute('data-film-id');
     window.open(`../pages/movieDescription.html?filmId=${filmId}`);
@@ -149,6 +151,7 @@ const findFilm = (e) => {
   if (movieName) {
     title.textContent = 'Search result';
 
+    // request to API by movie name
     getFilm(1, movieName).then((arr) => {
       if (!arr.length) {
         title.textContent = 'Nothing found';

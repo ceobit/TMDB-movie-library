@@ -19,7 +19,7 @@ body {
     .dci {
       color: $clr-neutral-100;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
     //About Project
     .about-bg-light {
@@ -54,6 +54,7 @@ body {
       img {
         width: 25px;
       }
+      flex-wrap: wrap;
     }
 
     // Team Members
