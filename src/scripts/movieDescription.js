@@ -15,7 +15,7 @@ const time = document.querySelector('.des-time');
 const year = document.querySelector('.des-year');
 const genres = document.querySelector('.des-class-genre');
 const story = document.querySelector('.des-story');
-const addToFavorite = document.querySelector('.des-add-btn'); // need function for add to favorites
+const addToFavorite = document.querySelector('.des-add-btn');
 
 getMovieCredits(filmId).then((data) => {
   moviePoster.setAttribute('src', `${posterBigURL}${data.poster_path}`);
@@ -28,17 +28,19 @@ getMovieCredits(filmId).then((data) => {
   genres.textContent = `● ${data.genres[0].name} ● ${data.genres[1].name}`; // if time try with loop
   story.textContent = data.overview;
 
-  console.log(data);
+  if (findDuplicate(filmId, 'favoriteList')) {
+    addToFavorite.textContent = 'Remove From Favorites';
+  }
 });
 
 const addToFavoriteList = (e) => {
   // get film id from HTML
   //Save the favourite movie to local storage
-  if (findDuplicate(filmId)) {
-    deleteFromLS(filmId);
+  if (findDuplicate(filmId, 'favoriteList')) {
+    deleteFromLS(filmId, 'favoriteList');
     addToFavorite.textContent = 'Add To Favorites';
   } else {
-    saveToLS(filmId);
+    saveToLS(filmId, 'favoriteList');
     addToFavorite.textContent = 'Remove From Favorites';
   }
 };
