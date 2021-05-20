@@ -893,10 +893,10 @@ body .about-container .about-bg-light .about-container-content {
 }
 body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 body .about-container .about-bg-light p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin-bottom: 30px;
   padding: 0.5rem;
   color: #e7ebee;
@@ -907,7 +907,7 @@ body .about-container .technologies-container {
   padding: 10px;
 }
 body .about-container .technologies-container img {
-  width: 30px;
+  width: 25px;
 }
 body .about-container .about-bg-dark {
   padding: 1rem;
@@ -922,19 +922,21 @@ body .about-container .about-bg-dark .about-container-content h2 {
   color: #90cea1;
   margin: 0.75rem 0 2rem 0;
   text-decoration: overline;
+  font-size: 1.25rem;
 }
 body .about-container .about-bg-dark .about-container-content h3 {
   color: #01b4e4;
   margin-bottom: 5px;
+  font-size: 1rem;
 }
 body .about-container .about-bg-dark .about-container-content p {
   margin-bottom: 3rem;
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: justify;
 }
 body .about-container .about-bg-dark .about-container-content .about-social {
-  width: 2rem;
+  width: 1.65rem;
   height: auto;
   margin-bottom: 0.75rem;
 }
@@ -953,14 +955,14 @@ body .about-container .about-bg-dark .about-container-content .about-social:hove
   }
   body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
-    font-size: 1.7rem;
+    font-size: 1.15rem;
   }
   body .about-container .about-bg-light p {
     padding: 0.75rem;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
   }
   body .about-container .about-bg-light .technologies-container img {
-    width: 40px;
+    width: 25px;
     margin-bottom: 1rem;
   }
   body .about-container .about-bg-dark {
@@ -970,14 +972,14 @@ body .about-container .about-bg-light h3 {
     text-align: center;
   }
   body .about-container .about-bg-dark .about-container-content h2 {
-    font-size: 1.85rem;
+    font-size: 1.3rem;
     margin-bottom: 2.5rem;
   }
   body .about-container .about-bg-dark .about-container-content h3 {
-    font-size: 1.45rem;
+    font-size: 1.1rem;
   }
   body .about-container .about-bg-dark .about-container-content p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-social {
     font-size: 2rem;
@@ -989,28 +991,28 @@ body .about-container .about-bg-light h3 {
   }
   body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
   body .about-container .about-bg-light p {
     padding: 1rem;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     margin-bottom: 2rem;
   }
   body .about-container .about-bg-light .technologies-container img {
-    width: 45px;
+    width: 35px;
     margin: 1rem 0;
   }
   body .about-container .about-bg-dark {
     width: 75%;
   }
   body .about-container .about-bg-dark .about-container-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   body .about-container .about-bg-dark .about-container-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   body .about-container .about-bg-dark .about-container-content p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-social {
     width: 1.8rem;
@@ -1022,11 +1024,11 @@ body .about-container .about-bg-light h3 {
   }
   body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
   body .about-container .about-bg-light p {
     padding: 1rem;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin-bottom: 2rem;
   }
   body .about-container .about-bg-light .technologies-container img {
@@ -1037,16 +1039,16 @@ body .about-container .about-bg-light h3 {
     width: 70%;
   }
   body .about-container .about-bg-dark .about-container-content h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   body .about-container .about-bg-dark .about-container-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
   body .about-container .about-bg-dark .about-container-content p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-social {
-    width: 1.6rem;
+    width: 1.5rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1071,7 +1073,7 @@ body .about-container .about-bg-light .about-container-content h3 {
   }
   body .about-container .about-bg-light .about-container-content .technologies-container img {
     width: 35px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   body .about-container .about-bg-dark {
     width: 100%;
