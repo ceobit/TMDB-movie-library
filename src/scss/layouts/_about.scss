@@ -1,90 +1,3 @@
-// section {
-//   padding: 1rem 0;
-//   @media (min-width: 40em) {
-//     section {
-//       padding: 1rem 1rem;
-//     }
-//   }
-// }
-// /* responsive design */
-// .about-container {
-//   align-items: row;
-//   margin-inline: auto;
-//   width: min(90%, 80.5rem);
-// }
-// .about-split {
-//   display: flex;
-//   flex-direction: column;
-// }
-// @media (min-width: 80em) {
-//   .about-split {
-//     flex-direction: row;
-//   }
-
-//   .about-split > * {
-//     flex-basis: 100%;
-//   }
-
-//   .about-split > * + * {
-//     margin-left: 1em;
-//   }
-// }
-
-// body {
-//   background-color: $clr-neutral-900;
-// }
-// .about-container {
-//   margin: 2rem;
-//   padding: 1rem;
-
-//   h1,
-//   h2,
-//   h3 {
-//     color: $clr-tertiary;
-//     font-family: $ff-accent;
-//     font-weight: 900;
-//     line-height: 1;
-//     margin-bottom: 1em;
-//   }
-
-//   p {
-//     margin-bottom: 1em;
-//     margin-top: 1em;
-//     color: $clr-neutral-100;
-//   }
-// }
-// .about-bg-light {
-//   margin-bottom: 4rem;
-//   padding: 1rem;
-//   background-color: $clr-primary;
-//   color: $clr-secondary;
-//   h2,
-//   h3 {
-//     margin-bottom: 1rem;
-//   }
-// }
-// .about-bg-dark {
-//   padding: 1rem;
-//   background-color: $clr-secondary;
-//   color: $clr-neutral-900;
-//   h2,
-//   h3 {
-//     color: $clr-neutral-900;
-//   }
-
-//   .about-social {
-//     font-size: 3rem;
-//     padding-left: 3rem;
-//     align-items: center;
-//     color: $clr-tertiary;
-//   }
-// }
-// .about-social:hover {
-//   font-size: 5rem;
-//   color: $clr-neutral-900;
-// }
-
-// Start From Here (Ruben)
 body {
   background-color: $clr-neutral-900;
 
@@ -111,14 +24,18 @@ body {
       color: $clr-tertiary;
       border-radius: 8px;
 
+      .about-container-content {
+        text-align: center;
+      }
+
       h2,
       h3 {
-        margin-bottom: 5px;
         font-size: 1.4rem;
       }
 
       p {
-        margin-bottom: 15px;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
         padding: 0.5rem;
         color: $clr-neutral-100;
       }
@@ -146,25 +63,29 @@ body {
 
         h2 {
           color: $clr-tertiary;
-          margin: 0.75rem 0 1.75rem 0;
+          margin: 0.75rem 0 2rem 0;
           text-decoration: overline;
         }
 
         h3 {
           color: $clr-secondary;
+          margin-bottom: 5px;
         }
 
         p {
           margin-bottom: 3rem;
+          text-align: left;
+          font-size: 0.9rem;
+          text-align: justify;
         }
 
         .about-social {
-          font-size: 2rem;
-          color: $clr-neutral-900;
+          width: 2rem;
+          height: auto;
           margin-bottom: 0.75rem;
 
           &:hover {
-            color: #f16811;
+            filter: sepia(0.5);
           }
         }
       }
@@ -241,19 +162,19 @@ body {
 
         h2,
         h3 {
-          font-size: 1.8rem;
+          font-size: 1.45rem;
         }
         p {
           padding: 1rem;
-          font-size: 1.3rem;
-          margin-bottom: 3rem;
+          font-size: 1.05rem;
+          margin-bottom: 2rem;
         }
 
         // About Project Images
         .technologies-container {
           img {
             width: 45px;
-            margin-bottom: 2rem;
+            margin: 1rem 0;
           }
         }
       }
@@ -264,19 +185,19 @@ body {
 
         .about-container-content {
           h2 {
-            font-size: 1.9rem;
-          }
-
-          h3 {
             font-size: 1.5rem;
           }
 
-          p {
+          h3 {
             font-size: 1.25rem;
           }
 
+          p {
+            font-size: 1rem;
+          }
+
           .about-social {
-            font-size: 2.5rem;
+            width: 1.8rem;
           }
         }
       }
@@ -291,10 +212,46 @@ body {
       //About Project
       .about-bg-light {
         width: 70%;
+
+        h2,
+        h3 {
+          font-size: 1.3rem;
+        }
+        p {
+          padding: 1rem;
+          font-size: 0.95rem;
+          margin-bottom: 2rem;
+        }
+
+        // About Project Images
+        .technologies-container {
+          img {
+            width: 35px;
+            margin: 0.75rem 0;
+          }
+        }
       }
       // Team Members
       .about-bg-dark {
         width: 70%;
+
+        .about-container-content {
+          h2 {
+            font-size: 1.4rem;
+          }
+
+          h3 {
+            font-size: 1.15rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+
+          .about-social {
+            width: 1.6rem;
+          }
+        }
       }
     }
   }
@@ -316,18 +273,18 @@ body {
           text-align: center;
           h2,
           h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
           }
           p {
             padding: 1rem;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
           }
 
           // About Project Images
           .technologies-container {
             img {
-              width: 40px;
+              width: 35px;
               margin-bottom: 2rem;
             }
           }
@@ -340,7 +297,7 @@ body {
 
         .about-container-content {
           h2 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
           }
 
           .about-split {
@@ -348,17 +305,18 @@ body {
             grid-template-columns: repeat(5, 1fr);
 
             div {
-              padding: 0 2.5rem;
+              padding: 0 2rem;
               h3 {
-                font-size: 1rem;
+                font-size: 1.15rem;
               }
 
               p {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                margin-bottom: 0.5rem;
               }
 
               .about-social {
-                font-size: 2rem;
+                width: 1.75rem;
               }
             }
           }

@@ -634,7 +634,6 @@ body {
   background-color: #06111f;
   width: 100vw;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
 }
 body .des-nav {
   width: 100%;
@@ -889,13 +888,16 @@ body .about-container .about-bg-light {
   color: #90cea1;
   border-radius: 8px;
 }
+body .about-container .about-bg-light .about-container-content {
+  text-align: center;
+}
 body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
-  margin-bottom: 5px;
   font-size: 1.4rem;
 }
 body .about-container .about-bg-light p {
-  margin-bottom: 15px;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
   padding: 0.5rem;
   color: #e7ebee;
 }
@@ -918,22 +920,26 @@ body .about-container .about-bg-dark .about-container-content {
 }
 body .about-container .about-bg-dark .about-container-content h2 {
   color: #90cea1;
-  margin: 0.75rem 0 1.75rem 0;
+  margin: 0.75rem 0 2rem 0;
   text-decoration: overline;
 }
 body .about-container .about-bg-dark .about-container-content h3 {
   color: #01b4e4;
+  margin-bottom: 5px;
 }
 body .about-container .about-bg-dark .about-container-content p {
   margin-bottom: 3rem;
+  text-align: left;
+  font-size: 0.9rem;
+  text-align: justify;
 }
 body .about-container .about-bg-dark .about-container-content .about-social {
-  font-size: 2rem;
-  color: #06111f;
+  width: 2rem;
+  height: auto;
   margin-bottom: 0.75rem;
 }
 body .about-container .about-bg-dark .about-container-content .about-social:hover {
-  color: #f16811;
+  filter: sepia(0.5);
 }
 
 @media only screen and (min-width: 576px) {
@@ -983,39 +989,64 @@ body .about-container .about-bg-light h3 {
   }
   body .about-container .about-bg-light h2,
 body .about-container .about-bg-light h3 {
-    font-size: 1.8rem;
+    font-size: 1.45rem;
   }
   body .about-container .about-bg-light p {
     padding: 1rem;
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
   }
   body .about-container .about-bg-light .technologies-container img {
     width: 45px;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
   }
   body .about-container .about-bg-dark {
     width: 75%;
   }
   body .about-container .about-bg-dark .about-container-content h2 {
-    font-size: 1.9rem;
-  }
-  body .about-container .about-bg-dark .about-container-content h3 {
     font-size: 1.5rem;
   }
-  body .about-container .about-bg-dark .about-container-content p {
+  body .about-container .about-bg-dark .about-container-content h3 {
     font-size: 1.25rem;
   }
+  body .about-container .about-bg-dark .about-container-content p {
+    font-size: 1rem;
+  }
   body .about-container .about-bg-dark .about-container-content .about-social {
-    font-size: 2.5rem;
+    width: 1.8rem;
   }
 }
 @media only screen and (min-width: 992px) {
   body .about-container .about-bg-light {
     width: 70%;
   }
+  body .about-container .about-bg-light h2,
+body .about-container .about-bg-light h3 {
+    font-size: 1.3rem;
+  }
+  body .about-container .about-bg-light p {
+    padding: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  body .about-container .about-bg-light .technologies-container img {
+    width: 35px;
+    margin: 0.75rem 0;
+  }
   body .about-container .about-bg-dark {
     width: 70%;
+  }
+  body .about-container .about-bg-dark .about-container-content h2 {
+    font-size: 1.4rem;
+  }
+  body .about-container .about-bg-dark .about-container-content h3 {
+    font-size: 1.15rem;
+  }
+  body .about-container .about-bg-dark .about-container-content p {
+    font-size: 0.95rem;
+  }
+  body .about-container .about-bg-dark .about-container-content .about-social {
+    width: 1.6rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1031,38 +1062,39 @@ body .about-container .about-bg-light h3 {
   }
   body .about-container .about-bg-light .about-container-content h2,
 body .about-container .about-bg-light .about-container-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   body .about-container .about-bg-light .about-container-content p {
     padding: 1rem;
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
   body .about-container .about-bg-light .about-container-content .technologies-container img {
-    width: 40px;
+    width: 35px;
     margin-bottom: 2rem;
   }
   body .about-container .about-bg-dark {
     width: 100%;
   }
   body .about-container .about-bg-dark .about-container-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-split {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
   body .about-container .about-bg-dark .about-container-content .about-split div {
-    padding: 0 2.5rem;
+    padding: 0 2rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-split div h3 {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-split div p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
   }
   body .about-container .about-bg-dark .about-container-content .about-split div .about-social {
-    font-size: 2rem;
+    width: 1.75rem;
   }
 }
 
