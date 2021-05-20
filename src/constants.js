@@ -33,7 +33,6 @@ export const posterTemplate = (movie) => {
         <i class="fas fa-star star-rating-user fourth-star"></i>
         <i class="fas fa-star star-rating-user fifth-star"></i>
         </div>
-        <span class="user-rating">#.#/10</span>
       </div>
     </div>
 
