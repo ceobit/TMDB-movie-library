@@ -8,8 +8,10 @@ export const posterTemplate = (movie) => {
   <div class="movie" data-film-id=${movie.filmId}>
   <!-- movie image -->
   <div class="movie-image-container">
-    <img class="movie-img" src=${posterURL}${movie.poster} alt="poster" data-film-id=${movie.filmId}/>
-    <span class="release-year">####</span>
+    <img class="movie-img" src=${posterURL}${movie.poster} alt="poster" data-film-id=${
+    movie.filmId
+  }/>
+    <span class="release-year">${movie.year.slice(0, 4)}</span>
   </div>
   <!-- movie title -->
   <div class="movie-description">
@@ -24,22 +26,23 @@ export const posterTemplate = (movie) => {
       <!-- user rating -->
       <div class="user-rating-container">
         <span class="rated-not-rated">Your rating:</span>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <i class="fas fa-star star-rating-user"></i>
-        <span class="user-rating">#.#/10</span>
+        <div class="user-rating-stars">
+        <i class="fas fa-star star-rating-user first-star"></i>
+        <i class="fas fa-star star-rating-user second-star"></i>
+        <i class="fas fa-star star-rating-user third-star"></i>
+        <i class="fas fa-star star-rating-user fourth-star"></i>
+        <i class="fas fa-star star-rating-user fifth-star"></i>
+        </div>
       </div>
     </div>
 
     <div class="favorite-container">
     <!-- set as watched -->
-    <div class="watched">not watched</div>
+    <div class="not-watched" data-film-id=${movie.filmId}>not watched</div>
     <!-- add film to favorites page -->
     <i class="fas fa-heart add-to-favorites_grey" data-film-id=${movie.filmId}></i>
   </div>
-  <p class="genres">genre1, genre2, genre3</p>
+  <p class="genres"></p>
   </div>
 </div>`;
 };

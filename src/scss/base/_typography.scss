@@ -1,7 +1,11 @@
 @import "../abstracts/variables";
 
 :root {
-  font-family: $sansSerif;
+  font-family: $ff-primary;
   font-size: $defaultFontSize;
   color: $fontColor;
+}
+
+h1 h2 h3 h4 {
+  font-family: $ff-accent;
 }
