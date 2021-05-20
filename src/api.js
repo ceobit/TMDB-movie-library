@@ -20,6 +20,7 @@ const searchApi = {
   },
 };
 
+// for searching specific movie
 export const getFilm = (page, movieName) => {
   return searchApi
     .getMoviesByName(page, movieName)
@@ -42,6 +43,7 @@ export const getFilm = (page, movieName) => {
     });
 };
 
+// to get information about movie in the favorite page
 export const getFilmById = (filmId) => {
   return searchApi
     .getMoviesById(filmId)
@@ -64,6 +66,7 @@ export const getFilmById = (filmId) => {
     });
 };
 
+// to fill most popular movies in the main page
 export const getRatedFilms = (page) => {
   return searchApi
     .getRatedMovies(page)
@@ -86,6 +89,7 @@ export const getRatedFilms = (page) => {
     });
 };
 
+// we are getting all information about movie to use in the description page
 export const getMovieCredits = (filmId) => {
   return searchApi
     .getMovieCredits(filmId)
@@ -98,6 +102,7 @@ export const getMovieCredits = (filmId) => {
     });
 };
 
+// TO DO
 export const getGenre = () => {
   return searchApi
     .getGenre()

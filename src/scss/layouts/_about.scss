@@ -1,85 +1,340 @@
-section {
-  padding: 1rem 0;
-  @media (min-width: 40em) {
-    section {
-      padding: 1rem 1rem;
+// Start From Here (Ruben)
+body {
+  background-color: $clr-neutral-900;
+
+  // Navbar
+  .about-nav {
+    width: 100%;
+    align-items: center;
+
+    // Navbar -> Logo
+    .about-brand {
+      font-size: 1.2rem;
+    }
+  }
+
+  .about-container {
+    padding: 1rem;
+    margin: 1rem;
+    .dci {
+      color: $clr-neutral-100;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    //About Project
+    .about-bg-light {
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      background-color: $clr-primary;
+      color: $clr-tertiary;
+      border-radius: 8px;
+
+      .about-container-content {
+        text-align: center;
+      }
+
+      h2,
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+        padding: 0.5rem;
+        color: $clr-neutral-100;
+      }
+    }
+
+    // About Project Images
+    .technologies-container {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px;
+      img {
+        width: 25px;
+      }
+      flex-wrap: wrap;
+    }
+
+    // Team Members
+    .about-bg-dark {
+      padding: 1rem;
+      background-color: $clr-primary;
+      color: $clr-neutral-100;
+      border-radius: 8px;
+
+      .about-container-content {
+        text-align: center;
+
+        h2 {
+          color: $clr-tertiary;
+          margin: 0.75rem 0 2rem 0;
+          text-decoration: overline;
+          font-size: 1.25rem;
+        }
+
+        h3 {
+          color: $clr-secondary;
+          margin-bottom: 5px;
+          font-size: 1rem;
+        }
+
+        p {
+          margin-bottom: 3rem;
+          text-align: left;
+          font-size: 0.8rem;
+          text-align: justify;
+        }
+
+        .about-social {
+          width: 1.65rem;
+          height: auto;
+          margin-bottom: 0.75rem;
+
+          &:hover {
+            filter: sepia(0.5);
+          }
+        }
+      }
     }
   }
 }
-/* responsive design */
-.about-container {
-  align-items: row;
-  margin-inline: auto;
-  width: min(90%, 80.5rem);
-}
-.about-split {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 80em) {
-  .about-split {
-    flex-direction: row;
-  }
 
-  .about-split > * {
-    flex-basis: 100%;
-  }
+// Small Devices
+@media only screen and (min-width: 576px) {
+  body {
+    .about-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
-  .about-split > * + * {
-    margin-left: 1em;
+      //About Project
+      .about-bg-light {
+        width: 85%;
+
+        h2,
+        h3 {
+          font-size: 1.15rem;
+        }
+        p {
+          padding: 0.75rem;
+          font-size: 0.8rem;
+        }
+
+        // About Project Images
+        .technologies-container {
+          img {
+            width: 25px;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      // Team Members
+      .about-bg-dark {
+        width: 85%;
+
+        .about-container-content {
+          text-align: center;
+
+          h2 {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+          }
+
+          h3 {
+            font-size: 1.1rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+
+          .about-social {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
   }
 }
 
-body {
-  background-color: $clr-neutral-900;
-}
-.about-container {
-  margin: 2rem;
-  padding: 1rem;
+// Medium Devices
+@media only screen and (min-width: 768px) {
+  body {
+    .about-container {
+      //About Project
+      .about-bg-light {
+        width: 75%;
 
-  h1,
-  h2,
-  h3 {
-    color: $clr-tertiary;
-    font-family: $ff-accent;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 1em;
-  }
+        h2,
+        h3 {
+          font-size: 1.35rem;
+        }
+        p {
+          padding: 1rem;
+          font-size: 0.9rem;
+          margin-bottom: 2rem;
+        }
 
-  p {
-    margin-bottom: 1em;
-    margin-top: 1em;
-    color: $clr-neutral-100;
-  }
-}
-.about-bg-light {
-  margin-bottom: 4rem;
-  padding: 1rem;
-  background-color: $clr-primary;
-  color: $clr-secondary;
-  h2,
-  h3 {
-    margin-bottom: 1rem;
-  }
-}
-.about-bg-dark {
-  padding: 1rem;
-  background-color: $clr-secondary;
-  color: $clr-neutral-900;
-  h2,
-  h3 {
-    color: $clr-neutral-900;
-  }
+        // About Project Images
+        .technologies-container {
+          img {
+            width: 35px;
+            margin: 1rem 0;
+          }
+        }
+      }
 
-  .about-social {
-    font-size: 3rem;
-    padding-left: 3rem;
-    align-items: center;
-    color: $clr-tertiary;
+      // Team Members
+      .about-bg-dark {
+        width: 75%;
+
+        .about-container-content {
+          h2 {
+            font-size: 1.4rem;
+          }
+
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+
+          .about-social {
+            width: 1.8rem;
+          }
+        }
+      }
+    }
   }
 }
-.about-social:hover {
-  font-size: 5rem;
-  color: $clr-neutral-900;
+
+// Large Devices
+@media only screen and (min-width: 992px) {
+  body {
+    .about-container {
+      //About Project
+      .about-bg-light {
+        width: 70%;
+
+        h2,
+        h3 {
+          font-size: 1.25rem;
+        }
+        p {
+          padding: 1rem;
+          font-size: 0.85rem;
+          margin-bottom: 2rem;
+        }
+
+        // About Project Images
+        .technologies-container {
+          img {
+            width: 35px;
+            margin: 0.75rem 0;
+          }
+        }
+      }
+      // Team Members
+      .about-bg-dark {
+        width: 70%;
+
+        .about-container-content {
+          h2 {
+            font-size: 1.3rem;
+          }
+
+          h3 {
+            font-size: 1.05rem;
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
+
+          .about-social {
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra Large Devices
+@media only screen and (min-width: 1200px) {
+  body {
+    .about-container {
+      //About Project
+      .about-bg-light {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .about-container-content {
+          width: 45%;
+          text-align: center;
+          h2,
+          h3 {
+            font-size: 1.3rem;
+          }
+          p {
+            padding: 1rem;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+          }
+
+          // About Project Images
+          .technologies-container {
+            img {
+              width: 35px;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+
+      // Team Members
+      .about-bg-dark {
+        width: 100%;
+
+        .about-container-content {
+          h2 {
+            font-size: 1.35rem;
+          }
+
+          .about-split {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            div {
+              padding: 0 2rem;
+              h3 {
+                font-size: 1.15rem;
+              }
+
+              p {
+                font-size: 0.95rem;
+                margin-bottom: 0.5rem;
+              }
+
+              .about-social {
+                width: 1.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.technologies-container img {
+  width: 200px;
+  height: auto;
+  margin: 4rem;
 }

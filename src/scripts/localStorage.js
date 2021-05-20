@@ -1,32 +1,32 @@
-export const saveToLS = (filmId) => {
+export const saveToLS = (filmId, name) => {
   let updatedFavoriteList = [];
-  const currentFavoriteList = getFromLS();
+  const currentFavoriteList = getFromLS(name);
   if (!findDuplicate(filmId)) {
     if (currentFavoriteList) updatedFavoriteList = [...currentFavoriteList, filmId];
     else updatedFavoriteList.push(filmId);
 
-    localStorage.setItem('favoriteList', JSON.stringify(updatedFavoriteList));
+    localStorage.setItem(name, JSON.stringify(updatedFavoriteList));
   }
 };
 
-export const getFromLS = () => {
-  return JSON.parse(localStorage.getItem('favoriteList'));
+export const getFromLS = (name) => {
+  return JSON.parse(localStorage.getItem(name));
 };
 
-export const deleteFromLS = (filmId) => {
-  const currentFavoriteList = getFromLS() || [];
+export const deleteFromLS = (filmId, name) => {
+  const currentFavoriteList = getFromLS(name) || [];
   currentFavoriteList.splice(currentFavoriteList.indexOf(filmId), 1);
   console.log(currentFavoriteList);
-  localStorage.setItem('favoriteList', JSON.stringify(currentFavoriteList));
+  localStorage.setItem(name, JSON.stringify(currentFavoriteList));
 };
 
 export const clearLs = () => {
   localStorage.clear();
 };
 
-export const findDuplicate = (id) => {
-  const currentFavoriteList = getFromLS();
+export const findDuplicate = (id, name) => {
+  const currentFavoriteList = getFromLS(name);
   if (currentFavoriteList) {
-    return getFromLS().filter((el) => el === id).length;
+    return getFromLS(name).filter((el) => el === id).length;
   } else return 0;
 };

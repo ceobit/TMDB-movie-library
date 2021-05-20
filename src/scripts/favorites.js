@@ -1,16 +1,16 @@
 import { posterTemplate } from '../constants.js';
 import { getFilmById } from '../api.js';
-import { deleteFromLS, findDuplicate, getFromLS, saveToLS } from './localStorage.js';
+import {deleteFromLS, findDuplicate, getFromLS} from './localStorage.js';
 
 const imagesContainer = document.querySelector('.posters-container');
 
 const favouriteImagesContainer = document.querySelector('.posters-container');
-getFromLS().forEach((filmId) =>
+
+//to fill  list of favorites movies from Local storage
+getFromLS('favoriteList').forEach((filmId) =>
   getFilmById(filmId)
     .then((data) => {
-      console.log(data);
       favouriteImagesContainer.insertAdjacentHTML('beforeend', posterTemplate(data));
-
       //add red heart
       const hearts = document.querySelectorAll('.fa-heart');
       let filmId;
@@ -19,6 +19,18 @@ getFromLS().forEach((filmId) =>
         el.classList.remove('add-to-favorites_grey');
         el.classList.add('add-to-favorites_red');
       });
+
+    //add watched
+    const watched = document.querySelectorAll('.not-watched');
+    watched.forEach((el) => {
+      filmId = el.getAttribute('data-film-id');
+      if (findDuplicate(filmId, 'watchedList')) {
+        el.classList.remove('not-watched');
+        el.classList.add('watched');
+        el.textContent = 'watched';
+      }
+    });
+
     })
     .catch((e) => console.log(e)),
 );
@@ -29,7 +41,7 @@ const deleteFromFavoriteList = (e) => {
   filmId = e.target.getAttribute('data-film-id');
 
   if (e.target.classList.contains('fa-heart')) {
-    deleteFromLS(filmId);
+    deleteFromLS(filmId, 'favoriteList');
     e.target.parentElement.parentElement.parentElement.remove();
   }
 };

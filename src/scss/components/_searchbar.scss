@@ -19,17 +19,24 @@
   padding: 0.3rem;
   padding-left: 0.7rem;
   border-radius: 1rem 0 0 1rem;
+  border: 2px solid $clr-tertiary;
   border-right: none;
   outline:none;
 }
+
+.searchbar:focus {
+  border: 2px solid $clr-primary;
+  border-right: none;
+}
+
 // search button type submit
 .searchbutton {
   width: auto;
+  height: 2.2rem;
   background-color: $clr-tertiary;
   border-left: 2px solid $clr-primary;
   border-radius: 0 1rem 1rem 0;
-  padding-left: 0.6rem;
-  padding-right: 0.7rem;
+  padding: 0 0.7rem 0 0.6rem;
   outline:none;
   &:hover {
     cursor: pointer;
