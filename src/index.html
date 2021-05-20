@@ -37,10 +37,11 @@
           <li>
             <a class="pagelink" href="index.html" aria-current="page">Home </a>
           </li>
-          <li><a class="pagelink" href="./pages/favoriteList.html">Hot</a></li>
+          <li><a class="pagelink" href="./pages/favoriteList.html">Favorites</a></li>
           <li><a class="pagelink" href="./pages/about.html">About</a></li>
         </ul>
       </div>
+      <div class="hamburger-container"><i class="fas fa-bars hamburger-menu"></i></div>
     </nav>
     <!-- searchbar -->
     <form class="searchbar-container">
@@ -50,10 +51,17 @@
         id="searchbar"
         class="searchbar"
         placeholder="Search by title/genre/year/etc."
+        autocomplete="off"
       />
       <button type="submit" class="searchbutton">Search</button>
     </form>
 
+    <h1 class="poster_title found-title"></h1>
+    <section class="found-container">
+      <!-- found posters -->
+    </section>
+
+    <h1 class="poster_title">Top movies</h1>
     <section class="posters-container">
       <!-- movie posters -->
     </section>
@@ -61,5 +69,7 @@
     <script src="./app.js" type="module"></script>
     <!-- poster scripts -->
     <script src="./scripts/poster.js" type="module"></script>
+    <!-- hamburger menu for mobile version script -->
+    <script src="./scripts/hamburger-menu.js"></script>
   </body>
 </html>
