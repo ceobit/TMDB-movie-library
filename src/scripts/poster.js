@@ -1,6 +1,6 @@
-import { getGenre, getRatedFilms, getFilm } from '../api.js';
+import { getRatedFilms, getFilm } from '../api.js';
 import { posterTemplate } from '../constants.js';
-import { getFromLS, saveToLS, findDuplicate, deleteFromLS } from './localStorage.js';
+import { saveToLS, findDuplicate, deleteFromLS } from './localStorage.js';
 
 const imagesContainer = document.querySelector('.posters-container');
 const foundContainer = document.querySelector('.found-container');
@@ -19,11 +19,23 @@ const searchbar = document.querySelector('.searchbar');
           let filmId;
           hearts.forEach((el) => {
             filmId = el.getAttribute('data-film-id');
-            if (findDuplicate(filmId)) {
+            if (findDuplicate(filmId, 'favoriteList')) {
               el.classList.remove('add-to-favorites_grey');
               el.classList.add('add-to-favorites_red');
             }
           });
+
+          //add watched
+          const watched = document.querySelectorAll('.not-watched');
+          watched.forEach((el) => {
+            filmId = el.getAttribute('data-film-id');
+            if (findDuplicate(filmId, 'watchedList')) {
+              el.classList.remove('not-watched');
+              el.classList.add('watched');
+              el.textContent = 'watched';
+            }
+          });
+
         } catch (e) {
           console.log(e);
         }
@@ -42,10 +54,10 @@ const addToFavoriteList = (e) => {
     e.target.classList.toggle('add-to-favorites_red');
 
     //Save the favourite movie to local storage
-    if (findDuplicate(filmId)) {
-      deleteFromLS(filmId);
+    if (findDuplicate(filmId, 'favoriteList')) {
+      deleteFromLS(filmId, 'favoriteList');
     } else {
-      saveToLS(filmId);
+      saveToLS(filmId, 'favoriteList');
     }
   }
 };
@@ -111,6 +123,15 @@ const handleWatched = (e) => {
     e.target.textContent = 'watched';
     e.target.classList.add('watched');
     e.target.classList.remove('not-watched');
+  }
+
+  const filmId = e.target.getAttribute('data-film-id');
+
+  //Save watched to local storage
+  if (findDuplicate(filmId, 'watchedList')) {
+    deleteFromLS(filmId, 'watchedList');
+  } else {
+    saveToLS(filmId, 'watchedList');
   }
 };
 

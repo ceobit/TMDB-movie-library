@@ -1,24 +1,25 @@
-@import "../abstracts/_abstracts-dir";
+@import '../abstracts/_abstracts-dir';
 
-* {
-  box-sizing: border-box;
-}
+// Movie Posters
 
-body {
-  background-color: $clr-neutral-900;
-}
-
-// Movie Poster
 // container for all movies
-.posters-container{
+.found-container {
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.found-container {
+.favorite-list {
   padding: 0 5%;
+  display: flex;
+  justify-content: space-evenly !important;
+  flex-wrap: wrap;
+}
+
+.posters-container {
+  padding: 0 5% 5% 5%;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -28,14 +29,9 @@ body {
   padding: 0 5%;
 }
 
-  // movie poster container
+// movie poster container
 .movie {
-  //   background-color: rgb(26, 8, 21);
-  //   background-color: #0a1e33;
-  // background-color: #0c2f4b;
-  // background-color: rgb(26, 8, 21);
-  background-color: #0b3957;
-  // padding: 1rem;
+  background-color: $poster-background;
   display: flex;
   flex-direction: column;
   width: calc(100% / 5 - 1%);
@@ -43,7 +39,7 @@ body {
   border-radius: 10px;
   &:hover {
     border: none;
-    box-shadow: 5px 15px 10px var(--clr-neutral-900);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.308);
     transform: scale(1.06);
     border-radius: 0.4rem;
     transition: 0.5s;
@@ -51,11 +47,6 @@ body {
   }
 }
 
-// common properties
-.movie-title,
-.ratings-favorites-container {
-  // margin: 0 1rem;
-}
 .movie-image-container,
 .movie-img,
 .movie-title,
@@ -70,11 +61,6 @@ body {
   border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
-
-.movie-image-container :hover {
-  box-shadow: 0 0 55px rgba(3, 16, 33, 0.25);
-}
-
 .movie-img {
   display: block;
   width: 100%;
@@ -85,7 +71,7 @@ body {
 .release-year {
   position: absolute;
   background-color: #ffffff;
-  opacity: .7;
+  opacity: 0.7;
   padding: 0.1rem 0.2rem;
   color: cornflowerblue;
   right: 0.7rem;
@@ -111,43 +97,38 @@ body {
 .ratings-favorites-container {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
-
   margin: 0.5rem 0;
 }
-
+// IMDb rating
 .star-rating-imdb {
   color: rgb(255, 217, 0);
 }
-
+// user rating
 .user-rating-container {
   cursor: pointer;
   display: flex;
   justify-content: space-evenly;
 }
-
 .rated-not-rated {
   margin-right: 2px;
 }
-
 .star-rating-user {
   color: gray;
 }
-
 .gold-star {
   color: rgb(255, 217, 0);
 }
-
 .user-rating {
   display: none;
 }
 
+// watched and favorite container
 .favorite-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.3rem 0;
 }
-
 // watched - not watched
 .watched {
   display: inline-block;
@@ -164,69 +145,73 @@ body {
   border: grey 1px solid;
   cursor: pointer;
 }
-
-// add to favorites button
+// add to favorites button (heart)
 .add-to-favorites {
   cursor: pointer;
 }
-
 .add-to-favorites_grey:before {
   color: grey;
 }
-
 .add-to-favorites_red:before {
   color: red;
 }
 
-// genre overview
-// .genres {
-//   left: 0.7rem;
-//   top: 0.3rem;
-//   // display: inline-block;
-//   // margin-bottom: 0.3vw;
-// }
+// SCREEN SIZE ADJUSTMENTS
 
-// SCREEN SIZE ADJUSTMENTS (WORK ON LATER)
+// Smaller devices (phones, 576px and below)
+@media (max-width: 575.98px) {
+  .posters-container {
+    justify-content: center;
+  }
+  .movie {
+    width: calc(100% / 1);
+    max-width: 342px;
+  }
+}
 
 // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-//   // common properties
-//   .movie-image-container,
-//   .movie-img,
-//   .movie-title,
-//   .ratings-favorites-container {
-//     max-width: 500px;
-//   }
-//   .movie-img {
-//     width: 500px;
-//     background-image: url('../../img/movie-placeholder-unsplash-w500.jpg');
-//   }
-// }
+@media (min-width: 576px) {
+  .movie {
+    width: calc(100% / 2 - 1%);
+  }
+  .ratings-favorites-container {
+    align-items: center;
+  }
+  .user-rating-container {
+    flex-direction: column;
+  }
+}
 
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-//   // common properties
-//   .movie-image-container,
-//   .movie-img,
-//   .movie-title,
-//   .ratings-favorites-container {
-//     max-width: 342px;
-//   }
-//   .movie-img {
-//     width: 342px;
-//     background-image: url('../../img/movie-placeholder-unsplash-w342.jpg');
-//   }
-// }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .movie {
+    width: calc(100% / 3 - 1%);
+  }
+}
 
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-// }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .movie {
+    width: calc(100% / 4 - 1%);
+  }
+}
 
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {
-// }
-
-// Notes:
-// make picture size and max width the same
-// change picture or picture size with screensize
-// clicking on rating opens up
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .movie {
+    width: calc(100% / 5 - 1%);
+    max-width: 342px;
+  }
+  .ratings-favorites-container {
+    align-items: center;
+  }
+  .user-rating-container {
+    flex-direction: column;
+  }
+}
+// Extra extra large devices (large desktops, 1740px and up)
+@media (min-width: 1740px) {
+  .user-rating-container {
+    flex-direction: row;
+  }
+}
