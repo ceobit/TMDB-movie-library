@@ -11,8 +11,7 @@
     "watch:styles": "sass src/scss:src/styles --watch",
     "clean": "rm -rf dist",
     "clean:styles": "rm -rf src/styles",
-    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
-    "deploy": "netlify deploy --prod -d dist"
+    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist"
   },
   "keywords": [],
   "author": "Vivi, Maryam, Sven, Ruben, Roman",
@@ -25,7 +24,9 @@
     "prettier": "^2.3.0",
     "sass": "^1.32.13"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vercel": "^23.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ceobit/IMDB-movie-library.git"

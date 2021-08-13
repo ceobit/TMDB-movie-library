@@ -24,3 +24,5 @@ yarn-error.log*
 
 #styles - css
 src/styles
+
+dist/
